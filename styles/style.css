@@ -134,9 +134,9 @@ body {
 }
 
 .presentacion__imagen {
-  width: 35%;
+  width: 20%;
   max-width: 400px;
-  border-radius: 10px;
+  border-radius: 7px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: filter 0.3s ease, transform 0.3s ease;
@@ -145,6 +145,24 @@ body {
 .presentacion__imagen:hover {
   filter: brightness(0.8);
   transform: scale(1.05);
+}
+
+.imag_proyecto {
+  width: 100%; /* La imagen ocupará el 100% del contenedor */
+  max-width: 300px; /* Limita el ancho máximo de la imagen */
+  aspect-ratio: 20 / 17; /* Mantiene una proporción consistente */
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un diseño más atractivo */
+  object-fit: cover; /* Asegura que la imagen se ajuste bien al contenedor */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Efecto de transición */
+}
+
+.imag_proyecto:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
+  filter: brightness(
+    0.9
+  ); /* Oscurece ligeramente la imagen al pasar el cursor */
 }
 
 .footer {
@@ -179,12 +197,7 @@ body {
     width: 100%;
     max-width: 600px;
   }
-
-  .imag_proyect {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    transition: filter 0.3s ease, transform 0.3s ease;
+  .imag_proyecto {
+    max-width: 100%; /* Asegura que las imágenes se ajusten al ancho del contenedor */
   }
 }
