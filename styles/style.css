@@ -34,14 +34,14 @@ body {
 .header__menu {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .header__menu__link {
   text-decoration: none;
   color: var(--color-secundaria);
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -81,12 +81,13 @@ body {
 }
 
 .presentacion__contenido__texto {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: var(--color-primaria);
   background-color: var(--color-secundaria);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.9;
 }
 
 .presentacion__enlaces {
