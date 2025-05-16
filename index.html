@@ -1,72 +1,184 @@
 <!DOCTYPE html>
-<html lang="es-ar">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+    <title>Java Backend Developer Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <header class="header">
         <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Home</a>
-            <a class="header__menu__link" href="about.html">Sobre mí</a>
-            <a class="header__menu__link" href="proyect.html">proyectos</a>
+            <a class="header__menu__link" href="#home">Inicio</a>
+            <a class="header__menu__link" href="#skills">Habilidades</a>
+            <a class="header__menu__link" href="#projects">Proyectos</a>
+            <a class="header__menu__link" href="#contacto">Contacto</a>
         </nav>
     </header>
-    <main class="presentacion">
-        <section class="presentacion__contenido">
-            <h1 class="presentacion__contenido__titulo">
-                Eleva tu negocio digital al siguiente nivel
-                <strong class="titulo-destaque">Desarrollo Full Stack: Potenciando el Front-end y el Back-end
-                </strong>
-            </h1>
 
-            <p class="presentacion__contenido__texto">Hola, soy Ariel Almada, desarrollador Full Stack especializado en
-                Java, React y Node.js.
+    <main class="presentacion" id="home">
+        <div class="presentacion__container">
+            <section class="presentacion__contenido">
+                <h1 class="presentacion__contenido__titulo">
+                    Ariel Almada
+                    <strong class="titulo-destaque">Java Backend Developer</strong>
+                </h1>
+                <p class="presentacion__contenido__texto">
+                    Desarrollador de Software Especializado en Java
+                    
+                    Con una sólida trayectoria y una profunda especialización en el ecosistema Java, poseo una marcada pasión por la
+                    creación de soluciones de software robustas, escalables y de alta calidad. Mi enfoque se centra en la aplicación de
+                    principios de diseño y desarrollo que aseguran la mantenibilidad y eficiencia de las aplicaciones.
+                    
+                    Experiencia Clave:
+                    
+                    Desarrollo de Aplicaciones Java Desktop: Experiencia en la concepción y desarrollo de aplicaciones de escritorio
+                    utilizando la arquitectura Modelo-Vista-Controlador (MVC), garantizando una separación clara de responsabilidades y una
+                    estructura de código organizada.
+                    Implementación de Interfaces Gráficas Intuitivas: Competencia en la creación de interfaces de usuario funcionales y de
+                    fácil uso mediante Swing, enfocándome en la experiencia del usuario.
+                    Desarrollo de APIs RESTful con Spring Framework: Amplia experiencia en el diseño e implementación de Servicios Web
+                    RESTful utilizando el framework Spring, asegurando la comunicación eficiente entre diferentes sistemas y clientes.
+                    Aplicación de Principios de Diseño y Calidad de Código: Compromiso con la aplicación de los principios SOLID y las
+                    prácticas de Clean Code, lo que resulta en un código legible, mantenible y extensible.
+                    Testing Exhaustivo: Implementación de estrategias de testing rigurosas utilizando JUnit para garantizar la calidad,
+                    fiabilidad y correcto funcionamiento de las aplicaciones.
+                    Gestión de Código y Metodologías Ágiles: Experiencia en el uso de sistemas de control de versiones como Git y la
+                    aplicación de metodologías ágiles para una gestión de proyectos eficiente y adaptable.
+                    Busco activamente nuevos desafíos profesionales que me permitan expandir mis habilidades, contribuir con mi experiencia
+                    y aportar valor a través de la creación de soluciones tecnológicas innovadoras y de impacto.
+                </p>
+            </section>
 
-                Me apasiona crear experiencias digitales sólidas, eficientes y visualmente atractivas. Combino la
-                potencia del Front-end
-                y el Back-end para desarrollar aplicaciones modernas, funcionales y escalables, adaptadas a las
-                necesidades de cada
-                proyecto.
+            <aside class="presentacion__lateral">
+                <img class="presentacion__imagen" src="assets/foto_mia.jpg" alt="Foto de perfil">
+            </aside>
+        </div>
 
-                Con mi experiencia, puedo ayudarte a transformar ideas en soluciones digitales de alto impacto.
-                ¿Tienes un proyecto en mente? Conectemos y hagámoslo realidad.
+        <section class="skills" id="skills">
+            <h2 class="skills__titulo">Stack Tecnológico</h2>
+            <div class="skills__grid">
+                <div class="skill-category">
+                    <h3>Java Core</h3>
+                    <ul>
+                        <li>Java 17+</li>
+                        <li>Java Swing</li>
+                        <li>Programación Orientada a Objetos</li>
+                        <li>Patrones de Diseño (MVC)</li>
+                        <li>JUnit Testing</li>
+                        <li>Control de Excepciones</li>
+                        <li>Collections Framework</li>
+                    </ul>
+                </div>
 
+                <div class="skill-category">
+                    <h3>Spring Framework</h3>
+                    <ul>
+                        <li>Spring Boot</li>
+                        <li>Spring MVC</li>
+                        <li>Spring Data JPA</li>
+                        <li>Spring Security</li>
+                        <li>Hibernate</li>
+                        <li>Maven/Gradle</li>
+                    </ul>
+                </div>
 
-            </p>
-            <div class="presentacion__enlaces">
-                <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes</h2>
-                <a class="presentacion__enlaces__link" href="https://github.com/ariel323">
-                    <img src="./assets/github.png">
-                    Github
-                </a>
-                <a class="presentacion__enlaces__link " href="https://www.linkedin.com/in/ariel-almada-4a7133346/">
-                    <img src="./assets/linkedin.png">
-                    Linkedin
-                </a>
-                <a class="presentacion__enlaces__link" href="tel:+54 9 3434475095">
-                    <img src="assets/whastsapp.png.png">
-                    whatsapp
-                </a>
-              
-            <a class="presentacion__enlaces__link" href="mailto:arielalmada861@gmail.com">
-                <img src="assets/imagen de gmail.png" alt="Gmail">
-                Gmail
-            </a>
+                <div class="skill-category">
+                    <h3>Java AI & ML</h3>
+                    <ul>
+                        <li>Deeplearning4j</li>
+                        <li>Weka</li>
+                        <li>JavaML</li>
+                        <li>Apache OpenNLP</li>
+                        <li>Stanford CoreNLP</li>
+                        <li>Eclipse Collections</li>
+                    </ul>
+                </div>
             </div>
-
         </section>
-        <img class="presentacion__imagen" src="assets/foto_mia.jpg" alt="Foto de ariel almada desarrolando un proyecto">
+
+        <section class="projects" id="projects">
+            <h2 class="projects__titulo">Proyecto Java Desktop</h2>
+            <div class="projects__grid">
+                <article class="project-card">
+                    <h3>Conversor de Moneda</h3>
+                    <div class="project-tech">Java | Swing | JUnit | MVC</div>
+                    <img class="project-image" src="assets/imagen de comvertidor.png"
+                        alt="Conversor de Moneda Screenshot">
+                    <p class="project-description">
+                        Aplicación de escritorio Java para conversión de monedas.
+                        Características principales:
+                        • Interfaz gráfica intuitiva con Swing
+                        • Patrón MVC para mejor mantenibilidad
+                        • Validación robusta de datos
+                        • Manejo de excepciones personalizado
+                        • Tests unitarios con JUnit
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/ariel323/ComversorMoneda" target="_blank" class="btn-primary">Ver
+                            Código</a>
+                    </div>
+
+                    <h3>Restaurant Backend Application</h3>
+                    <div class="project-tech">Java | Spring Boot | Maven |JPA (Java Persistence API)</div>
+                    <img class="project-image" src="assets/Restaurant Backend Application.jpg"
+                        alt="Restaurant Backend Application">
+                    <p class="project-description">
+                        Esta aplicación robusta, desarrollada con Java y el potente framework Spring Boot, ofrece
+                        funcionalidades esenciales
+                        para la gestión integral de un restaurante. A través de su interfaz, permite administrar los
+                        elementos del menú de forma
+                        eficiente, facilitando la creación, modificación y eliminación de platos y sus detalles. Además,
+                        el sistema está
+                        diseñado para crear y gestionar órdenes, abarcando desde la recepción del pedido hasta su
+                        finalización, lo que optimiza
+                        el flujo de trabajo operativo.
+
+                        Internamente, la aplicación está preparada para manejar peticiones HTTP relacionadas con las
+                        operaciones del
+                        restaurante, lo que sugiere una arquitectura flexible y adaptable para interactuar con otros
+                        sistemas o clientes. La
+                        gestión de dependencias se realiza con Maven, asegurando una construcción y gestión de proyectos
+                        eficiente. Para la
+                        persistencia de datos, se emplea JPA (Java Persistence API), lo que facilita la interacción con
+                        la base de datos de
+                        manera orientada a objetos, garantizando la integridad y consistencia de la información del
+                        restaurante.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/ariel323/proyectoRetaurant" target="_blank" class="btn-primary">Ver
+                            Código</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2 class="contacto__titulo">Contacto</h2>
+            <div class="contacto__container">
+                <div class="contacto__enlaces">
+                    <a href="https://www.linkedin.com/in/ariel-almada-4a7133346/" target="_blank"
+                        class="contacto__link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/ariel323" target="_blank" class="contacto__link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="mailto:arielalmada861@gmail.com" class="contacto__link">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                    <a href="https://wa.me/5493434475095" target="_blank" class="contacto__link">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
-        <p>Desarrollado por Ariel Almada</p>
-    </footer>
 </body>
 
 </html>
