@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel Almada | Java Backend Developer Portfolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__menu" aria-label="Navegación principal">
+            <a class="header__menu__link" href="#home">Inicio</a>
+            <a class="header__menu__link" href="#skills">Habilidades</a>
+            <a class="header__menu__link" href="#projects">Proyectos</a>
+            <a class="header__menu__link" href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="hero-section__container">
+                <div class="hero-section__content">
+                    <h1 class="hero-section__title">
+                        Ariel Almada
+                        <strong class="hero-section__title--highlight">Java Backend Developer</strong>
+                    </h1>
+                    <p class="hero-section__text">
+                        Desarrollador de Software Especializado en Java.
+                    </p>
+                    <p class="hero-section__text">
+                        Con una sólida trayectoria y una profunda especialización en el ecosistema Java, poseo una
+                        marcada pasión por la creación de soluciones de software robustas, escalables y de alta calidad.
+                        Mi enfoque se centra en la aplicación de principios de diseño y desarrollo que aseguran la
+                        mantenibilidad y eficiencia de las aplicaciones.
+                    </p>
+                    <p class="hero-section__text">
+                        **Experiencia Clave:**
+                    </p>
+                    <ul class="hero-section__experience-list">
+                        <li>**Desarrollo de Aplicaciones Java Desktop:** Experiencia en la concepción y desarrollo de
+                            aplicaciones de escritorio utilizando la arquitectura Modelo-Vista-Controlador (MVC),
+                            garantizando una separación clara de responsabilidades y una estructura de código
+                            organizada.</li>
+                        <li>**Implementación de Interfaces Gráficas Intuitivas:** Competencia en la creación de
+                            interfaces de usuario funcionales y de fácil uso mediante Swing, enfocándome en la
+                            experiencia del usuario.</li>
+                        <li>**Desarrollo de APIs RESTful con Spring Framework:** Amplia experiencia en el diseño e
+                            implementación de Servicios Web RESTful utilizando el framework Spring, asegurando la
+                            comunicación eficiente entre diferentes sistemas y clientes.</li>
+                        <li>**Aplicación de Principios de Diseño y Calidad de Código:** Compromiso con la aplicación de
+                            los principios SOLID y las prácticas de Clean Code, lo que resulta en un código legible,
+                            mantenible y extensible.</li>
+                        <li>**Testing Exhaustivo:** Implementación de estrategias de testing rigurosas utilizando JUnit
+                            para garantizar la calidad, fiabilidad y correcto funcionamiento de las aplicaciones.</li>
+                        <li>**Gestión de Código y Metodologías Ágiles:** Experiencia en el uso de sistemas de control de
+                            versiones como Git y la aplicación de metodologías ágiles para una gestión de proyectos
+                            eficiente y adaptable.</li>
+                    </ul>
+                    <p class="hero-section__text">
+                        Busco activamente nuevos desafíos profesionales que me permitan expandir mis habilidades,
+                        contribuir con mi experiencia y aportar valor a través de la creación de soluciones tecnológicas
+                        innovadoras y de impacto.
+                    </p>
+                </div>
+
+                <aside class="hero-section__aside">
+                    <img class="hero-section__image" src="assets/foto_mia.jpg"
+                        alt="Foto de perfil de Ariel Almada, desarrollador de software Java.">
+                </aside>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h2 class="section-title">💡 Stack Tecnológico</h2>
+            <div class="skills__grid">
+                <div class="skill-card fade-in-up">
+                    <h3><i class="fas fa-code"></i> Java Core</h3>
+                    <ul>
+                        <li>Java 17+</li>
+                        <li>POO / MVC / Clean Code</li>
+                        <li>Swing & Interfaces</li>
+                        <li>JUnit Testing</li>
+                        <li>Collections & Streams</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card fade-in-up">
+                    <h3><i class="fab fa-java"></i> Spring Framework</h3>
+                    <ul>
+                        <li>Spring Boot & MVC</li>
+                        <li>Spring Security</li>
+                        <li>JPA / Hibernate</li>
+                        <li>RESTful APIs</li>
+                        <li>Maven / Gradle</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card fade-in-up">
+                    <h3><i class="fas fa-brain"></i> Java + AI/ML</h3>
+                    <ul>
+                        <li>Weka, JavaML</li>
+                        <li>Deeplearning4j</li>
+                        <li>CoreNLP & OpenNLP</li>
+                        <li>AI Pipeline (POC)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2 class="section-title">🚀 Proyectos Destacados</h2>
+            <div class="projects__grid">
+                <div class="project-card fade-in-up">
+                    <img src="assets/imagen de comvertidor.png" alt="Miniatura del proyecto de conversor de moneda."
+                        class="project-card__image">
+                    <h3 class="project-card__title">Conversor de Moneda</h3>
+                    <p class="project-card__description">App Java Swing con arquitectura MVC y validación robusta.
+                        Incluye tests con JUnit.</p>
+                    <div class="project-card__links"> <a href="https://github.com/ariel323/ComversorMoneda"
+                            target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver Código</a>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in-up">
+                    <img src="assets/Restaurant Backend Application.jpg"
+                        alt="Miniatura del proyecto de API Backend de Restaurante." class="project-card__image">
+                    <h3 class="project-card__title">Restaurant Backend API</h3>
+                    <p class="project-card__description">Spring Boot API REST para gestionar menús y órdenes.
+                        Persistencia con JPA y arquitectura modular.</p>
+                    <div class="project-card__links"> <a href="https://github.com/ariel323/proyectoRetaurant"
+                            target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver Código</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="section-title">📬 Hablemos</h2>
+            <p class="contact__intro-text">Estoy abierto a nuevas oportunidades y siempre busco colaborar en proyectos
+                interesantes. No dudes en contactarme.</p>
+            <div class="contact__links-container">
+                <a href="https://www.linkedin.com/in/ariel-almada-4a7133346/" target="_blank" rel="noopener noreferrer"
+                    class="contact__link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/ariel323" target="_blank" rel="noopener noreferrer" class="contact__link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="mailto:arielalmada861@gmail.com" class="contact__link">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://wa.me/5493434475095" target="_blank" rel="noopener noreferrer" class="contact__link">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Diseñado y Desarrollado por Ariel Almada &copy; 2024</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>
