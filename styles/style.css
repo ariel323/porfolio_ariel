@@ -9,10 +9,16 @@
   --color-card-background: #172a45; /* Slightly lighter background for cards */
   --color-hover: #1e3251; /* Darker hover state for elements */
   --color-shadow-dark: rgba(2, 12, 27, 0.7); /* Dark shadow for depth */
-  --color-shadow-light: rgba(100, 255, 218, 0.1); /* Light shadow for hover effects */
+  --color-shadow-light: rgba(
+    100,
+    255,
+    218,
+    0.1
+  ); /* Light shadow for hover effects */
 
   /* Typography */
-  --font-sans: "Inter", "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  --font-sans: "Inter", "Calibre", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
   --font-mono: "Roboto Mono", "SF Mono", "Fira Code", "Fira Mono", monospace;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
@@ -231,7 +237,8 @@ section {
   margin-bottom: var(--spacing-xl);
 }
 
-.skills .section-title { /* Use the global section title for consistency */
+.skills .section-title {
+  /* Use the global section title for consistency */
   margin-bottom: var(--spacing-xl); /* Increased margin for section title */
 }
 
@@ -241,8 +248,11 @@ section {
   gap: var(--spacing-md); /* Consistent gap */
 }
 
-.skill-card { /* Renamed from skill-category */
-  background-color: var(--color-card-background); /* Lighter background for cards */
+.skill-card {
+  /* Renamed from skill-category */
+  background-color: var(
+    --color-card-background
+  ); /* Lighter background for cards */
   padding: var(--spacing-md);
   border-radius: var(--border-radius-md);
   box-shadow: 0 5px 15px -5px rgba(2, 12, 27, 0.5);
@@ -267,7 +277,9 @@ section {
   align-items: center;
 }
 
-.skill-card h3 .fas, .skill-card h3 .fab { /* Style for Font Awesome icons */
+.skill-card h3 .fas,
+.skill-card h3 .fab {
+  /* Style for Font Awesome icons */
   font-size: 1.2em; /* Slightly larger icon */
   margin-right: 10px;
   color: var(--color-accent);
@@ -321,7 +333,10 @@ section {
 
 .projects__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider min for projects */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(320px, 1fr)
+  ); /* Slightly wider min for projects */
   gap: var(--spacing-lg); /* More gap between projects */
 }
 
@@ -376,7 +391,8 @@ section {
 }
 
 /* Buttons */
-.btn { /* Combined common button styles */
+.btn {
+  /* Combined common button styles */
   padding: 0.75rem 1.5rem;
   border-radius: var(--border-radius-sm);
   text-decoration: none;
@@ -390,13 +406,15 @@ section {
   white-space: nowrap; /* Prevent text wrapping */
 }
 
-.btn--primary { /* Renamed btn-primary to btn--primary (BEM-like) */
+.btn--primary {
+  /* Renamed btn-primary to btn--primary (BEM-like) */
   background-color: var(--color-accent);
   color: var(--color-primary);
   border: 1px solid var(--color-accent); /* Added border for consistency */
 }
 
-.btn--secondary { /* Renamed btn-secondary to btn--secondary (BEM-like) */
+.btn--secondary {
+  /* Renamed btn-secondary to btn--secondary (BEM-like) */
   background-color: transparent;
   border: 1px solid var(--color-accent);
   color: var(--color-accent);
@@ -416,9 +434,9 @@ section {
   transform: translateY(-2px);
 }
 
-
 /* Contact Section */
-.contact { /* Renamed from contacto */
+.contact {
+  /* Renamed from contacto */
   background-color: var(--color-secondary);
   border-radius: var(--border-radius-lg);
   box-shadow: 0 10px 30px -15px var(--color-shadow-dark);
@@ -428,7 +446,8 @@ section {
   text-align: center;
 }
 
-.contact .section-title { /* Use global section title for consistency */
+.contact .section-title {
+  /* Use global section title for consistency */
   margin-bottom: var(--spacing-md); /* Reduced margin for section title */
 }
 
@@ -441,14 +460,16 @@ section {
   color: var(--color-text-light); /* Make this text stand out more */
 }
 
-.contact__links-container { /* Renamed from contacto__enlaces */
+.contact__links-container {
+  /* Renamed from contacto__enlaces */
   display: flex;
   justify-content: center;
   gap: var(--spacing-md);
   flex-wrap: wrap; /* Allow links to wrap */
 }
 
-.contact__link { /* Renamed from contacto__link */
+.contact__link {
+  /* Renamed from contacto__link */
   display: inline-flex; /* Use inline-flex for better alignment */
   align-items: center;
   gap: 0.75rem; /* Increased gap between icon and text */
@@ -471,7 +492,8 @@ section {
   box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
 }
 
-.contact__link i { /* Style for Font Awesome icons within links */
+.contact__link i {
+  /* Style for Font Awesome icons within links */
   font-size: 1.2em;
 }
 
@@ -489,131 +511,207 @@ section {
   margin: 0;
 }
 
+/* Docker Projects Section */
+.docker-projects {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 3rem 0;
+  border-radius: 12px;
+}
+
+.docker-projects .section-title {
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.docker-commands-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.docker-commands-section h4 {
+  color: #64ffda;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.docker-command {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.docker-command code {
+  flex: 1;
+  background: transparent;
+  color: #64ffda;
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.copy-btn {
+  background: #64ffda;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.copy-btn:hover {
+  background: #4fd1c7;
+}
+
+.docker-instructions {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.docker-instructions .project-card__title {
+  color: white;
+}
+
+.instructions-content h4 {
+  color: #64ffda;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.instructions-content .docker-command {
+  margin-bottom: 1rem;
+}
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   :root {
-      --font-size-4xl: 3rem;
-      --font-size-3xl: 2.25rem;
+    --font-size-4xl: 3rem;
+    --font-size-3xl: 2.25rem;
   }
   .hero-section__container {
-      flex-direction: column;
-      text-align: center; /* Center align text on smaller screens */
+    flex-direction: column;
+    text-align: center; /* Center align text on smaller screens */
   }
 
   .hero-section__content {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .hero-section__image {
-      margin-top: var(--spacing-lg); /* Add space above image */
+    margin-top: var(--spacing-lg); /* Add space above image */
   }
 
   .header__menu {
-      justify-content: center; /* Center menu on medium screens */
+    justify-content: center; /* Center menu on medium screens */
   }
 }
 
 @media (max-width: 768px) {
   :root {
-      --spacing-md: 1.5rem;
-      --spacing-lg: 2rem;
-      --spacing-xl: 3rem;
-      --font-size-4xl: 2.5rem;
-      --font-size-3xl: 2rem;
-      --font-size-2xl: 1.25rem;
-      --font-size-lg: 1rem;
-      --font-size-base: 0.95rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-3xl: 2rem;
+    --font-size-2xl: 1.25rem;
+    --font-size-lg: 1rem;
+    --font-size-base: 0.95rem;
   }
 
   section {
-      padding: var(--spacing-lg) var(--spacing-sm); /* Adjusted padding for smaller screens */
+    padding: var(--spacing-lg) var(--spacing-sm); /* Adjusted padding for smaller screens */
   }
 
   .header {
-      padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 
   .header__menu {
-      gap: var(--spacing-sm);
+    gap: var(--spacing-sm);
   }
 
   .header__menu__link {
-      font-size: 0.85rem;
-      padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
   }
 
   .hero-section {
-      padding-top: 120px; /* Adjust for smaller header */
-      padding-bottom: var(--spacing-lg);
+    padding-top: 120px; /* Adjust for smaller header */
+    padding-bottom: var(--spacing-lg);
   }
 
   .hero-section__container {
-      gap: var(--spacing-lg);
+    gap: var(--spacing-lg);
   }
 
   .hero-section__title {
-      font-size: var(--font-size-4xl);
+    font-size: var(--font-size-4xl);
   }
 
   .hero-section__title--highlight {
-      font-size: var(--font-size-xl);
+    font-size: var(--font-size-xl);
   }
 
   .hero-section__image {
-      width: 250px;
-      height: 250px;
+    width: 250px;
+    height: 250px;
   }
 
   .skills__grid,
   .projects__grid {
-      grid-template-columns: 1fr; /* Stack columns on small screens */
+    grid-template-columns: 1fr; /* Stack columns on small screens */
   }
 
   .skill-card,
   .project-card {
-      padding: var(--spacing-md);
+    padding: var(--spacing-md);
   }
 
   .project-card__image {
-      height: 180px; /* Slightly smaller project images */
+    height: 180px; /* Slightly smaller project images */
   }
 
   .btn {
-      padding: 0.6rem 1.2rem;
-      font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 
   .contact__links-container {
-      flex-direction: column; /* Stack contact links vertically */
-      align-items: center;
-      gap: var(--spacing-sm);
+    flex-direction: column; /* Stack contact links vertically */
+    align-items: center;
+    gap: var(--spacing-sm);
   }
 
   .contact__link {
-      width: 100%; /* Full width links */
-      max-width: 250px; /* Limit width */
-      justify-content: center;
+    width: 100%; /* Full width links */
+    max-width: 250px; /* Limit width */
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   :root {
-      --font-size-4xl: 2rem;
-      --font-size-3xl: 1.75rem;
-      --font-size-2xl: 1.1rem;
+    --font-size-4xl: 2rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.1rem;
   }
   .header__menu {
-      flex-wrap: wrap; /* Allow menu items to wrap if needed */
-      justify-content: center;
+    flex-wrap: wrap; /* Allow menu items to wrap if needed */
+    justify-content: center;
   }
   .hero-section__image {
-      width: 200px;
-      height: 200px;
+    width: 200px;
+    height: 200px;
   }
   .skills .section-title,
   .projects .section-title,
   .contact .section-title {
-      font-size: var(--font-size-3xl);
+    font-size: var(--font-size-3xl);
   }
 }

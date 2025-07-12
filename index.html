@@ -20,6 +20,7 @@
             <a class="header__menu__link" href="#home">Inicio</a>
             <a class="header__menu__link" href="#skills">Habilidades</a>
             <a class="header__menu__link" href="#projects">Proyectos</a>
+            <a class="header__menu__link" href="#docker-projects">Docker</a>
             <a class="header__menu__link" href="#contact">Contacto</a>
         </nav>
     </header>
@@ -30,7 +31,7 @@
                 <div class="hero-section__content">
                     <h1 class="hero-section__title">
                         Ariel Almada
-                        <strong class="hero-section__title--highlight">Backend & Fullstack Developer</strong>
+                        <strong class="hero-section__title--highlight">Fullstack Developer</strong>
                     </h1>
                     <p class="hero-section__text">
                         Especialista en desarrollo de software con foco en Java y Node.js. Apasionado por crear
@@ -91,6 +92,28 @@
                         <li>Hooks & Context API</li>
                         <li>Componentes reutilizables</li>
                         <li>Consumo de APIs REST</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card fade-in-up">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>H2 Database</li>
+                        <li>Diseño de esquemas relacionales</li>
+                        <li>Consultas SQL optimizadas</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card fade-in-up">
+                    <h3><i class="fab fa-docker"></i> DevOps & Herramientas</h3>
+                    <ul>
+                        <li>Docker & Docker Compose</li>
+                        <li>Git & GitHub</li>
+                        <li>Maven & Gradle</li>
+                        <li>Postman (Testing APIs)</li>
+                        <li>Linux/Ubuntu</li>
                     </ul>
                 </div>
 
@@ -172,6 +195,71 @@
             </div>
         </section>
 
+        <!-- Agregar esta sección después de la sección "projects" y antes de "contact" -->
+        <section class="docker-projects" id="docker-projects">
+            <h2 class="section-title">🐳 Proyectos con Docker</h2>
+            <div class="projects__grid">
+                <div class="project-card fade-in-up">
+                    <img src="assets/doker.png" alt="Proyecto Docker Caso 001" class="project-card__image">
+                    <h3 class="project-card__title">Caso 01 - Aplicación Containerizada</h3>
+                    <p class="project-card__description">
+                        Aplicación completa containerizada con Docker. Incluye aplicación principal y base de datos
+                        MySQL en contenedores separados.<br>
+                        <strong>Tecnologías:</strong> Docker, MySQL, Arquitectura de Microservicios.
+                    </p>
+
+                    <div class="docker-commands-section">
+                        <h4>🚀 Comandos Docker:</h4>
+                        <div class="docker-command">
+                            <code>docker pull ariel234/caso-001-app:latest</code>
+                            <button class="copy-btn"
+                                onclick="copyToClipboard('docker pull ariel234/caso-001-app:latest')">📋</button>
+                        </div>
+                        <div class="docker-command">
+                            <code>docker pull ariel234/caso-001-mysql:latest</code>
+                            <button class="copy-btn"
+                                onclick="copyToClipboard('docker pull ariel234/caso-001-mysql:latest')">📋</button>
+                        </div>
+                    </div>
+
+                    <div class="project-card__links">
+                        <a href="https://hub.docker.com/u/ariel234" target="_blank" rel="noopener noreferrer"
+                            class="btn btn--primary">
+                            Ver en Docker Hub
+                        </a>
+                        <a href="https://github.com/ariel323/estructura-caso-001" target="_blank" rel="noopener noreferrer"
+                            class="btn btn--secondary">
+                            Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card con instrucciones de uso -->
+                <div class="project-card fade-in-up docker-instructions">
+                    <h3 class="project-card__title">🔧 Instrucciones de Uso</h3>
+                    <div class="instructions-content">
+                        <h4>1. Descargar las imágenes:</h4>
+                        <div class="docker-command">
+                            <code>docker pull ariel234/caso-001-app:latest</code>
+                        </div>
+                        <div class="docker-command">
+                            <code>docker pull ariel234/caso-001-mysql:latest</code>
+                        </div>
+
+                        <h4>2. Ejecutar MySQL:</h4>
+                        <div class="docker-command">
+                            <code>docker run -d --name mysql-db ariel234/caso-001-mysql:latest</code>
+                        </div>
+
+                        <h4>3. Ejecutar la aplicación:</h4>
+                        <div class="docker-command">
+                            <code>docker run -d --link mysql-db --name app ariel234/caso-001-app:latest</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="contact" id="contact">
             <h2 class="section-title">📬 Hablemos</h2>
             <p class="contact__intro-text">Estoy abierto a nuevas oportunidades y siempre busco colaborar en proyectos
@@ -219,6 +307,18 @@
                 observer.observe(element);
             });
         });
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function () {
+                // Mostrar feedback visual
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
     </script>
 </body>
 
