@@ -1,7 +1,8 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/porfolio_ariel/" : "/",
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
@@ -23,4 +24,4 @@ export default defineConfig({
     port: 3000,
     open: true,
   },
-});
+}));
