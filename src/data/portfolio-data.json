@@ -1,0 +1,292 @@
+{
+  "profile": {
+    "name": "Ariel Almada",
+    "title": "Fullstack Developer",
+    "tagline": "Especialista en desarrollo de software con foco en Java y Node.js",
+    "bio": "Apasionado por crear soluciones robustas, escalables y de alta calidad. Experiencia en desarrollo backend, APIs RESTful, microservicios y aplicaciones web modernas con JavaScript y React.",
+    "image": "/assets/foto_mia.jpg",
+    "github": "ariel323",
+    "linkedin": "https://www.linkedin.com/in/ariel-almada-4a7133346/",
+    "email": "arielalmada861@gmail.com",
+    "whatsapp": "5493434475095"
+  },
+  "skills": [
+    {
+      "id": "java-spring",
+      "category": "Backend",
+      "title": "Java & Spring",
+      "icon": "☕",
+      "color": "#f89820",
+      "summary": "Desarrollo backend robusto con arquitectura por capas, microservicios y APIs seguras utilizando el ecosistema Spring.",
+      "coreTools": [
+        "Spring Boot",
+        "Spring MVC",
+        "Spring Security",
+        "Hibernate/JPA",
+        "Maven/Gradle",
+        "JUnit 5"
+      ],
+      "technologies": [
+        { "name": "Java 17+", "level": 90 },
+        { "name": "Spring Boot", "level": 85 },
+        { "name": "Spring MVC", "level": 80 },
+        { "name": "Spring Security", "level": 75 },
+        { "name": "JPA / Hibernate", "level": 85 },
+        { "name": "JUnit Testing", "level": 80 }
+      ]
+    },
+    {
+      "id": "nodejs-javascript",
+      "category": "Backend",
+      "title": "Node.js & JavaScript",
+      "icon": "🟢",
+      "color": "#68a063",
+      "summary": "Construcción de APIs REST, microservicios y procesos asincrónicos con Node.js y TypeScript.",
+      "coreTools": [
+        "Express.js",
+        "NestJS",
+        "TypeScript",
+        "JWT/Auth0",
+        "TypeORM/Prisma",
+        "Jest"
+      ],
+      "technologies": [
+        { "name": "Node.js", "level": 85 },
+        { "name": "Express.js", "level": 85 },
+        { "name": "JavaScript ES6+", "level": 90 },
+        { "name": "TypeScript", "level": 80 },
+        { "name": "REST APIs", "level": 90 },
+        { "name": "Jest Testing", "level": 75 }
+      ]
+    },
+    {
+      "id": "react",
+      "category": "Frontend",
+      "title": "React",
+      "icon": "⚛️",
+      "color": "#61dafb",
+      "summary": "Interfaces responsivas y componentes reutilizables con React, TypeScript y patrones modernos de UI.",
+      "coreTools": [
+        "React Router",
+        "Redux Toolkit",
+        "Vite",
+        "Styled Components",
+        "Testing Library",
+        "Framer Motion"
+      ],
+      "technologies": [
+        { "name": "React.js", "level": 85 },
+        { "name": "Hooks & Context", "level": 80 },
+        { "name": "Component Design", "level": 85 },
+        { "name": "State Management", "level": 75 },
+        { "name": "API Integration", "level": 90 }
+      ]
+    },
+    {
+      "id": "databases",
+      "category": "Database",
+      "title": "Bases de Datos",
+      "icon": "🗄️",
+      "color": "#4479a1",
+      "summary": "Modelado de datos relacionales, optimización de consultas y migraciones automatizadas.",
+      "coreTools": [
+        "MySQL",
+        "PostgreSQL",
+        "Liquibase",
+        "Flyway",
+        "Stored Procedures",
+        "Query Tuning"
+      ],
+      "technologies": [
+        { "name": "MySQL", "level": 85 },
+        { "name": "PostgreSQL", "level": 80 },
+        { "name": "H2 Database", "level": 70 },
+        { "name": "SQL Queries", "level": 90 },
+        { "name": "Schema Design", "level": 80 }
+      ]
+    },
+    {
+      "id": "devops",
+      "category": "DevOps",
+      "title": "DevOps & Tools",
+      "icon": "🐳",
+      "color": "#0db7ed",
+      "summary": "Automatización de pipelines y entrega continua con contenedores, observabilidad y control de versiones.",
+      "coreTools": [
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "CI/CD",
+        "Linux",
+        "Monitoring"
+      ],
+      "technologies": [
+        { "name": "Docker", "level": 80 },
+        { "name": "Docker Compose", "level": 75 },
+        { "name": "Git & GitHub", "level": 90 },
+        { "name": "Maven", "level": 85 },
+        { "name": "Gradle", "level": 75 },
+        { "name": "Postman", "level": 85 },
+        { "name": "Linux/Ubuntu", "level": 70 }
+      ]
+    },
+    {
+      "id": "ai-ml",
+      "category": "AI/ML",
+      "title": "Java + AI/ML",
+      "icon": "🧠",
+      "color": "#ff6b6b",
+      "summary": "Integración de librerías Java para minería de datos, machine learning y procesamiento de lenguaje natural.",
+      "coreTools": [
+        "Weka",
+        "JavaML",
+        "Deeplearning4j",
+        "CoreNLP",
+        "OpenNLP",
+        "TensorFlow Java"
+      ],
+      "technologies": [
+        { "name": "Weka", "level": 60 },
+        { "name": "JavaML", "level": 55 },
+        { "name": "Deeplearning4j", "level": 50 },
+        { "name": "CoreNLP", "level": 55 },
+        { "name": "OpenNLP", "level": 50 }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "conversor-moneda",
+      "title": "Conversor de Moneda",
+      "shortDescription": "App Java Swing con arquitectura MVC y validación robusta",
+      "description": "Aplicación de escritorio desarrollada en Java Swing que permite convertir entre diferentes monedas en tiempo real. Implementa el patrón de diseño MVC para una arquitectura limpia y mantenible. Incluye validación robusta de datos y testing completo con JUnit.",
+      "image": "/assets/imagen de comvertidor.png",
+      "technologies": ["Java", "Swing", "MVC", "JUnit", "OOP"],
+      "category": "backend",
+      "featured": true,
+      "demoUrl": null,
+      "repoUrl": "https://github.com/ariel323/ComversorMoneda",
+      "date": "2024-03-15",
+      "stats": {
+        "stars": 0,
+        "forks": 0,
+        "language": "Java"
+      }
+    },
+    {
+      "id": "restaurant-backend",
+      "title": "Restaurant Backend API",
+      "shortDescription": "Spring Boot API REST para gestionar menús y órdenes",
+      "description": "API RESTful completa desarrollada con Spring Boot para la gestión de restaurantes. Permite administrar menús, órdenes, inventario y usuarios. Implementa persistencia con JPA/Hibernate, arquitectura por capas, y endpoints documentados. Incluye manejo de errores y validaciones.",
+      "image": "/assets/Restaurant Backend Application.jpg",
+      "technologies": [
+        "Spring Boot",
+        "JPA",
+        "Hibernate",
+        "REST API",
+        "MySQL",
+        "Maven"
+      ],
+      "category": "backend",
+      "featured": true,
+      "demoUrl": null,
+      "repoUrl": "https://github.com/ariel323/proyectoRetaurant",
+      "date": "2024-06-20",
+      "stats": {
+        "stars": 0,
+        "forks": 0,
+        "language": "Java"
+      }
+    },
+    {
+      "id": "literalura",
+      "title": "Literalura",
+      "shortDescription": "Explorador de libros usando API de Gutendex",
+      "description": "Aplicación Java que consume la API de Gutendex para explorar y buscar libros del Proyecto Gutenberg. Permite filtrar por autor, género, idioma y almacenar favoritos en una base de datos PostgreSQL. Implementa consumo de APIs REST, manejo de JSON, y operaciones CRUD.",
+      "image": "/assets/imagenApiLiteratura.png",
+      "technologies": [
+        "Java 17+",
+        "Maven",
+        "PostgreSQL",
+        "REST API",
+        "Jackson",
+        "JDBC"
+      ],
+      "category": "backend",
+      "featured": true,
+      "demoUrl": null,
+      "repoUrl": "https://github.com/ariel323/challenge-literalura/tree/main",
+      "date": "2024-08-10",
+      "stats": {
+        "stars": 0,
+        "forks": 0,
+        "language": "Java"
+      }
+    },
+    {
+      "id": "gestor-clientes",
+      "title": "Gestor de Clientes",
+      "shortDescription": "Aplicación web React para gestión de clientes",
+      "description": "Aplicación web interactiva desarrollada en React para la gestión eficiente de clientes. Permite crear, editar, eliminar y buscar clientes con una interfaz intuitiva y responsiva. Implementa React Hooks (useState, useEffect), Context API para estado global, y CSS Modules para estilos encapsulados.",
+      "image": "/assets/imagenGestor.png",
+      "technologies": [
+        "React",
+        "JavaScript ES6+",
+        "Hooks",
+        "CSS Modules",
+        "LocalStorage"
+      ],
+      "category": "frontend",
+      "featured": true,
+      "demoUrl": "https://gestor-de-clientes.netlify.app/",
+      "repoUrl": "https://github.com/ariel323/GestorDeClientes",
+      "date": "2024-09-05",
+      "stats": {
+        "stars": 0,
+        "forks": 0,
+        "language": "JavaScript"
+      }
+    },
+    {
+      "id": "docker-caso-001",
+      "title": "Docker Caso 001 - App Containerizada",
+      "shortDescription": "Aplicación completa con Docker y MySQL",
+      "description": "Proyecto de containerización completo usando Docker y Docker Compose. Incluye una aplicación backend y una base de datos MySQL ejecutándose en contenedores separados pero conectados. Implementa mejores prácticas de Docker: multi-stage builds, volúmenes persistentes, redes personalizadas, y variables de entorno.",
+      "image": "/assets/doker.png",
+      "technologies": [
+        "Docker",
+        "Docker Compose",
+        "MySQL",
+        "Networking",
+        "Volumes"
+      ],
+      "category": "devops",
+      "featured": true,
+      "demoUrl": null,
+      "repoUrl": "https://github.com/ariel323/estructura-caso-001",
+      "dockerHub": "https://hub.docker.com/u/ariel234",
+      "dockerImages": [
+        "ariel234/caso-001-app:latest",
+        "ariel234/caso-001-mysql:latest"
+      ],
+      "date": "2024-10-01",
+      "stats": {
+        "stars": 0,
+        "forks": 0,
+        "language": "Dockerfile"
+      }
+    }
+  ],
+  "experience": [
+    "Desarrollo de apps Java Desktop con arquitectura MVC",
+    "APIs RESTful con Spring Boot y Node.js (Express)",
+    "Aplicaciones web interactivas con React",
+    "JavaScript moderno (ES6+), TypeScript y manejo de estados",
+    "Testing con JUnit, Jest y herramientas modernas",
+    "Git, metodologías ágiles y buenas prácticas de Clean Code"
+  ],
+  "metadata": {
+    "lastUpdated": "2025-10-07",
+    "version": "2.0.0"
+  }
+}

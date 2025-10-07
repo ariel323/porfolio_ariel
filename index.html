@@ -4,322 +4,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ariel Almada | Java Backend Developer Portfolio</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- SEO Meta Tags -->
+    <title>Ariel Almada | Fullstack Developer - Portfolio</title>
+    <meta name="description"
+        content="Portfolio profesional de Ariel Almada - Fullstack Developer especializado en Java, Spring Boot, Node.js, React y TypeScript. Proyectos con arquitectura moderna y buenas prácticas.">
+    <meta name="keywords"
+        content="Ariel Almada, Fullstack Developer, Java, Spring Boot, Node.js, React, TypeScript, Portfolio">
+    <meta name="author" content="Ariel Almada">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ariel Almada | Fullstack Developer">
+    <meta property="og:description" content="Portfolio profesional con proyectos de Java, Node.js, React y Docker">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/ariel323">
+    <meta property="og:image" content="/assets/foto_mia.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ariel Almada | Fullstack Developer">
+    <meta name="twitter:description" content="Portfolio profesional con arquitectura TypeScript moderna">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 </head>
 
 <body>
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-spinner"></div>
+        <div class="loader-text">Cargando...</div>
+    </div>
+
+    <!-- Particles Background Container -->
+    <div id="particles-container"></div>
+    <!-- Header Navigation -->
     <header class="header">
-        <nav class="header__menu" aria-label="Navegación principal">
-            <a class="header__menu__link" href="#home">Inicio</a>
-            <a class="header__menu__link" href="#skills">Habilidades</a>
-            <a class="header__menu__link" href="#projects">Proyectos</a>
-            <a class="header__menu__link" href="#docker-projects">Docker</a>
-            <a class="header__menu__link" href="#contact">Contacto</a>
-        </nav>
+        <div class="header__container">
+            <a href="#home" class="header__logo">
+                <span>💻</span> Ariel Almada
+            </a>
+
+            <nav class="header__menu" aria-label="Navegación principal">
+                <a class="header__menu__link" href="#home"><span>01.</span> Inicio</a>
+                <a class="header__menu__link" href="#skills"><span>02.</span> Habilidades</a>
+                <a class="header__menu__link" href="#projects"><span>03.</span> Proyectos</a>
+                <a class="header__menu__link" href="#github-stats"><span>04.</span> GitHub</a>
+                <a class="header__menu__link" href="#contact"><span>05.</span> Contacto</a>
+            </nav>
+
+            <!-- Theme Toggle (opcional) -->
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                🌙
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="header__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                <span class="header__mobile-toggle__bar"></span>
+                <span class="header__mobile-toggle__bar"></span>
+                <span class="header__mobile-toggle__bar"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Overlay -->
+        <div class="header__overlay" id="menu-overlay"></div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="hero-section__container">
                 <div class="hero-section__content">
+                    <p class="hero-section__greeting">Hola, soy</p>
+
                     <h1 class="hero-section__title">
-                        Ariel Almada
-                        <strong class="hero-section__title--highlight">Fullstack Developer</strong>
-                    </h1>
-                    <p class="hero-section__text">
-                        Especialista en desarrollo de software con foco en Java y Node.js. Apasionado por crear
-                        soluciones
-                        robustas, escalables y de alta calidad.<br>
-                        Experiencia en desarrollo backend, APIs RESTful, microservicios y aplicaciones web modernas con
-                        JavaScript y React.
-                    </p>
-                    <ul class="hero-section__experience-list">
-                        <li>Desarrollo de apps Java Desktop con arquitectura MVC.</li>
-                        <li>APIs RESTful con Spring Boot y Node.js (Express).</li>
-                        <li>Aplicaciones web interactivas con React.</li>
-                        <li>JavaScript moderno (ES6+), TypeScript y manejo de estados.</li>
-                        <li>Testing con JUnit, Jest y herramientas modernas.</li>
-                        <li>Git, metodologías ágiles y buenas prácticas de Clean Code.</li>
-                    </ul>
-                    <p class="hero-section__text">
-                        Busco nuevos desafíos donde aportar valor y seguir creciendo como desarrollador backend y
-                        fullstack.
-                    </p>
+                        <h1 class="hero-section__title">
+                            <span id="profile-name">Ariel Almada</span>
+                            <span class="hero-section__title--highlight" id="profile-title">Fullstack Developer</span>
+                        </h1>
+
+                        <p class="hero-section__subtitle" id="profile-tagline">
+                            Construyo soluciones digitales robustas y escalables
+                        </p>
+
+                        <p class="hero-section__text" id="profile-bio">
+                            Especialista en desarrollo de software con foco en Java y Node.js. Apasionado por crear
+                            soluciones robustas, escalables y de alta calidad. Experiencia en desarrollo backend,
+                            APIs RESTful, microservicios y aplicaciones web modernas con JavaScript y React.
+                        </p>
+
+                        <ul class="hero-section__experience-list">
+                            <li>Desarrollo de apps Java Desktop con arquitectura MVC</li>
+                            <li>APIs RESTful con Spring Boot y Node.js (Express)</li>
+                            <li>Aplicaciones web interactivas con React</li>
+                            <li>JavaScript moderno (ES6+), TypeScript y manejo de estados</li>
+                            <li>Testing con JUnit, Jest y herramientas modernas</li>
+                            <li>Git, metodologías ágiles y buenas prácticas de Clean Code</li>
+                        </ul>
+
+                        <!-- Call to Action Buttons -->
+                        <div class="hero-section__cta">
+                            <a href="#projects" class="hero-section__cta-btn hero-section__cta-btn--primary">
+                                <span>🚀</span> Ver Proyectos
+                            </a>
+                            <a href="#contact" class="hero-section__cta-btn hero-section__cta-btn--secondary">
+                                <span>📧</span> Contactar
+                            </a>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="hero-section__social">
+                            <a href="https://github.com/ariel323" target="_blank" class="hero-section__social-link"
+                                data-social="github" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ariel-almada-4a7133346/" target="_blank"
+                                class="hero-section__social-link" data-social="linkedin" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:arielalmada861@gmail.com" class="hero-section__social-link"
+                                data-social="email" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
                 </div>
 
-
                 <aside class="hero-section__aside">
-                    <img class="hero-section__image" src="assets/foto_mia.jpg"
-                        alt="Foto de perfil de Ariel Almada, desarrollador de software Java y JavaScript.">
+                    <div class="hero-section__image-wrapper">
+                        <img class="hero-section__image" src="/assets/foto_mia.jpg" data-profile-image
+                            alt="Foto de perfil de Ariel Almada, desarrollador de software Java y JavaScript.">
+                        <div class="hero-section__image-blob"></div>
+                    </div>
                 </aside>
             </div>
+
+            <!-- Scroll Indicator -->
+            <a href="#skills" class="hero-section__scroll">
+                <span>Scroll</span>
+                <div class="hero-section__scroll-icon"></div>
+            </a>
         </section>
 
+        <!-- Skills Section - Se renderizará dinámicamente con TypeScript -->
         <section class="skills" id="skills">
             <h2 class="section-title">💡 Stack Tecnológico</h2>
             <div class="skills__grid">
-                <div class="skill-card fade-in-up">
-                    <h3><i class="fas fa-code"></i> Java & Spring</h3>
-                    <ul>
-                        <li>Java 17+</li>
-                        <li>Spring Boot, Spring MVC, Spring Security</li>
-                        <li>JPA / Hibernate</li>
-                        <li>JUnit Testing</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card fade-in-up">
-                    <h3><i class="fab fa-node-js"></i> Node.js & JavaScript</h3>
-                    <ul>
-                        <li>Node.js (Express, REST APIs)</li>
-                        <li>JavaScript ES6+</li>
-                        <li>TypeScript</li>
-                        <li>Jest Testing</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card fade-in-up">
-                    <h3><i class="fab fa-react"></i> React</h3>
-                    <ul>
-                        <li>React.js</li>
-                        <li>Hooks & Context API</li>
-                        <li>Componentes reutilizables</li>
-                        <li>Consumo de APIs REST</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card fade-in-up">
-                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
-                    <ul>
-                        <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>H2 Database</li>
-                        <li>Diseño de esquemas relacionales</li>
-                        <li>Consultas SQL optimizadas</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card fade-in-up">
-                    <h3><i class="fab fa-docker"></i> DevOps & Herramientas</h3>
-                    <ul>
-                        <li>Docker & Docker Compose</li>
-                        <li>Git & GitHub</li>
-                        <li>Maven & Gradle</li>
-                        <li>Postman (Testing APIs)</li>
-                        <li>Linux/Ubuntu</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card fade-in-up">
-                    <h3><i class="fas fa-brain"></i> Java + AI/ML</h3>
-                    <ul>
-                        <li>Weka, JavaML</li>
-                        <li>Deeplearning4j</li>
-                        <li>CoreNLP & OpenNLP</li>
-                    </ul>
-                </div>
+                <!-- Los skills se cargarán dinámicamente desde portfolio-data.json -->
             </div>
         </section>
 
+        <!-- GitHub Stats Dashboard -->
+        <section id="github-stats">
+            <h2 class="section-title">📊 Estadísticas de GitHub</h2>
+            <div class="github-stats-loading">
+                <div class="spinner"></div>
+                <p>Cargando estadísticas de GitHub...</p>
+            </div>
+        </section>
+
+        <!-- Projects Section - Se renderizará dinámicamente con TypeScript -->
         <section class="projects" id="projects">
             <h2 class="section-title">🚀 Proyectos Destacados</h2>
+
+            <!-- Controles de filtrado y búsqueda se agregarán dinámicamente -->
+
             <div class="projects__grid">
-                <div class="project-card fade-in-up">
-                    <img src="assets/imagen de comvertidor.png" alt="Miniatura del proyecto de conversor de moneda."
-                        class="project-card__image">
-                    <h3 class="project-card__title">Conversor de Moneda</h3>
-                    <p class="project-card__description">App Java Swing con arquitectura MVC y validación robusta.
-                        Incluye tests con JUnit.</p>
-                    <div class="project-card__links"> <a href="https://github.com/ariel323/ComversorMoneda"
-                            target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver Código</a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in-up">
-                    <img src="assets/Restaurant Backend Application.jpg"
-                        alt="Miniatura del proyecto de API Backend de Restaurante." class="project-card__image">
-                    <h3 class="project-card__title">Restaurant Backend API</h3>
-                    <p class="project-card__description">Spring Boot API REST para gestionar menús y órdenes.
-                        Persistencia con JPA y arquitectura modular.</p>
-                    <div class="project-card__links"> <a href="https://github.com/ariel323/proyectoRetaurant"
-                            target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Ver Código</a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in-up">
-                    <img src="assets/imagenApiLiteratura.png" alt="Miniatura del proyecto Literalura"
-                        class="project-card__image">
-                    <h3 class="project-card__title">Literalura</h3>
-                    <p class="project-card__description">
-                        Aplicación Java que consume la API de Gutendex para explorar libros, autores y géneros
-                        literarios.
-                        Permite filtrar, buscar y almacenar información relevante en una base de datos relacional.
-                        <br>
-                        <strong>Tecnologías:</strong> Java 17+ , Maven , PostgreSQL , Consumo de APIs REST, Maven.
-                    </p>
-                    <div class="project-card__links">
-                        <a href="https://github.com/ariel323/challenge-literalura/tree/main" target="_blank"
-                            rel="noopener noreferrer" class="btn btn--secondary">
-                            Ver Código
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in-up">
-                    <img src="assets/imagenGestor.png" alt="Miniatura del proyecto Gestor de Clientes"
-                        class="project-card__image">
-                    <h3 class="project-card__title">Gestor de Clientes</h3>
-                    <p class="project-card__description">
-                        Aplicación web desarrollada en React para la gestión eficiente de clientes. Permite agregar,
-                        editar, eliminar y visualizar información de clientes de manera intuitiva y dinámica.<br>
-                        <strong>Tecnologías:</strong> React, JavaScript (ES6+), CSS Modules, Hooks.
-                    </p>
-                    <div class="project-card__links">
-                        <a href="https://gestor-de-clientes.netlify.app/" target="_blank" rel="noopener noreferrer"
-                            class="btn btn--primary">
-                            Ver Demo
-                        </a>
-                        <a href="https://github.com/ariel323/GestorDeClientes" target="_blank" rel="noopener noreferrer"
-                            class="btn btn--secondary">
-                            Ver Código
-                        </a>
-                    </div>
-                </div>
+                <!-- Los proyectos se cargarán dinámicamente desde portfolio-data.json -->
             </div>
         </section>
 
-        <!-- Agregar esta sección después de la sección "projects" y antes de "contact" -->
-        <section class="docker-projects" id="docker-projects">
-            <h2 class="section-title">🐳 Proyectos con Docker</h2>
-            <div class="projects__grid">
-                <div class="project-card fade-in-up">
-                    <img src="assets/doker.png" alt="Proyecto Docker Caso 001" class="project-card__image">
-                    <h3 class="project-card__title">Caso 01 - Aplicación Containerizada</h3>
-                    <p class="project-card__description">
-                        Aplicación completa containerizada con Docker. Incluye aplicación principal y base de datos
-                        MySQL en contenedores separados.<br>
-                        <strong>Tecnologías:</strong> Docker, MySQL, Arquitectura de Microservicios.
-                    </p>
 
-                    <div class="docker-commands-section">
-                        <h4>🚀 Comandos Docker:</h4>
-                        <div class="docker-command">
-                            <code>docker pull ariel234/caso-001-app:latest</code>
-                            <button class="copy-btn"
-                                onclick="copyToClipboard('docker pull ariel234/caso-001-app:latest')">📋</button>
-                        </div>
-                        <div class="docker-command">
-                            <code>docker pull ariel234/caso-001-mysql:latest</code>
-                            <button class="copy-btn"
-                                onclick="copyToClipboard('docker pull ariel234/caso-001-mysql:latest')">📋</button>
-                        </div>
-                    </div>
 
-                    <div class="project-card__links">
-                        <a href="https://hub.docker.com/u/ariel234" target="_blank" rel="noopener noreferrer"
-                            class="btn btn--primary">
-                            Ver en Docker Hub
-                        </a>
-                        <a href="https://github.com/ariel323/estructura-caso-001" target="_blank" rel="noopener noreferrer"
-                            class="btn btn--secondary">
-                            Ver Código
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card con instrucciones de uso -->
-                <div class="project-card fade-in-up docker-instructions">
-                    <h3 class="project-card__title">🔧 Instrucciones de Uso</h3>
-                    <div class="instructions-content">
-                        <h4>1. Descargar las imágenes:</h4>
-                        <div class="docker-command">
-                            <code>docker pull ariel234/caso-001-app:latest</code>
-                        </div>
-                        <div class="docker-command">
-                            <code>docker pull ariel234/caso-001-mysql:latest</code>
-                        </div>
-
-                        <h4>2. Ejecutar MySQL:</h4>
-                        <div class="docker-command">
-                            <code>docker run -d --name mysql-db ariel234/caso-001-mysql:latest</code>
-                        </div>
-
-                        <h4>3. Ejecutar la aplicación:</h4>
-                        <div class="docker-command">
-                            <code>docker run -d --link mysql-db --name app ariel234/caso-001-app:latest</code>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- Contact Section -->
         <section class="contact" id="contact">
             <h2 class="section-title">📬 Hablemos</h2>
-            <p class="contact__intro-text">Estoy abierto a nuevas oportunidades y siempre busco colaborar en proyectos
-                interesantes. No dudes en contactarme.</p>
+            <p class="contact__intro-text">
+                Estoy abierto a nuevas oportunidades y siempre busco colaborar en proyectos
+                interesantes. ¿Tienes un proyecto en mente? ¡Hablemos!
+            </p>
             <div class="contact__links-container">
                 <a href="https://www.linkedin.com/in/ariel-almada-4a7133346/" target="_blank" rel="noopener noreferrer"
-                    class="contact__link">
+                    class="contact__link contact__link--linkedin">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://github.com/ariel323" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <a href="https://github.com/ariel323" target="_blank" rel="noopener noreferrer"
+                    class="contact__link contact__link--github">
                     <i class="fab fa-github"></i> GitHub
                 </a>
-                <a href="mailto:arielalmada861@gmail.com" class="contact__link">
+                <a href="mailto:arielalmada861@gmail.com" class="contact__link contact__link--email">
                     <i class="fas fa-envelope"></i> Email
                 </a>
-                <a href="https://wa.me/5493434475095" target="_blank" rel="noopener noreferrer" class="contact__link">
+                <a href="https://wa.me/5493434475095" target="_blank" rel="noopener noreferrer"
+                    class="contact__link contact__link--whatsapp">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <p class="footer__text">Diseñado y Desarrollado por Ariel Almada &copy; 2025</p>
+        <p class="footer__text">
+            Diseñado y Desarrollado con ❤️ por Ariel Almada &copy; 2025
+            <br>
+            <span style="font-size: 0.875rem; opacity: 0.7;">
+                Hecho con TypeScript + Three.js + GSAP
+            </span>
+        </p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in-up').forEach(element => {
-                observer.observe(element);
-            });
-        });
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function () {
-                // Mostrar feedback visual
-                const button = event.target;
-                const originalText = button.textContent;
-                button.textContent = '✅';
-                setTimeout(() => {
-                    button.textContent = originalText;
-                }, 2000);
-            });
-        }
-    </script>
+    <!-- TypeScript Main Entry Point - Vite se encargará de compilar y bundlear -->
+    <script type="module" src="/src/main.ts"></script>
 </body>
 
 </html>
