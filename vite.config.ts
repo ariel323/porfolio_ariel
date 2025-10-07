@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig(({ command }) => ({
-  base: command === "build" ? "/porfolio_ariel/" : "/",
+  base: "/",
   resolve: {
     alias: {
       "@": resolve(__dirname, "./src"),
