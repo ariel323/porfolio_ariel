@@ -163,7 +163,7 @@ class Portfolio {
 
       mobileToggle.addEventListener("click", () => {
         const isActive = mobileMenu.classList.contains("header__menu--active");
-        
+
         if (isActive) {
           closeMobileMenu();
         } else {
@@ -182,14 +182,18 @@ class Portfolio {
           left: rect.right - 60,
           right: rect.right - 12,
           top: rect.top + 12,
-          bottom: rect.top + 60
+          bottom: rect.top + 60,
         };
 
         const x = mouseEvent.clientX;
         const y = mouseEvent.clientY;
 
-        if (x >= closeButtonArea.left && x <= closeButtonArea.right && 
-            y >= closeButtonArea.top && y <= closeButtonArea.bottom) {
+        if (
+          x >= closeButtonArea.left &&
+          x <= closeButtonArea.right &&
+          y >= closeButtonArea.top &&
+          y <= closeButtonArea.bottom
+        ) {
           closeMobileMenu();
         }
       });
