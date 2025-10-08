@@ -149,34 +149,54 @@ class Portfolio {
     const mobileOverlay = document.getElementById("menu-overlay");
 
     if (mobileToggle && mobileMenu && mobileOverlay) {
+      const closeMobileMenu = () => {
+        mobileMenu.classList.remove("header__menu--active");
+        mobileOverlay.classList.remove("header__overlay--active");
+        mobileToggle.classList.remove("header__mobile-toggle--active");
+      };
+
+      const openMobileMenu = () => {
+        mobileMenu.classList.add("header__menu--active");
+        mobileOverlay.classList.add("header__overlay--active");
+        mobileToggle.classList.add("header__mobile-toggle--active");
+      };
+
       mobileToggle.addEventListener("click", () => {
         const isActive = mobileMenu.classList.contains("header__menu--active");
         
         if (isActive) {
-          mobileMenu.classList.remove("header__menu--active");
-          mobileOverlay.classList.remove("header__overlay--active");
-          mobileToggle.classList.remove("header__mobile-toggle--active");
+          closeMobileMenu();
         } else {
-          mobileMenu.classList.add("header__menu--active");
-          mobileOverlay.classList.add("header__overlay--active");
-          mobileToggle.classList.add("header__mobile-toggle--active");
+          openMobileMenu();
         }
       });
 
       // Close menu when clicking overlay
-      mobileOverlay.addEventListener("click", () => {
-        mobileMenu.classList.remove("header__menu--active");
-        mobileOverlay.classList.remove("header__overlay--active");
-        mobileToggle.classList.remove("header__mobile-toggle--active");
+      mobileOverlay.addEventListener("click", closeMobileMenu);
+
+      // Close menu when clicking the X button (pseudo-element area)
+      mobileMenu.addEventListener("click", (e) => {
+        const mouseEvent = e as MouseEvent;
+        const rect = mobileMenu.getBoundingClientRect();
+        const closeButtonArea = {
+          left: rect.right - 60,
+          right: rect.right - 12,
+          top: rect.top + 12,
+          bottom: rect.top + 60
+        };
+
+        const x = mouseEvent.clientX;
+        const y = mouseEvent.clientY;
+
+        if (x >= closeButtonArea.left && x <= closeButtonArea.right && 
+            y >= closeButtonArea.top && y <= closeButtonArea.bottom) {
+          closeMobileMenu();
+        }
       });
 
       // Close menu when clicking a nav link
-      document.querySelectorAll('.header__menu__link').forEach(link => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.remove("header__menu--active");
-          mobileOverlay.classList.remove("header__overlay--active");
-          mobileToggle.classList.remove("header__mobile-toggle--active");
-        });
+      document.querySelectorAll(".header__menu__link").forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
       });
     }
 
