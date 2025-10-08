@@ -143,6 +143,43 @@ class Portfolio {
       });
     });
 
+    // Mobile menu toggle
+    const mobileToggle = document.getElementById("mobile-toggle");
+    const mobileMenu = document.querySelector(".header__menu");
+    const mobileOverlay = document.getElementById("menu-overlay");
+
+    if (mobileToggle && mobileMenu && mobileOverlay) {
+      mobileToggle.addEventListener("click", () => {
+        const isActive = mobileMenu.classList.contains("header__menu--active");
+        
+        if (isActive) {
+          mobileMenu.classList.remove("header__menu--active");
+          mobileOverlay.classList.remove("header__overlay--active");
+          mobileToggle.classList.remove("header__mobile-toggle--active");
+        } else {
+          mobileMenu.classList.add("header__menu--active");
+          mobileOverlay.classList.add("header__overlay--active");
+          mobileToggle.classList.add("header__mobile-toggle--active");
+        }
+      });
+
+      // Close menu when clicking overlay
+      mobileOverlay.addEventListener("click", () => {
+        mobileMenu.classList.remove("header__menu--active");
+        mobileOverlay.classList.remove("header__overlay--active");
+        mobileToggle.classList.remove("header__mobile-toggle--active");
+      });
+
+      // Close menu when clicking a nav link
+      document.querySelectorAll('.header__menu__link').forEach(link => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.remove("header__menu--active");
+          mobileOverlay.classList.remove("header__overlay--active");
+          mobileToggle.classList.remove("header__mobile-toggle--active");
+        });
+      });
+    }
+
     // Theme toggle (if implemented)
     const themeToggle = document.getElementById("theme-toggle");
     if (themeToggle) {
