@@ -273,4 +273,11 @@ export class ProjectsManager {
   getExperience() {
     return this.data?.experience || [];
   }
+
+  /**
+   * Get all portfolio data
+   */
+  getData(): PortfolioData | null {
+    return this.data;
+  }
 }

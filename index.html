@@ -57,10 +57,12 @@
 
             <nav class="header__menu" aria-label="Navegación principal">
                 <a class="header__menu__link" href="#home"><span>01.</span> Inicio</a>
-                <a class="header__menu__link" href="#skills"><span>02.</span> Habilidades</a>
-                <a class="header__menu__link" href="#projects"><span>03.</span> Proyectos</a>
-                <a class="header__menu__link" href="#github-stats"><span>04.</span> GitHub</a>
-                <a class="header__menu__link" href="#contact"><span>05.</span> Contacto</a>
+                <a class="header__menu__link" href="#terminal"><span>02.</span> Terminal</a>
+                <a class="header__menu__link" href="#code-lab"><span>03.</span> Code Lab</a>
+                <a class="header__menu__link" href="#dashboard"><span>04.</span> Dashboard</a>
+                <a class="header__menu__link" href="#skills"><span>05.</span> Skills</a>
+                <a class="header__menu__link" href="#projects"><span>06.</span> Proyectos</a>
+                <a class="header__menu__link" href="#contact"><span>07.</span> Contacto</a>
             </nav>
 
             <!-- Theme Toggle (opcional) -->
@@ -155,6 +157,35 @@
             </a>
         </section>
 
+        <!-- Interactive Terminal Section -->
+        <section class="section-modern" id="terminal">
+            <h2 class="section-title">💻 Interactive Terminal</h2>
+            <p class="section-intro">
+                Explora mi portafolio de una manera única. Usa comandos como <code>help</code>, <code>projects</code>,
+                <code>skills</code>, o descubre easter eggs!
+            </p>
+            <div id="interactive-terminal"></div>
+        </section>
+
+        <!-- Code Editor / Lab Section -->
+        <section class="section-modern" id="code-lab">
+            <h2 class="section-title">🔬 Code Laboratory</h2>
+            <p class="section-intro">
+                Navega por mis proyectos como si estuvieras en VSCode. Explora el código, revisa las tecnologías y mira
+                las previews.
+            </p>
+            <div id="code-editor"></div>
+        </section>
+
+        <!-- Live Dashboard Section -->
+        <section class="section-modern" id="dashboard">
+            <h2 class="section-title">📊 Developer Dashboard</h2>
+            <p class="section-intro">
+                Métricas en tiempo real, actividad de commits, distribución de lenguajes y estado de deployments.
+            </p>
+            <div id="live-dashboard"></div>
+        </section>
+
         <!-- Skills Section - Se renderizará dinámicamente con TypeScript -->
         <section class="skills" id="skills">
             <h2 class="section-title">💡 Stack Tecnológico</h2>
@@ -163,12 +194,29 @@
             </div>
         </section>
 
-        <!-- GitHub Stats Dashboard -->
-        <section id="github-stats">
-            <h2 class="section-title">📊 Estadísticas de GitHub</h2>
-            <div class="github-stats-loading">
-                <div class="spinner"></div>
-                <p>Cargando estadísticas de GitHub...</p>
+        <!-- Experience Section - Timeline profesional -->
+        <section class="experience" id="experience">
+            <h2 class="section-title">� Experiencia Profesional</h2>
+
+            <!-- Timeline de experiencia -->
+            <div class="experience__timeline" id="experience-timeline">
+                <!-- Se renderizará dinámicamente desde ExperienceTimeline.ts -->
+            </div>
+
+            <!-- Educación -->
+            <div class="experience__education">
+                <h3 class="subsection-title">🎓 Formación Académica</h3>
+                <div class="education__grid" id="education-grid">
+                    <!-- Se renderizará dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Certificaciones -->
+            <div class="experience__certifications">
+                <h3 class="subsection-title">🏆 Certificaciones</h3>
+                <div class="certifications__carousel" id="certifications-carousel">
+                    <!-- Se renderizará dinámicamente -->
+                </div>
             </div>
         </section>
 
@@ -180,6 +228,15 @@
 
             <div class="projects__grid">
                 <!-- Los proyectos se cargarán dinámicamente desde portfolio-data.json -->
+            </div>
+        </section>
+
+        <!-- GitHub Stats Dashboard -->
+        <section id="github-stats">
+            <h2 class="section-title">📊 Estadísticas de GitHub</h2>
+            <div class="github-stats-loading">
+                <div class="spinner"></div>
+                <p>Cargando estadísticas de GitHub...</p>
             </div>
         </section>
 

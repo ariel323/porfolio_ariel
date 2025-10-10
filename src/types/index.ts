@@ -50,11 +50,52 @@ export interface Profile {
   whatsapp: string;
 }
 
+// Experience Types
+export interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  companyUrl?: string;
+  location: string;
+  period: {
+    start: string; // "YYYY-MM"
+    end: string | "present";
+  };
+  description: string;
+  achievements: string[];
+  technologies: string[];
+  type: "full-time" | "freelance" | "contract" | "internship";
+}
+
+export interface Education {
+  id: string;
+  degree: string;
+  institution: string;
+  period: {
+    start: string; // "YYYY"
+    end: string;
+  };
+  description?: string;
+  achievements?: string[];
+}
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  date: string; // "YYYY-MM"
+  credentialUrl?: string;
+  logo?: string;
+}
+
 export interface PortfolioData {
   profile: Profile;
   skills: Skill[];
   projects: Project[];
   experience: string[];
+  experiences?: Experience[];
+  education?: Education[];
+  certifications?: Certification[];
   metadata: {
     lastUpdated: string;
     version: string;

@@ -3,6 +3,10 @@ import { GitHubAPI } from "@utils/GitHubAPI";
 import { ParticlesSystem } from "@components/ParticlesSystem";
 import { AnimationsController } from "@components/AnimationsController";
 import { UIComponents } from "@components/UIComponents";
+import { ExperienceTimeline } from "@components/ExperienceTimeline";
+import { InteractiveTerminal } from "@components/InteractiveTerminal";
+import { CodeEditor } from "@components/CodeEditor";
+import { LiveDashboard } from "@components/LiveDashboard";
 import "./styles/main.css";
 
 class Portfolio {
@@ -11,6 +15,10 @@ class Portfolio {
   private particlesSystem: ParticlesSystem | null = null;
   private animationsController: AnimationsController;
   private uiComponents: UIComponents;
+  private experienceTimeline: ExperienceTimeline | null = null;
+  private terminal: InteractiveTerminal | null = null;
+  private codeEditor: CodeEditor | null = null;
+  private dashboard: LiveDashboard | null = null;
 
   constructor() {
     this.projectsManager = new ProjectsManager();
@@ -95,11 +103,91 @@ class Portfolio {
     // Render skills section
     this.uiComponents.renderSkills();
 
+    // Render interactive terminal
+    this.renderTerminal();
+
+    // Render code editor
+    this.renderCodeEditor();
+
+    // Render live dashboard
+    this.renderDashboard();
+
+    // Render experience timeline
+    this.renderExperienceTimeline();
+
     // Render projects with filters
     this.uiComponents.renderProjectsWithFilters();
 
     // Render experience
     this.uiComponents.renderExperience();
+  }
+
+  /**
+   * Render interactive terminal
+   */
+  private renderTerminal(): void {
+    const data = this.projectsManager.getData();
+    if (data) {
+      try {
+        this.terminal = new InteractiveTerminal("interactive-terminal", data);
+        console.log("✅ Interactive terminal rendered");
+      } catch (error) {
+        console.warn(
+          "⚠️ Terminal container not found, skipping terminal render"
+        );
+      }
+    }
+  }
+
+  /**
+   * Render code editor
+   */
+  private renderCodeEditor(): void {
+    const data = this.projectsManager.getData();
+    if (data) {
+      try {
+        this.codeEditor = new CodeEditor("code-editor", data);
+        console.log("✅ Code editor rendered");
+      } catch (error) {
+        console.warn(
+          "⚠️ Code editor container not found, skipping editor render"
+        );
+      }
+    }
+  }
+
+  /**
+   * Render live dashboard
+   */
+  private renderDashboard(): void {
+    try {
+      this.dashboard = new LiveDashboard("live-dashboard");
+      console.log("✅ Live dashboard rendered");
+    } catch (error) {
+      console.warn(
+        "⚠️ Dashboard container not found, skipping dashboard render"
+      );
+    }
+  }
+
+  /**
+   * Render experience timeline section
+   */
+  private renderExperienceTimeline(): void {
+    const data = this.projectsManager.getData();
+
+    // Only render if data is available
+    if (data?.experiences && data?.education && data?.certifications) {
+      this.experienceTimeline = new ExperienceTimeline({
+        experiences: data.experiences,
+        education: data.education,
+        certifications: data.certifications,
+      });
+      this.experienceTimeline.render();
+      console.log("✅ Experience timeline rendered");
+    } else {
+      console.warn("⚠️ Experience data not available");
+    }
   }
 
   /**
@@ -115,6 +203,11 @@ class Portfolio {
       this.uiComponents.renderGitHubStats(stats);
       this.uiComponents.renderGitHubRepositories(repos);
       this.uiComponents.updateProjectsWithGitHubData(repos);
+
+      // Update dashboard with GitHub data
+      if (this.dashboard) {
+        this.dashboard.updateStats(stats, repos);
+      }
 
       console.log("✅ GitHub data loaded");
     } catch (error) {
@@ -310,6 +403,15 @@ class Portfolio {
   destroy(): void {
     if (this.particlesSystem) {
       this.particlesSystem.destroy();
+    }
+    if (this.terminal) {
+      this.terminal.destroy();
+    }
+    if (this.codeEditor) {
+      this.codeEditor.destroy();
+    }
+    if (this.dashboard) {
+      this.dashboard.destroy();
     }
     this.animationsController.destroy();
   }

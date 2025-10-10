@@ -6,7 +6,11 @@
 @import url("./variables.css");
 @import url("./components/header.css");
 @import url("./components/hero.css");
+@import url("./components/terminal.css");
+@import url("./components/code-editor.css");
+@import url("./components/dashboard.css");
 @import url("./components/skills.css");
+@import url("./components/experience.css");
 @import url("./components/projects.css");
 @import url("./components/github-stats.css");
 @import url("./components/contact.css");
@@ -76,6 +80,33 @@ section {
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
+}
+
+/* Modern sections with special styling */
+.section-modern {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-intro {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: -10px auto 40px;
+  line-height: 1.7;
+}
+
+.section-intro code {
+  background: rgba(100, 255, 218, 0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
 .section-title {

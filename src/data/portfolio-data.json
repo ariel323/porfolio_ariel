@@ -285,8 +285,182 @@
     "Testing con JUnit, Jest y herramientas modernas",
     "Git, metodologías ágiles y buenas prácticas de Clean Code"
   ],
+  "experiences": [
+    {
+      "id": "exp-1",
+      "role": "Desarrollador Full Stack",
+      "company": "Proyectos Personales",
+      "location": "Remoto",
+      "period": {
+        "start": "2025-01",
+        "end": "present"
+      },
+      "type": "personal",
+      "description": "Desarrollo de proyectos personales full-stack desde enero 2025, comenzando con el primer proyecto de certificación. Enfoque en crear aplicaciones web completas utilizando tecnologías modernas como Java, Spring Boot, React y bases de datos relacionales.",
+      "achievements": [
+        "Desarrollo de múltiples proyectos full-stack desde cero aplicando mejores prácticas",
+        "Implementación de arquitecturas RESTful con Spring Boot y Spring MVC",
+        "Gestión de bases de datos relacionales con MySQL aplicando normalización y optimización",
+        "Integración de APIs externas y servicios de terceros en aplicaciones web",
+        "Containerización de aplicaciones con Docker para facilitar despliegue y escalabilidad"
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Spring MVC",
+        "MySQL",
+        "React",
+        "TypeScript",
+        "Docker",
+        "Git",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "role": "Desarrollador Backend",
+      "company": "Proyecto Open Source",
+      "location": "Remoto",
+      "period": {
+        "start": "2025-07",
+        "end": "2025-08"
+      },
+      "type": "opensource",
+      "description": "Primera experiencia trabajando en equipo real en un proyecto open source durante julio-agosto 2025. Desarrollo colaborativo de una API en Node.js puro (sin frameworks como Express), implementando servidor HTTP nativo, gestión de rutas, integración con base de datos y dockerización completa del proyecto.",
+      "achievements": [
+        "Desarrollo de API RESTful con Node.js puro sin usar frameworks externos",
+        "Implementación de servidor HTTP nativo y sistema de enrutamiento personalizado",
+        "Integración y optimización de base de datos relacional con consultas SQL eficientes",
+        "Dockerización completa del proyecto incluyendo aplicación y base de datos con Docker Compose",
+        "Trabajo colaborativo con equipo real usando Git, pull requests y code reviews",
+        "Aplicación de metodologías ágiles y buenas prácticas de desarrollo en equipo"
+      ],
+      "technologies": [
+        "Node.js",
+        "JavaScript ES6+",
+        "SQL",
+        "Docker",
+        "Docker Compose",
+        "Git",
+        "HTTP Protocol",
+        "REST APIs"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "Programa Oracle ONE - Especialización en Desarrollo Backend",
+      "institution": "Alura Latam + Oracle",
+      "period": {
+        "start": "2025-01",
+        "end": "2025-10"
+      },
+      "description": "Formación intensiva en desarrollo backend con Java, Spring Framework, bases de datos MySQL y tecnologías de la nube. Programa Oracle Next Education en colaboración con Alura Latam (AOVS Sistemas de Informática S.A - CNPJ: 05.555.382/0001-33).",
+      "achievements": [
+        "Completado el programa completo Oracle ONE con certificación oficial",
+        "Desarrollo de proyectos prácticos: Conversor de Monedas, API de Literatura, Gestor de Tareas",
+        "Especialización en Java SE, Spring Boot, Spring Data JPA y MySQL",
+        "Formación en IA generativa: ChatGPT, Spring AI y Engineering Prompts",
+        "Carga horaria total: +200 horas de formación práctica",
+        "Dominio de comandos DML, consultas SQL avanzadas y Oracle SQL Developer"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "name": "Certificado de finalización del programa Oracle ONE",
+      "issuer": "Oracle + Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-2",
+      "name": "Java: creando tu primera aplicación",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-3",
+      "name": "Introducción a la Programación",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-4",
+      "name": "Java: trabajando con lambdas, streams y Spring Framework",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-5",
+      "name": "Java: persistencia de datos y consultas con Spring Data JPA",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-6",
+      "name": "Practicando con Java: Challenge Conversor de Monedas",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-7",
+      "name": "ChatGPT y programación: aumenta tu productividad",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-8",
+      "name": "Aprendizaje con IA: personalizando tu rutina con ChatGPT",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-9",
+      "name": "Spring AI: Integra una aplicación con OpenAI",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-10",
+      "name": "Ingeniería de Prompt: creando prompts eficaces para la IA generativa",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-11",
+      "name": "Linux: conociendo y utilizando la terminal",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-12",
+      "name": "Comandos DML: Manipulación de datos con MySQL",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-13",
+      "name": "Introducción a SQL con MySQL: Manipule y consulte",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-14",
+      "name": "Consultas SQL: Avanzando en SQL con MySQL",
+      "issuer": "Alura Latam",
+      "date": "2025"
+    },
+    {
+      "id": "cert-15",
+      "name": "Oracle SQL Developer",
+      "issuer": "Oracle + Alura Latam",
+      "date": "2025"
+    }
+  ],
   "metadata": {
-    "lastUpdated": "2025-10-07",
-    "version": "2.0.0"
+    "lastUpdated": "2025-10-10",
+    "version": "2.1.0"
   }
 }
