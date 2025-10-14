@@ -1,0 +1,289 @@
+/* ========================================
+   VISUAL IDENTITY - Cursor & Microinteracciones
+   ======================================== */
+
+/* Ocultar cursor por defecto en desktop */
+@media (min-width: 1024px) {
+  body {
+    cursor: none;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    cursor: none;
+  }
+}
+
+/* ===== CUSTOM CURSOR ===== */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--brand-primary, #00d9ff);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  mix-blend-mode: difference;
+  transition: transform 0.2s ease, background 0.2s ease;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor.cursor-hover {
+  transform: translate(-50%, -50%) scale(0.5);
+  background: var(--brand-accent, #fbbf24);
+}
+
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--brand-primary, #00d9ff);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.3;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.custom-cursor-follower.cursor-hover {
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+  border-color: var(--brand-accent, #fbbf24);
+}
+
+/* ===== RIPPLE EFFECT ===== */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: ripple-animation 0.6s ease-out;
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}
+
+/* ===== ANIMATED UNDERLINE ===== */
+.animated-underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--brand-primary, #00d9ff),
+    var(--brand-accent, #fbbf24)
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+a {
+  position: relative;
+}
+
+/* ===== PALETA DE COLORES BRAND ===== */
+:root {
+  /* Primarios */
+  --brand-primary: #00d9ff;
+  --brand-primary-dark: #00a8cc;
+  --brand-primary-light: #64ffda;
+
+  /* Secundarios */
+  --brand-secondary: #8b5cf6;
+  --brand-secondary-dark: #6d28d9;
+  --brand-secondary-light: #a78bfa;
+
+  /* Acentos */
+  --brand-accent: #fbbf24;
+  --brand-accent-dark: #f59e0b;
+  --brand-accent-light: #fde047;
+
+  /* Backgrounds */
+  --brand-bg-primary: #0a0e27;
+  --brand-bg-secondary: #0f172a;
+  --brand-bg-tertiary: #1e293b;
+
+  /* Textos */
+  --brand-text-primary: #f8fafc;
+  --brand-text-secondary: #cbd5e1;
+  --brand-text-tertiary: #94a3b8;
+
+  /* Tipografía */
+  --text-xs: 0.8rem;
+  --text-sm: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.563rem;
+  --text-xl: 1.953rem;
+  --text-2xl: 2.441rem;
+  --text-3xl: 3.052rem;
+  --text-4xl: 3.815rem;
+
+  --leading-tight: 1.2;
+  --leading-normal: 1.6;
+  --leading-loose: 2;
+}
+
+/* ===== GLASSMORPHISM CARDS ===== */
+.glass-card {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(30, 41, 59, 0.6);
+  border-color: rgba(100, 255, 218, 0.3);
+  box-shadow: 0 12px 48px rgba(0, 217, 255, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--brand-primary) 0%,
+    var(--brand-accent) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-primary {
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3), 0 0 40px rgba(0, 217, 255, 0.1);
+}
+
+.glow-accent {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3), 0 0 40px rgba(251, 191, 36, 0.1);
+}
+
+/* ===== LOADING STATES ===== */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 41, 59, 0.4) 0%,
+    rgba(100, 255, 218, 0.1) 50%,
+    rgba(30, 41, 59, 0.4) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ===== PULSE ANIMATION ===== */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ===== SMOOTH SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--brand-primary) 0%,
+    var(--brand-secondary) 100%
+  );
+  border-radius: 10px;
+  border: 2px solid var(--brand-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--brand-primary-light) 0%,
+    var(--brand-secondary-light) 100%
+  );
+}
+
+/* ===== SELECTION STYLING ===== */
+::selection {
+  background: var(--brand-primary);
+  color: var(--brand-bg-primary);
+}
+
+::-moz-selection {
+  background: var(--brand-primary);
+  color: var(--brand-bg-primary);
+}
+
+/* ===== MOBILE: Deshabilitar cursor custom ===== */
+@media (max-width: 1023px) {
+  .custom-cursor,
+  .custom-cursor-follower {
+    display: none;
+  }
+
+  body {
+    cursor: auto;
+  }
+}
+
+/* ===== NOISE TEXTURE (sutil) ===== */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' /%3E%3C/svg%3E");
+}

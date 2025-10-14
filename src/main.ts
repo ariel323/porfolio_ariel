@@ -7,6 +7,8 @@ import { ExperienceTimeline } from "@components/ExperienceTimeline";
 import { InteractiveTerminal } from "@components/InteractiveTerminal";
 import { CodeEditor } from "@components/CodeEditor";
 import { LiveDashboard } from "@components/LiveDashboard";
+import { NarrativeScroll } from "@components/NarrativeScroll";
+import { VisualIdentity } from "@components/VisualIdentity";
 import "./styles/main.css";
 
 class Portfolio {
@@ -19,6 +21,8 @@ class Portfolio {
   private terminal: InteractiveTerminal | null = null;
   private codeEditor: CodeEditor | null = null;
   private dashboard: LiveDashboard | null = null;
+  private narrativeScroll: NarrativeScroll | null = null;
+  private visualIdentity: VisualIdentity | null = null;
 
   constructor() {
     this.projectsManager = new ProjectsManager();
@@ -50,6 +54,14 @@ class Portfolio {
       // Initialize animations
       this.animationsController.init();
       console.log("✅ Animations initialized");
+
+      // Initialize narrative scroll system
+      this.narrativeScroll = new NarrativeScroll();
+      console.log("✅ Narrative scroll initialized");
+
+      // Initialize visual identity (cursor, microinteractions)
+      this.visualIdentity = new VisualIdentity();
+      console.log("✅ Visual identity applied");
 
       // Setup event listeners
       this.setupEventListeners();
@@ -412,6 +424,12 @@ class Portfolio {
     }
     if (this.dashboard) {
       this.dashboard.destroy();
+    }
+    if (this.narrativeScroll) {
+      this.narrativeScroll.destroy();
+    }
+    if (this.visualIdentity) {
+      this.visualIdentity.destroy();
     }
     this.animationsController.destroy();
   }
