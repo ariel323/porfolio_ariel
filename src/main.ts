@@ -36,6 +36,9 @@ class Portfolio {
    */
   async init(): Promise<void> {
     try {
+      // Force scroll to top on page load
+      window.scrollTo(0, 0);
+
       console.log("🚀 Initializing Portfolio...");
 
       // Show loading state

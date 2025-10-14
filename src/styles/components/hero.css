@@ -7,8 +7,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: calc(80px + var(--spacing-2xl));
-  padding-bottom: var(--spacing-2xl);
+  padding-top: 80px;
+  padding-bottom: var(--spacing-xl);
   position: relative;
   overflow: hidden;
 }

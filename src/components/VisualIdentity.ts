@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 
 /**
  * 🎨 VisualIdentity - Sistema de identidad visual única
- * 
+ *
  * Define la personalidad visual del portfolio:
  * - Paleta de colores distintiva
  * - Tipografía con carácter

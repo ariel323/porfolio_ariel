@@ -15,6 +15,7 @@ Este portfolio ha sido completamente transformado de una "presentación de secci
 ### 📝 Características:
 
 - **5 Escenas narrativas** con transiciones fluidas:
+
   1. **Opening** (Hero) - "El comienzo de la historia" - Mood: Inspirational
   2. **Journey** (Skills) - "Las herramientas del viaje" - Mood: Technical
   3. **Creations** (Projects) - "Lo que he construido" - Mood: Creative
@@ -61,14 +62,14 @@ Este portfolio ha sido completamente transformado de una "presentación de secci
 
 Cada interacción comunica algo sobre el desarrollador:
 
-| Efecto            | ¿Qué comunica?       | Implementación                |
-| ----------------- | -------------------- | ----------------------------- |
-| **Ripple**        | Precisión            | Botones con efecto de ondas   |
-| **Magnetic**      | Atención al detalle  | Cards que "sienten" el cursor |
-| **Underline**     | Elegancia            | Links con línea animada       |
-| **Smooth scroll** | Fluidez profesional  | GSAP ScrollToPlugin           |
-| **Glow effects**  | Tecnología avanzada  | Box-shadows animados          |
-| **Glassmorphism** | Modernidad           | Backdrop-filter en cards      |
+| Efecto            | ¿Qué comunica?      | Implementación                |
+| ----------------- | ------------------- | ----------------------------- |
+| **Ripple**        | Precisión           | Botones con efecto de ondas   |
+| **Magnetic**      | Atención al detalle | Cards que "sienten" el cursor |
+| **Underline**     | Elegancia           | Links con línea animada       |
+| **Smooth scroll** | Fluidez profesional | GSAP ScrollToPlugin           |
+| **Glow effects**  | Tecnología avanzada | Box-shadows animados          |
+| **Glassmorphism** | Modernidad          | Backdrop-filter en cards      |
 
 ### 📖 Tipografía con Carácter
 
@@ -139,19 +140,19 @@ El portfolio ahora comunica:
 
 ### 🌊 Cada animación comunica
 
-| Animación                | Mensaje                  | Tecnología     |
-| ------------------------ | ------------------------ | -------------- |
-| Transiciones fluidas     | Profesionalismo          | GSAP + ScrollT |
-| Cursor reactivo          | Atención al detalle      | GSAP + Events  |
-| Mood transitions         | Adaptabilidad            | CSS Gradients  |
-| Magnetic cards           | Interacción intuitiva    | GSAP mousemove |
-| Scroll cinematográfico   | Storytelling             | ScrollTrigger  |
-| Partículas contextuales  | Ambiente dinámico        | Three.js       |
-| Ripple en botones        | Feedback inmediato       | CSS Animation  |
-| Glow en hover            | Enfoque visual           | Box-shadow     |
-| Skeleton loading         | Transparencia de proceso | CSS Animation  |
-| Smooth scrollbar         | Experiencia pulida       | CSS Styling    |
-| Text gradients           | Modernidad tecnológica   | background-cli |
+| Animación               | Mensaje                  | Tecnología     |
+| ----------------------- | ------------------------ | -------------- |
+| Transiciones fluidas    | Profesionalismo          | GSAP + ScrollT |
+| Cursor reactivo         | Atención al detalle      | GSAP + Events  |
+| Mood transitions        | Adaptabilidad            | CSS Gradients  |
+| Magnetic cards          | Interacción intuitiva    | GSAP mousemove |
+| Scroll cinematográfico  | Storytelling             | ScrollTrigger  |
+| Partículas contextuales | Ambiente dinámico        | Three.js       |
+| Ripple en botones       | Feedback inmediato       | CSS Animation  |
+| Glow en hover           | Enfoque visual           | Box-shadow     |
+| Skeleton loading        | Transparencia de proceso | CSS Animation  |
+| Smooth scrollbar        | Experiencia pulida       | CSS Styling    |
+| Text gradients          | Modernidad tecnológica   | background-cli |
 
 ---
 

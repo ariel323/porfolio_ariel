@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 /**
  * 🌌 NarrativeScroll - Sistema de scroll narrativo que transforma
  * el portfolio en una experiencia cinematográfica fluida.
- * 
+ *
  * En lugar de secciones estáticas, el usuario "viaja" por tu historia.
  */
 export class NarrativeScroll {
