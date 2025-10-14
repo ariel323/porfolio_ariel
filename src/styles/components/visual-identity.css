@@ -274,6 +274,47 @@ a {
   }
 }
 
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+@media (max-width: 768px) {
+  :root {
+    --text-xs: 0.75rem;
+    --text-sm: 0.9rem;
+    --text-md: 1.1rem;
+    --text-lg: 1.35rem;
+    --text-xl: 1.65rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3rem;
+  }
+
+  .glass-card {
+    border-radius: 12px;
+    padding: var(--spacing-md);
+  }
+
+  .glass-card:hover {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --text-xs: 0.7rem;
+    --text-sm: 0.85rem;
+    --text-md: 1rem;
+    --text-lg: 1.2rem;
+    --text-xl: 1.4rem;
+    --text-2xl: 1.75rem;
+    --text-3xl: 2.2rem;
+    --text-4xl: 2.6rem;
+  }
+
+  .glass-card {
+    border-radius: 10px;
+    padding: var(--spacing-sm);
+  }
+}
+
 /* ===== NOISE TEXTURE (sutil) ===== */
 body::before {
   content: "";

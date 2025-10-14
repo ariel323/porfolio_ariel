@@ -14,6 +14,12 @@ export class NarrativeScroll {
   private currentScene: number = 0;
 
   constructor() {
+    // Disable on mobile for performance
+    if (window.innerWidth < 768) {
+      console.log("📱 Narrative Scroll disabled on mobile");
+      return;
+    }
+
     this.initScenes();
     this.setupNarrativeFlow();
   }
@@ -212,6 +218,7 @@ export class NarrativeScroll {
    * 🧹 Cleanup
    */
   destroy(): void {
+    if (window.innerWidth < 768) return;
     ScrollTrigger.getAll().forEach((st) => st.kill());
   }
 }

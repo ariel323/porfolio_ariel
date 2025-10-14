@@ -319,24 +319,56 @@ section {
 @media (max-width: 768px) {
   html {
     font-size: 14px;
+    scroll-padding-top: 70px;
   }
 
   section {
-    padding: var(--spacing-lg) var(--spacing-sm);
+    padding: var(--spacing-2xl) var(--spacing-md);
   }
 
   .section-title {
-    margin-bottom: var(--spacing-xl);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Touch-friendly buttons */
+  button,
+  .btn,
+  a {
+    min-height: 44px;
+    min-width: 44px;
   }
 }
 
 @media (max-width: 480px) {
   html {
     font-size: 13px;
+    scroll-padding-top: 60px;
+  }
+
+  section {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
   }
 
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
+  }
+
+  /* Optimize for small screens */
+  body {
+    -webkit-tap-highlight-color: rgba(0, 217, 255, 0.2);
+  }
+
+  /* Prevent zoom on inputs */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
   }
 }
 
