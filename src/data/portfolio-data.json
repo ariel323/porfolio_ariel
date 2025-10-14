@@ -370,97 +370,106 @@
   "certifications": [
     {
       "id": "cert-1",
+      "name": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
+      "issuer": "Oracle",
+      "date": "2025-10-13",
+      "expirationDate": "2027-10-13",
+      "credentialId": "Oracle Badge",
+      "description": "Certificación oficial de Oracle que valida conocimientos fundamentales en servicios de nube pública de Oracle Cloud Infrastructure (OCI). Cubre arquitectura cloud, servicios principales, seguridad, networking, y mejores prácticas de OCI."
+    },
+    {
+      "id": "cert-2",
       "name": "Certificado de finalización del programa Oracle ONE",
       "issuer": "Oracle + Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-2",
+      "id": "cert-3",
       "name": "Java: creando tu primera aplicación",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-3",
+      "id": "cert-4",
       "name": "Introducción a la Programación",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-4",
+      "id": "cert-5",
       "name": "Java: trabajando con lambdas, streams y Spring Framework",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-5",
+      "id": "cert-6",
       "name": "Java: persistencia de datos y consultas con Spring Data JPA",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-6",
+      "id": "cert-7",
       "name": "Practicando con Java: Challenge Conversor de Monedas",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-7",
+      "id": "cert-8",
       "name": "ChatGPT y programación: aumenta tu productividad",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-8",
+      "id": "cert-9",
       "name": "Aprendizaje con IA: personalizando tu rutina con ChatGPT",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-9",
+      "id": "cert-10",
       "name": "Spring AI: Integra una aplicación con OpenAI",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-10",
+      "id": "cert-11",
       "name": "Ingeniería de Prompt: creando prompts eficaces para la IA generativa",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-11",
+      "id": "cert-12",
       "name": "Linux: conociendo y utilizando la terminal",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-12",
+      "id": "cert-13",
       "name": "Comandos DML: Manipulación de datos con MySQL",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-13",
+      "id": "cert-14",
       "name": "Introducción a SQL con MySQL: Manipule y consulte",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-14",
+      "id": "cert-15",
       "name": "Consultas SQL: Avanzando en SQL con MySQL",
       "issuer": "Alura Latam",
       "date": "2025"
     },
     {
-      "id": "cert-15",
+      "id": "cert-16",
       "name": "Oracle SQL Developer",
       "issuer": "Oracle + Alura Latam",
       "date": "2025"
     }
   ],
   "metadata": {
-    "lastUpdated": "2025-10-10",
-    "version": "2.1.0"
+    "lastUpdated": "2025-10-14",
+    "version": "2.2.0"
   }
 }
