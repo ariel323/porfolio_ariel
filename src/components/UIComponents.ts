@@ -58,6 +58,19 @@ export class UIComponents {
     if (imageElement) {
       imageElement.src = profile.image;
       imageElement.alt = `Foto de ${profile.name}`;
+      console.log("📸 Profile image updated:", profile.image);
+
+      // Add error handling for image loading
+      imageElement.addEventListener("error", () => {
+        console.error("❌ Failed to load profile image:", profile.image);
+        imageElement.src = "/assets/fallback-avatar.png"; // Fallback image
+      });
+
+      imageElement.addEventListener("load", () => {
+        console.log("✅ Profile image loaded successfully");
+      });
+    } else {
+      console.warn("⚠️ Profile image element not found");
     }
 
     this.updateSocialLinks(profile.github, profile.linkedin, profile.email);
