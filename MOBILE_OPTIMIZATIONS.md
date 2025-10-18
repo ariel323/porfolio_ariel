@@ -3,6 +3,7 @@
 ## Resumen de Optimizaciones Aplicadas
 
 ### 🎯 Objetivos
+
 - Mejorar rendimiento en dispositivos móviles
 - Optimizar legibilidad y usabilidad táctil
 - Reducir consumo de recursos en pantallas pequeñas
@@ -13,6 +14,7 @@
 ## 🚀 Optimizaciones Implementadas
 
 ### 1. **Performance - NarrativeScroll**
+
 **Archivo:** `src/components/NarrativeScroll.ts`
 
 - ✅ **Desactivado en móviles (< 768px)**: El sistema de scroll narrativo con animaciones GSAP se desactiva automáticamente en dispositivos móviles para:
@@ -34,9 +36,11 @@ constructor() {
 ---
 
 ### 2. **Tipografía Responsive**
+
 **Archivo:** `src/styles/components/visual-identity.css`
 
 #### Tablets (≤ 768px)
+
 - `text-4xl`: 3.815rem → **3rem** (-21%)
 - `text-3xl`: 3.052rem → **2.5rem** (-18%)
 - `text-2xl`: 2.441rem → **2rem** (-18%)
@@ -44,6 +48,7 @@ constructor() {
 - Mejora legibilidad en pantallas medianas
 
 #### Móviles Pequeños (≤ 480px)
+
 - `text-4xl`: 3rem → **2.6rem** (-13%)
 - `text-3xl`: 2.5rem → **2.2rem** (-12%)
 - `text-2xl`: 2rem → **1.75rem** (-13%)
@@ -53,9 +58,11 @@ constructor() {
 ---
 
 ### 3. **Espaciado y Layout**
+
 **Archivo:** `src/styles/main.css`
 
 #### Tablets (768px)
+
 ```css
 html {
   scroll-padding-top: 70px; /* Compensa header fijo */
@@ -72,6 +79,7 @@ section {
 ```
 
 #### Móviles (480px)
+
 ```css
 html {
   scroll-padding-top: 60px; /* Header más pequeño */
@@ -89,6 +97,7 @@ section {
 ---
 
 ### 4. **Touch-Friendly UX**
+
 **Archivo:** `src/styles/main.css`
 
 - ✅ **Mínimo 44x44px** en botones y enlaces (estándar Apple/Google)
@@ -97,7 +106,9 @@ section {
 - ✅ **Scrollbar optimizado**: 6px en móviles (vs 10px desktop)
 
 ```css
-button, .btn, a {
+button,
+.btn,
+a {
   min-height: 44px;
   min-width: 44px;
 }
@@ -106,7 +117,9 @@ body {
   -webkit-tap-highlight-color: rgba(0, 217, 255, 0.2);
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   font-size: 16px; /* Evita zoom en iOS */
 }
 ```
@@ -114,9 +127,11 @@ input, select, textarea {
 ---
 
 ### 5. **Glass Cards Responsive**
+
 **Archivo:** `src/styles/components/visual-identity.css`
 
 #### Tablets (768px)
+
 ```css
 .glass-card {
   border-radius: 12px; /* 16px → 12px */
@@ -129,6 +144,7 @@ input, select, textarea {
 ```
 
 #### Móviles (480px)
+
 ```css
 .glass-card {
   border-radius: 10px; /* Más compacto */
@@ -139,6 +155,7 @@ input, select, textarea {
 ---
 
 ### 6. **Cursor Personalizado**
+
 **Archivo:** `src/styles/components/visual-identity.css`
 
 - ✅ **Desactivado en < 1024px**: El cursor custom solo funciona en desktop
@@ -150,7 +167,7 @@ input, select, textarea {
   .custom-cursor-follower {
     display: none;
   }
-  
+
   body {
     cursor: auto;
   }
@@ -161,11 +178,11 @@ input, select, textarea {
 
 ## 📊 Breakpoints Aplicados
 
-| Breakpoint | Dispositivos | Optimizaciones Principales |
-|------------|--------------|---------------------------|
-| **1024px** | Tablets grandes | Cursor desactivado, layout ajustado |
-| **768px** | Tablets, móviles landscape | NarrativeScroll OFF, tipografía -15%, glass cards compactas |
-| **480px** | Móviles portrait | Tipografía -25%, spacing mínimo, scrollbar 6px |
+| Breakpoint | Dispositivos               | Optimizaciones Principales                                  |
+| ---------- | -------------------------- | ----------------------------------------------------------- |
+| **1024px** | Tablets grandes            | Cursor desactivado, layout ajustado                         |
+| **768px**  | Tablets, móviles landscape | NarrativeScroll OFF, tipografía -15%, glass cards compactas |
+| **480px**  | Móviles portrait           | Tipografía -25%, spacing mínimo, scrollbar 6px              |
 
 ---
 
@@ -190,11 +207,13 @@ Todos los componentes principales ya tienen optimizaciones móviles:
 ## 🎨 Mejoras Visuales Móviles
 
 ### Colores y Contraste
+
 - ✅ Selección de texto: Cyan sobre fondo oscuro
 - ✅ Tap highlight: Cyan 20% opacity
 - ✅ Scrollbar: Gradiente cyan → violet (6px)
 
 ### Animaciones
+
 - ✅ NarrativeScroll desactivado (performance)
 - ✅ Glass cards: Hover reducido (-4px → -2px)
 - ✅ Ripple effect: Mantiene funcionalidad
@@ -205,12 +224,14 @@ Todos los componentes principales ya tienen optimizaciones móviles:
 ## 📈 Métricas de Impacto
 
 ### Antes de Optimizaciones
+
 - ❌ NarrativeScroll activo en móviles (alto consumo CPU)
 - ❌ Tipografía overflow en pantallas pequeñas
 - ❌ Botones < 44px (difícil tocar)
 - ❌ Zoom al tocar inputs (iOS)
 
 ### Después de Optimizaciones
+
 - ✅ NarrativeScroll OFF en < 768px (mejor performance)
 - ✅ Tipografía escalada progresivamente
 - ✅ Botones mínimo 44x44px (WCAG AAA)
@@ -222,12 +243,14 @@ Todos los componentes principales ya tienen optimizaciones móviles:
 ## 🔧 Testing Recomendado
 
 ### Dispositivos de Prueba
+
 1. **iPhone SE (375px)** - Móvil pequeño
 2. **iPhone 12 Pro (390px)** - Móvil estándar
 3. **iPad (768px)** - Tablet portrait
 4. **iPad Pro (1024px)** - Tablet landscape
 
 ### Checklist de Testing
+
 - [ ] Scroll suave sin NarrativeScroll
 - [ ] Títulos legibles sin overflow
 - [ ] Botones táctiles de 44x44px
