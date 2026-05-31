@@ -23,7 +23,6 @@
   gap: var(--spacing-xl);
 }
 
-/* Background decoration */
 .contact::before {
   content: "";
   position: absolute;
@@ -67,100 +66,216 @@
 }
 
 /* ========================================
-   CONTACT LINKS
+   STRATEGIC ALLIANCES - BENTO GRID
    ======================================== */
 
-.contact__links-container {
+.contact__bento-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-lg);
   max-width: 1000px;
   margin: 0 auto;
+  width: 100%;
 }
 
-.contact__link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-lg) var(--spacing-xl);
+.contact__card {
   background: var(--glass-background);
   backdrop-filter: blur(10px);
   border: 2px solid var(--glass-border);
-  border-radius: var(--border-radius-lg);
-  color: var(--color-text-light);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  text-decoration: none;
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-xl);
   transition: var(--transition-ease);
   position: relative;
   overflow: hidden;
 }
 
-.contact__link::before {
+.contact__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary-emerald);
+  box-shadow: var(--shadow-lg), var(--shadow-glow-emerald);
+}
+
+.contact__card::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(100, 255, 218, 0.1) 50%,
+    135deg,
+    rgba(16, 185, 129, 0.05) 0%,
     transparent 100%
   );
-  transition: left 0.6s ease;
-}
-
-.contact__link:hover::before {
-  left: 100%;
-}
-
-.contact__link:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-lg), var(--shadow-glow-accent);
-  color: var(--color-accent);
-}
-
-.contact__link i,
-.contact__link .fab,
-.contact__link .fas {
-  font-size: var(--font-size-2xl);
+  opacity: 0;
   transition: var(--transition-ease);
 }
 
-.contact__link:hover i,
-.contact__link:hover .fab,
-.contact__link:hover .fas {
-  transform: scale(1.2) rotate(5deg);
+.contact__card:hover::before {
+  opacity: 1;
 }
 
-/* Specific link colors */
-.contact__link--linkedin:hover {
-  border-color: #0077b5;
-  color: #0077b5;
+.contact__card-title {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
 }
 
-.contact__link--github:hover {
-  border-color: #fff;
-  color: #fff;
+.contact__card-icon {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary-emerald);
 }
 
-.contact__link--email:hover {
-  border-color: #ea4335;
-  color: #ea4335;
+.contact__card-content {
+  margin-bottom: var(--spacing-md);
 }
 
-.contact__link--whatsapp:hover {
-  border-color: #25d366;
-  color: #25d366;
+.contact__card-description {
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+}
+
+.contact__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-primary-emerald);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: var(--transition-ease);
+}
+
+.contact__card-link:hover {
+  gap: calc(var(--spacing-sm) + 4px);
+  color: var(--color-primary-emerald-light);
+}
+
+.contact__card-link i {
+  transition: var(--transition-ease);
+}
+
+.contact__card-link:hover i {
+  transform: translateX(4px);
+}
+
+.contact__cal-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  background: var(--gradient-emerald);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-light);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: var(--transition-ease);
+  border: none;
+  cursor: pointer;
+}
+
+.contact__cal-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-emerald);
+}
+
+.contact__partnerships-list {
+  margin-top: var(--spacing-md);
+  text-align: left;
+}
+
+.contact__partnerships-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact__partnerships-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact__partnerships-item i {
+  color: var(--color-primary-emerald);
 }
 
 /* ========================================
-   CONTACT FORM (Optional)
+   DIGITAL PRESENCE GRID (LinkedIn/GitHub)
+   ======================================== */
+
+.contact__digital-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  max-width: 600px;
+  margin: var(--spacing-lg) auto 0;
+}
+
+.contact__digital-item {
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  transition: var(--transition-ease);
+}
+
+.contact__digital-item:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.contact__digital-icon {
+  font-size: var(--font-size-3xl);
+  transition: var(--transition-ease);
+}
+
+.contact__digital-item:hover .contact__digital-icon {
+  transform: scale(1.1);
+}
+
+.contact__digital-item--linkedin:hover .contact__digital-icon {
+  color: #0077b5;
+}
+
+.contact__digital-item--github:hover .contact__digital-icon {
+  color: #fff;
+}
+
+.contact__digital-label {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.contact__digital-handle {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-light);
+}
+
+/* ========================================
+   CONTACT FORM
    ======================================== */
 
 .contact__form {
@@ -203,8 +318,8 @@
 .contact__form-input:focus,
 .contact__form-textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-glow-accent);
+  border-color: var(--color-primary-emerald);
+  box-shadow: var(--shadow-glow-emerald);
 }
 
 .contact__form-textarea {
@@ -215,7 +330,7 @@
 .contact__form-submit {
   width: 100%;
   padding: var(--spacing-lg);
-  background: var(--gradient-primary);
+  background: var(--gradient-emerald);
   border: none;
   border-radius: var(--border-radius-lg);
   color: white;
@@ -237,6 +352,14 @@
 }
 
 /* ========================================
+   HONEYPOT FIELD (Anti-spam)
+   ======================================== */
+
+.contact__honeypot {
+  display: none;
+}
+
+/* ========================================
    RESPONSIVE
    ======================================== */
 
@@ -245,11 +368,11 @@
     padding: var(--spacing-2xl) var(--spacing-lg);
   }
 
-  .contact__links-container {
+  .contact__bento-grid {
     grid-template-columns: 1fr;
   }
 
-  .contact__link {
-    font-size: var(--font-size-sm);
+  .contact__digital-grid {
+    grid-template-columns: 1fr;
   }
 }
