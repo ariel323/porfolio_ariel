@@ -325,14 +325,14 @@
     }
   ],
   "experience": [
-    "Desarrollo de apps Java Desktop con arquitectura MVC",
-    "APIs RESTful con Spring Boot y Node.js (Express)",
-    "Aplicaciones web interactivas con React",
-    "JavaScript moderno (ES6+), TypeScript y manejo de estados",
-    "Testing con JUnit, Jest y herramientas modernas",
-    "Git, metodologías ágiles y buenas prácticas de Clean Code",
-    "Estandarización de entornos de desarrollo global mediante Docker Compose",
-    "Reducción de tiempos de respuesta del servidor mediante escritura y mejora de consultas SQL complejas"
+    "hero.experienceList.javaMvc",
+    "hero.experienceList.restApis",
+    "hero.experienceList.react",
+    "hero.experienceList.modernJs",
+    "hero.experienceList.testing",
+    "hero.experienceList.cleanCode",
+    "hero.experienceList.devops",
+    "hero.experienceList.optimization"
   ],
   "experiences": [
     {

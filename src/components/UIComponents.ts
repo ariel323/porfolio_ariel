@@ -849,13 +849,15 @@ export class UIComponents {
   /**
    * Render experience list
    */
-  renderExperience(): void {
-    const experience = this.projectsManager.getExperience();
-    const list = document.querySelector(".hero-section__experience-list");
-    if (!list) return;
+renderExperience(): void {
+  const experience = this.projectsManager.getExperience();
+  const list = document.querySelector(".hero-section__experience-list");
+  if (!list) return;
 
-    list.innerHTML = experience.map((exp) => `<li>${exp}</li>`).join("");
-  }
+  list.innerHTML = experience
+    .map((key) => `<li>${i18n.t(key)}</li>`)
+    .join("");
+}
 
   /**
    * Render GitHub stats dashboard
