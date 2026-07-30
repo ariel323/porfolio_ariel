@@ -36,6 +36,23 @@
       ]
     },
     {
+      "id": "python",
+      "category": "Backend",
+      "title": "Python",
+      "icon": "🐍",
+      "color": "#3776ab",
+      "summary": "Desarrollo de aplicaciones y scripts con Python, incluyendo automatización y análisis de datos.",
+      "coreTools": [
+        "Django",
+        "Flask",
+        "Pandas",
+        "NumPy"
+      ],
+      "technologies": [
+        { "name": "Python", "level": 75 }
+      ]
+    },
+    {
       "id": "nodejs-javascript",
       "category": "Backend",
       "title": "Node.js & JavaScript",
@@ -92,17 +109,20 @@
       "coreTools": [
         "MySQL",
         "PostgreSQL",
+        "MongoDB",
         "Liquibase",
         "Flyway",
         "Stored Procedures",
-        "Query Tuning"
+        "Query Tuning",
+        "Prisma ORM"
       ],
       "technologies": [
         { "name": "MySQL", "level": 85 },
         { "name": "PostgreSQL", "level": 80 },
         { "name": "H2 Database", "level": 70 },
         { "name": "SQL Queries", "level": 90 },
-        { "name": "Schema Design", "level": 80 }
+        { "name": "Schema Design", "level": 80 },
+        { "name": "MongoDB", "level": 70 }
       ]
     },
     {
@@ -112,22 +132,29 @@
       "icon": "🐳",
       "color": "#0db7ed",
       "summary": "Automatización de pipelines y entrega continua con contenedores, observabilidad y control de versiones.",
-      "coreTools": [
-        "Docker",
-        "Docker Compose",
-        "GitHub Actions",
-        "CI/CD",
-        "Linux",
-        "Monitoring"
-      ],
+    "coreTools": [
+      "Docker",
+      "Docker Compose",
+      "GitHub Actions",
+      "CI/CD",
+      "Linux",
+      "Monitoring",
+      "Prisma ORM",
+      "Oracle Cloud (OCI)",
+      "Vercel",
+      "Git"
+    ],
       "technologies": [
         { "name": "Docker", "level": 80 },
-        { "name": "Docker Compose", "level": 75 },
+        { "name": "Docker Compose", "level": 85 },
         { "name": "Git & GitHub", "level": 90 },
         { "name": "Maven", "level": 85 },
         { "name": "Gradle", "level": 75 },
         { "name": "Postman", "level": 85 },
-        { "name": "Linux/Ubuntu", "level": 70 }
+        { "name": "Linux/Ubuntu", "level": 70 },
+        { "name": "Prisma ORM", "level": 70 },
+        { "name": "Oracle Cloud (OCI)", "level": 75 },
+        { "name": "Vercel", "level": 70 }
       ]
     },
     {
@@ -143,14 +170,34 @@
         "Deeplearning4j",
         "CoreNLP",
         "OpenNLP",
-        "TensorFlow Java"
+        "TensorFlow Java",
+        "IA (RAG)"
       ],
       "technologies": [
         { "name": "Weka", "level": 60 },
         { "name": "JavaML", "level": 55 },
         { "name": "Deeplearning4j", "level": 50 },
         { "name": "CoreNLP", "level": 55 },
-        { "name": "OpenNLP", "level": 50 }
+        { "name": "OpenNLP", "level": 50 },
+        { "name": "IA (RAG)", "level": 60 }
+      ]
+    },
+    {
+      "id": "methodologies",
+      "category": "Metodologías",
+      "title": "Metodologías y Arquitectura",
+      "icon": "🏗️",
+      "color": "#4a90e2",
+      "summary": "Aplicación de metodologías ágiles y patrones de arquitectura para desarrollo de software de calidad.",
+      "coreTools": [
+        "Clean Architecture",
+        "Scrum",
+        "Desarrollo SaaS"
+      ],
+      "technologies": [
+        { "name": "Clean Architecture", "level": 75 },
+        { "name": "Scrum", "level": 80 },
+        { "name": "Desarrollo SaaS", "level": 70 }
       ]
     }
   ],
@@ -283,7 +330,9 @@
     "Aplicaciones web interactivas con React",
     "JavaScript moderno (ES6+), TypeScript y manejo de estados",
     "Testing con JUnit, Jest y herramientas modernas",
-    "Git, metodologías ágiles y buenas prácticas de Clean Code"
+    "Git, metodologías ágiles y buenas prácticas de Clean Code",
+    "Estandarización de entornos de desarrollo global mediante Docker Compose",
+    "Reducción de tiempos de respuesta del servidor mediante escritura y mejora de consultas SQL complejas"
   ],
   "experiences": [
     {
@@ -365,6 +414,28 @@
         "Carga horaria total: +200 horas de formación práctica",
         "Dominio de comandos DML, consultas SQL avanzadas y Oracle SQL Developer"
       ]
+    },
+    {
+      "id": "edu-2",
+      "degree": "Full Stack & Backend",
+      "institution": "Alura Latam",
+      "period": {
+        "start": "2025-01",
+        "end": "2026-12"
+      },
+      "description": "Formación especializada en desarrollo Full Stack y Backend con enfoque en tecnologías modernas.",
+      "achievements": []
+    },
+    {
+      "id": "edu-3",
+      "degree": "JavaScript & Java",
+      "institution": "Orange Coast College",
+      "period": {
+        "start": "2025-01",
+        "end": "2026-12"
+      },
+      "description": "Formación académica en desarrollo de software con JavaScript y Java.",
+      "achievements": []
     }
   ],
   "certifications": [
@@ -376,6 +447,27 @@
       "expirationDate": "2027-10-13",
       "credentialId": "Oracle Badge",
       "description": "Certificación oficial de Oracle que valida conocimientos fundamentales en servicios de nube pública de Oracle Cloud Infrastructure (OCI). Cubre arquitectura cloud, servicios principales, seguridad, networking, y mejores prácticas de OCI."
+    },
+    {
+      "id": "cert-oci",
+      "name": "OCI Certified Foundations Associate 2025",
+      "issuer": "Oracle",
+      "date": "2025",
+      "description": "Certificación en fundamentos de Oracle Cloud Infrastructure."
+    },
+    {
+      "id": "cert-hackathon",
+      "name": "Hackathon ONE Latam",
+      "issuer": "Oracle",
+      "date": "2025",
+      "description": "Participación y certificación en el Hackathon ONE Latam organizado por Oracle."
+    },
+    {
+      "id": "cert-php-mvc",
+      "name": "PHP & MVC",
+      "issuer": "Udemy",
+      "date": "2025",
+      "description": "Certificación en desarrollo con PHP y el patrón MVC."
     },
     {
       "id": "cert-2",
