@@ -231,7 +231,7 @@ class Portfolio {
       const message =
         error instanceof Error
           ? error.message
-          : "No pudimos conectar con GitHub. Intentalo más tarde.";
+          : i18n.t("common.githubConnectionError");
       this.uiComponents.renderGitHubError(message);
     }
   }
@@ -347,7 +347,9 @@ class Portfolio {
     body.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
 
-    this.showNotification(`Switched to ${newTheme} theme`);
+    this.showNotification(
+        i18n.t("common.themeToggled", { theme: newTheme })
+      );
   }
 
   /**
