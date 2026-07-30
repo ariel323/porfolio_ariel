@@ -20,6 +20,14 @@ export class ExperienceTimeline {
     this.certifications = data.certifications;
   }
 
+  private getContentTranslation(key: string): string {
+    try {
+      return i18n.t(`content.experiences.${key}`);
+    } catch {
+      return key;
+    }
+  }
+
   /**
    * Render all experience sections
    */

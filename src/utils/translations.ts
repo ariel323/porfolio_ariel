@@ -383,6 +383,37 @@ export const translations = {
       year: "2025",
       builtWith: "Hecho con TypeScript + Three.js + GSAP",
     },
+    content: {
+      experiences: {
+        exp1: {
+          role: "Desarrollador Full Stack",
+          company: "Proyectos Personales",
+          location: "Remoto",
+          description: "Desarrollo de proyectos personales full-stack desde enero 2025, comenzando con el primer proyecto de certificación. Enfoque en crear aplicaciones web completas utilizando tecnologías modernas como Java, Spring Boot, React y bases de datos relacionales.",
+          achievements: [
+            "Desarrollo de múltiples proyectos full-stack desde cero aplicando mejores prácticas",
+            "Implementación de arquitecturas RESTful con Spring Boot y Spring MVC",
+            "Gestión de bases de datos relacionales con MySQL aplicando normalización y optimización",
+            "Integración de APIs externas y servicios de terceros en aplicaciones web",
+            "Containerización de aplicaciones con Docker para facilitar despliegue y escalabilidad"
+          ]
+        },
+        exp2: {
+          role: "Desarrollador Backend",
+          company: "Proyecto Open Source",
+          location: "Remoto",
+          description: "Primera experiencia trabajando en equipo real en un proyecto open source durante julio-agosto 2025. Desarrollo colaborativo de una API en Node.js puro (sin frameworks como Express), implementando servidor HTTP nativo, gestión de rutas, integración con base de datos y dockerización completa del proyecto.",
+          achievements: [
+            "Desarrollo de API RESTful con Node.js puro sin usar frameworks externos",
+            "Implementación de servidor HTTP nativo y sistema de enrutamiento personalizado",
+            "Integración y optimización de base de datos relacional con consultas SQL eficientes",
+            "Dockerización completa del proyecto incluyendo aplicación y base de datos con Docker Compose",
+            "Trabajo colaborativo con equipo real usando Git, pull requests y code reviews",
+            "Aplicación de metodologías ágiles y buenas prácticas de desarrollo en equipo"
+          ]
+        }
+      }
+    }
   },
   en: {
     common: {
@@ -767,5 +798,36 @@ export const translations = {
       year: "2025",
       builtWith: "Built with TypeScript + Three.js + GSAP",
     },
+    content: {
+      experiences: {
+        exp1: {
+          role: "Full Stack Developer",
+          company: "Personal Projects",
+          location: "Remote",
+          description: "Full-stack personal project development since January 2025, starting with the first certification project. Focused on building complete web applications using modern technologies such as Java, Spring Boot, React, and relational databases.",
+          achievements: [
+            "Development of multiple full-stack projects from scratch applying best practices",
+            "Implementation of RESTful architectures with Spring Boot and Spring MVC",
+            "Management of relational databases with MySQL applying normalization and optimization",
+            "Integration of external APIs and third-party services in web applications",
+            "Containerization of applications with Docker to facilitate deployment and scalability"
+          ]
+        },
+        exp2: {
+          role: "Backend Developer",
+          company: "Open Source Project",
+          location: "Remote",
+          description: "First experience working in a real team on an open source project during July-August 2025. Collaborative development of a Node.js API (without frameworks like Express), implementing native HTTP server, routing management, database integration, and complete project dockerization.",
+          achievements: [
+            "Development of RESTful API with pure Node.js without external frameworks",
+            "Implementation of native HTTP server and custom routing system",
+            "Integration and optimization of relational database with efficient SQL queries",
+            "Complete project dockerization including application and database with Docker Compose",
+            "Real team collaboration using Git, pull requests, and code reviews",
+            "Application of agile methodologies and team development best practices"
+          ]
+        }
+      }
+    }
   },
 };

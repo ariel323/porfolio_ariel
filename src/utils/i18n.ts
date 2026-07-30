@@ -163,6 +163,21 @@ export class I18n {
     return result;
   }
 
+  tArray(key: string): string[] {
+    const keys = key.split(".");
+    let result: unknown = translations[this.currentLanguage];
+
+    for (const k of keys) {
+      if (result && typeof result === "object" && k in result) {
+        result = (result as Record<string, unknown>)[k];
+      } else {
+        return [];
+      }
+    }
+
+    return Array.isArray(result) ? (result as string[]) : [];
+  }
+
   isSpanish(): boolean {
     return this.currentLanguage === "es";
   }

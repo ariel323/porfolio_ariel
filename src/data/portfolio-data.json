@@ -335,23 +335,36 @@
     "hero.experienceList.optimization"
   ],
   "experiences": [
+
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Spring MVC",
+        "MySQL",
+        "React",
+        "TypeScript",
+        "Docker",
+        "Git",
+        "REST APIs"
+      ]
+    },
     {
       "id": "exp-1",
-      "role": "Desarrollador Full Stack",
-      "company": "Proyectos Personales",
-      "location": "Remoto",
+      "role": "content.experiences.exp1.role",
+      "company": "content.experiences.exp1.company",
+      "location": "content.experiences.exp1.location",
       "period": {
         "start": "2025-01",
         "end": "present"
       },
       "type": "personal",
-      "description": "Desarrollo de proyectos personales full-stack desde enero 2025, comenzando con el primer proyecto de certificación. Enfoque en crear aplicaciones web completas utilizando tecnologías modernas como Java, Spring Boot, React y bases de datos relacionales.",
+      "description": "content.experiences.exp1.description",
       "achievements": [
-        "Desarrollo de múltiples proyectos full-stack desde cero aplicando mejores prácticas",
-        "Implementación de arquitecturas RESTful con Spring Boot y Spring MVC",
-        "Gestión de bases de datos relacionales con MySQL aplicando normalización y optimización",
-        "Integración de APIs externas y servicios de terceros en aplicaciones web",
-        "Containerización de aplicaciones con Docker para facilitar despliegue y escalabilidad"
+        "content.experiences.exp1.achievements[0]",
+        "content.experiences.exp1.achievements[1]",
+        "content.experiences.exp1.achievements[2]",
+        "content.experiences.exp1.achievements[3]",
+        "content.experiences.exp1.achievements[4]"
       ],
       "technologies": [
         "Java",
