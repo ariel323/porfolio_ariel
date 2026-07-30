@@ -27,12 +27,30 @@
         "JUnit 5"
       ],
       "technologies": [
-        { "name": "Java 17+", "level": 90 },
-        { "name": "Spring Boot", "level": 85 },
-        { "name": "Spring MVC", "level": 80 },
-        { "name": "Spring Security", "level": 75 },
-        { "name": "JPA / Hibernate", "level": 85 },
-        { "name": "JUnit Testing", "level": 80 }
+        {
+          "name": "Java 17+",
+          "level": 90
+        },
+        {
+          "name": "Spring Boot",
+          "level": 85
+        },
+        {
+          "name": "Spring MVC",
+          "level": 80
+        },
+        {
+          "name": "Spring Security",
+          "level": 75
+        },
+        {
+          "name": "JPA / Hibernate",
+          "level": 85
+        },
+        {
+          "name": "JUnit Testing",
+          "level": 80
+        }
       ]
     },
     {
@@ -49,7 +67,10 @@
         "NumPy"
       ],
       "technologies": [
-        { "name": "Python", "level": 75 }
+        {
+          "name": "Python",
+          "level": 75
+        }
       ]
     },
     {
@@ -68,12 +89,30 @@
         "Jest"
       ],
       "technologies": [
-        { "name": "Node.js", "level": 85 },
-        { "name": "Express.js", "level": 85 },
-        { "name": "JavaScript ES6+", "level": 90 },
-        { "name": "TypeScript", "level": 80 },
-        { "name": "REST APIs", "level": 90 },
-        { "name": "Jest Testing", "level": 75 }
+        {
+          "name": "Node.js",
+          "level": 85
+        },
+        {
+          "name": "Express.js",
+          "level": 85
+        },
+        {
+          "name": "JavaScript ES6+",
+          "level": 90
+        },
+        {
+          "name": "TypeScript",
+          "level": 80
+        },
+        {
+          "name": "REST APIs",
+          "level": 90
+        },
+        {
+          "name": "Jest Testing",
+          "level": 75
+        }
       ]
     },
     {
@@ -92,11 +131,26 @@
         "Framer Motion"
       ],
       "technologies": [
-        { "name": "React.js", "level": 85 },
-        { "name": "Hooks & Context", "level": 80 },
-        { "name": "Component Design", "level": 85 },
-        { "name": "State Management", "level": 75 },
-        { "name": "API Integration", "level": 90 }
+        {
+          "name": "React.js",
+          "level": 85
+        },
+        {
+          "name": "Hooks & Context",
+          "level": 80
+        },
+        {
+          "name": "Component Design",
+          "level": 85
+        },
+        {
+          "name": "State Management",
+          "level": 75
+        },
+        {
+          "name": "API Integration",
+          "level": 90
+        }
       ]
     },
     {
@@ -117,12 +171,30 @@
         "Prisma ORM"
       ],
       "technologies": [
-        { "name": "MySQL", "level": 85 },
-        { "name": "PostgreSQL", "level": 80 },
-        { "name": "H2 Database", "level": 70 },
-        { "name": "SQL Queries", "level": 90 },
-        { "name": "Schema Design", "level": 80 },
-        { "name": "MongoDB", "level": 70 }
+        {
+          "name": "MySQL",
+          "level": 85
+        },
+        {
+          "name": "PostgreSQL",
+          "level": 80
+        },
+        {
+          "name": "H2 Database",
+          "level": 70
+        },
+        {
+          "name": "SQL Queries",
+          "level": 90
+        },
+        {
+          "name": "Schema Design",
+          "level": 80
+        },
+        {
+          "name": "MongoDB",
+          "level": 70
+        }
       ]
     },
     {
@@ -132,29 +204,59 @@
       "icon": "🐳",
       "color": "#0db7ed",
       "summary": "Automatización de pipelines y entrega continua con contenedores, observabilidad y control de versiones.",
-    "coreTools": [
-      "Docker",
-      "Docker Compose",
-      "GitHub Actions",
-      "CI/CD",
-      "Linux",
-      "Monitoring",
-      "Prisma ORM",
-      "Oracle Cloud (OCI)",
-      "Vercel",
-      "Git"
-    ],
+      "coreTools": [
+        "Docker",
+        "Docker Compose",
+        "GitHub Actions",
+        "CI/CD",
+        "Linux",
+        "Monitoring",
+        "Prisma ORM",
+        "Oracle Cloud (OCI)",
+        "Vercel",
+        "Git"
+      ],
       "technologies": [
-        { "name": "Docker", "level": 80 },
-        { "name": "Docker Compose", "level": 85 },
-        { "name": "Git & GitHub", "level": 90 },
-        { "name": "Maven", "level": 85 },
-        { "name": "Gradle", "level": 75 },
-        { "name": "Postman", "level": 85 },
-        { "name": "Linux/Ubuntu", "level": 70 },
-        { "name": "Prisma ORM", "level": 70 },
-        { "name": "Oracle Cloud (OCI)", "level": 75 },
-        { "name": "Vercel", "level": 70 }
+        {
+          "name": "Docker",
+          "level": 80
+        },
+        {
+          "name": "Docker Compose",
+          "level": 85
+        },
+        {
+          "name": "Git & GitHub",
+          "level": 90
+        },
+        {
+          "name": "Maven",
+          "level": 85
+        },
+        {
+          "name": "Gradle",
+          "level": 75
+        },
+        {
+          "name": "Postman",
+          "level": 85
+        },
+        {
+          "name": "Linux/Ubuntu",
+          "level": 70
+        },
+        {
+          "name": "Prisma ORM",
+          "level": 70
+        },
+        {
+          "name": "Oracle Cloud (OCI)",
+          "level": 75
+        },
+        {
+          "name": "Vercel",
+          "level": 70
+        }
       ]
     },
     {
@@ -174,12 +276,30 @@
         "IA (RAG)"
       ],
       "technologies": [
-        { "name": "Weka", "level": 60 },
-        { "name": "JavaML", "level": 55 },
-        { "name": "Deeplearning4j", "level": 50 },
-        { "name": "CoreNLP", "level": 55 },
-        { "name": "OpenNLP", "level": 50 },
-        { "name": "IA (RAG)", "level": 60 }
+        {
+          "name": "Weka",
+          "level": 60
+        },
+        {
+          "name": "JavaML",
+          "level": 55
+        },
+        {
+          "name": "Deeplearning4j",
+          "level": 50
+        },
+        {
+          "name": "CoreNLP",
+          "level": 55
+        },
+        {
+          "name": "OpenNLP",
+          "level": 50
+        },
+        {
+          "name": "IA (RAG)",
+          "level": 60
+        }
       ]
     },
     {
@@ -195,9 +315,18 @@
         "Desarrollo SaaS"
       ],
       "technologies": [
-        { "name": "Clean Architecture", "level": 75 },
-        { "name": "Scrum", "level": 80 },
-        { "name": "Desarrollo SaaS", "level": 70 }
+        {
+          "name": "Clean Architecture",
+          "level": 75
+        },
+        {
+          "name": "Scrum",
+          "level": 80
+        },
+        {
+          "name": "Desarrollo SaaS",
+          "level": 70
+        }
       ]
     }
   ],
@@ -208,7 +337,13 @@
       "shortDescription": "App Java Swing con arquitectura MVC y validación robusta",
       "description": "Aplicación de escritorio desarrollada en Java Swing que permite convertir entre diferentes monedas en tiempo real. Implementa el patrón de diseño MVC para una arquitectura limpia y mantenible. Incluye validación robusta de datos y testing completo con JUnit.",
       "image": "/assets/imagen de comvertidor.png",
-      "technologies": ["Java", "Swing", "MVC", "JUnit", "OOP"],
+      "technologies": [
+        "Java",
+        "Swing",
+        "MVC",
+        "JUnit",
+        "OOP"
+      ],
       "category": "backend",
       "featured": true,
       "demoUrl": null,
@@ -335,19 +470,6 @@
     "hero.experienceList.optimization"
   ],
   "experiences": [
-
-      "technologies": [
-        "Java",
-        "Spring Boot",
-        "Spring MVC",
-        "MySQL",
-        "React",
-        "TypeScript",
-        "Docker",
-        "Git",
-        "REST APIs"
-      ]
-    },
     {
       "id": "exp-1",
       "role": "content.experiences.exp1.role",
@@ -380,22 +502,22 @@
     },
     {
       "id": "exp-2",
-      "role": "Desarrollador Backend",
-      "company": "Proyecto Open Source",
-      "location": "Remoto",
+      "role": "content.experiences.exp2.role",
+      "company": "content.experiences.exp2.company",
+      "location": "content.experiences.exp2.location",
       "period": {
         "start": "2025-07",
         "end": "2025-08"
       },
       "type": "opensource",
-      "description": "Primera experiencia trabajando en equipo real en un proyecto open source durante julio-agosto 2025. Desarrollo colaborativo de una API en Node.js puro (sin frameworks como Express), implementando servidor HTTP nativo, gestión de rutas, integración con base de datos y dockerización completa del proyecto.",
+      "description": "content.experiences.exp2.description",
       "achievements": [
-        "Desarrollo de API RESTful con Node.js puro sin usar frameworks externos",
-        "Implementación de servidor HTTP nativo y sistema de enrutamiento personalizado",
-        "Integración y optimización de base de datos relacional con consultas SQL eficientes",
-        "Dockerización completa del proyecto incluyendo aplicación y base de datos con Docker Compose",
-        "Trabajo colaborativo con equipo real usando Git, pull requests y code reviews",
-        "Aplicación de metodologías ágiles y buenas prácticas de desarrollo en equipo"
+        "content.experiences.exp2.achievements[0]",
+        "content.experiences.exp2.achievements[1]",
+        "content.experiences.exp2.achievements[2]",
+        "content.experiences.exp2.achievements[3]",
+        "content.experiences.exp2.achievements[4]",
+        "content.experiences.exp2.achievements[5]"
       ],
       "technologies": [
         "Node.js",
@@ -412,165 +534,180 @@
   "education": [
     {
       "id": "edu-1",
-      "degree": "Programa Oracle ONE - Especialización en Desarrollo Backend",
-      "institution": "Alura Latam + Oracle",
+      "degree": "content.education.edu1.degree",
+      "institution": "content.education.edu1.institution",
       "period": {
         "start": "2025-01",
         "end": "2025-10"
       },
-      "description": "Formación intensiva en desarrollo backend con Java, Spring Framework, bases de datos MySQL y tecnologías de la nube. Programa Oracle Next Education en colaboración con Alura Latam (AOVS Sistemas de Informática S.A - CNPJ: 05.555.382/0001-33).",
+      "description": "content.education.edu1.description",
       "achievements": [
-        "Completado el programa completo Oracle ONE con certificación oficial",
-        "Desarrollo de proyectos prácticos: Conversor de Monedas, API de Literatura, Gestor de Tareas",
-        "Especialización en Java SE, Spring Boot, Spring Data JPA y MySQL",
-        "Formación en IA generativa: ChatGPT, Spring AI y Engineering Prompts",
-        "Carga horaria total: +200 horas de formación práctica",
-        "Dominio de comandos DML, consultas SQL avanzadas y Oracle SQL Developer"
+        "content.education.edu1.achievements[0]",
+        "content.education.edu1.achievements[1]",
+        "content.education.edu1.achievements[2]",
+        "content.education.edu1.achievements[3]",
+        "content.education.edu1.achievements[4]",
+        "content.education.edu1.achievements[5]"
       ]
     },
     {
       "id": "edu-2",
-      "degree": "Full Stack & Backend",
-      "institution": "Alura Latam",
+      "degree": "content.education.edu2.degree",
+      "institution": "content.education.edu2.institution",
       "period": {
         "start": "2025-01",
         "end": "2026-12"
       },
-      "description": "Formación especializada en desarrollo Full Stack y Backend con enfoque en tecnologías modernas.",
+      "description": "content.education.edu2.description",
       "achievements": []
     },
     {
       "id": "edu-3",
-      "degree": "JavaScript & Java",
-      "institution": "Orange Coast College",
+      "degree": "content.education.edu3.degree",
+      "institution": "content.education.edu3.institution",
       "period": {
         "start": "2025-01",
         "end": "2026-12"
       },
-      "description": "Formación académica en desarrollo de software con JavaScript y Java.",
+      "description": "content.education.edu3.description",
       "achievements": []
     }
   ],
   "certifications": [
     {
       "id": "cert-1",
-      "name": "Oracle Cloud Infrastructure 2025 Certified Foundations Associate",
-      "issuer": "Oracle",
+      "name": "content.certifications.cert1.name",
+      "issuer": "content.certifications.cert1.issuer",
       "date": "2025-10-13",
       "expirationDate": "2027-10-13",
       "credentialId": "Oracle Badge",
-      "description": "Certificación oficial de Oracle que valida conocimientos fundamentales en servicios de nube pública de Oracle Cloud Infrastructure (OCI). Cubre arquitectura cloud, servicios principales, seguridad, networking, y mejores prácticas de OCI."
+      "description": "content.certifications.cert1.description"
     },
     {
       "id": "cert-oci",
-      "name": "OCI Certified Foundations Associate 2025",
-      "issuer": "Oracle",
+      "name": "content.certifications.cert2.name",
+      "issuer": "content.certifications.cert2.issuer",
       "date": "2025",
-      "description": "Certificación en fundamentos de Oracle Cloud Infrastructure."
+      "description": "content.certifications.cert2.description"
     },
     {
       "id": "cert-hackathon",
-      "name": "Hackathon ONE Latam",
-      "issuer": "Oracle",
+      "name": "content.certifications.cert3.name",
+      "issuer": "content.certifications.cert3.issuer",
       "date": "2025",
-      "description": "Participación y certificación en el Hackathon ONE Latam organizado por Oracle."
+      "description": "content.certifications.cert3.description"
     },
     {
       "id": "cert-php-mvc",
-      "name": "PHP & MVC",
-      "issuer": "Udemy",
+      "name": "content.certifications.cert4.name",
+      "issuer": "content.certifications.cert4.issuer",
       "date": "2025",
-      "description": "Certificación en desarrollo con PHP y el patrón MVC."
+      "description": "content.certifications.cert4.description"
     },
     {
       "id": "cert-2",
-      "name": "Certificado de finalización del programa Oracle ONE",
-      "issuer": "Oracle + Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert5.name",
+      "issuer": "content.certifications.cert5.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert5.description"
     },
     {
       "id": "cert-3",
-      "name": "Java: creando tu primera aplicación",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert6.name",
+      "issuer": "content.certifications.cert6.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert6.description"
     },
     {
       "id": "cert-4",
-      "name": "Introducción a la Programación",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert7.name",
+      "issuer": "content.certifications.cert7.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert7.description"
     },
     {
       "id": "cert-5",
-      "name": "Java: trabajando con lambdas, streams y Spring Framework",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert8.name",
+      "issuer": "content.certifications.cert8.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert8.description"
     },
     {
       "id": "cert-6",
-      "name": "Java: persistencia de datos y consultas con Spring Data JPA",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert9.name",
+      "issuer": "content.certifications.cert9.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert9.description"
     },
     {
       "id": "cert-7",
-      "name": "Practicando con Java: Challenge Conversor de Monedas",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert10.name",
+      "issuer": "content.certifications.cert10.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert10.description"
     },
     {
       "id": "cert-8",
-      "name": "ChatGPT y programación: aumenta tu productividad",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert11.name",
+      "issuer": "content.certifications.cert11.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert11.description"
     },
     {
       "id": "cert-9",
-      "name": "Aprendizaje con IA: personalizando tu rutina con ChatGPT",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert12.name",
+      "issuer": "content.certifications.cert12.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert12.description"
     },
     {
       "id": "cert-10",
-      "name": "Spring AI: Integra una aplicación con OpenAI",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert13.name",
+      "issuer": "content.certifications.cert13.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert13.description"
     },
     {
       "id": "cert-11",
-      "name": "Ingeniería de Prompt: creando prompts eficaces para la IA generativa",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert14.name",
+      "issuer": "content.certifications.cert14.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert14.description"
     },
     {
       "id": "cert-12",
-      "name": "Linux: conociendo y utilizando la terminal",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert15.name",
+      "issuer": "content.certifications.cert15.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert15.description"
     },
     {
       "id": "cert-13",
-      "name": "Comandos DML: Manipulación de datos con MySQL",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert16.name",
+      "issuer": "content.certifications.cert16.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert16.description"
     },
     {
       "id": "cert-14",
-      "name": "Introducción a SQL con MySQL: Manipule y consulte",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert17.name",
+      "issuer": "content.certifications.cert17.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert17.description"
     },
     {
       "id": "cert-15",
-      "name": "Consultas SQL: Avanzando en SQL con MySQL",
-      "issuer": "Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert18.name",
+      "issuer": "content.certifications.cert18.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert18.description"
     },
     {
       "id": "cert-16",
-      "name": "Oracle SQL Developer",
-      "issuer": "Oracle + Alura Latam",
-      "date": "2025"
+      "name": "content.certifications.cert19.name",
+      "issuer": "content.certifications.cert19.issuer",
+      "date": "2025",
+      "description": "content.certifications.cert19.description"
     }
   ],
   "metadata": {

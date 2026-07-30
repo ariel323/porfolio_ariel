@@ -20,12 +20,12 @@ export class ExperienceTimeline {
     this.certifications = data.certifications;
   }
 
-  private getContentTranslation(key: string): string {
-    try {
-      return i18n.t(`content.experiences.${key}`);
-    } catch {
-      return key;
+  private resolveContent(value: string): string {
+    const trimmed = value.trim();
+    if (trimmed.startsWith("content.")) {
+      return i18n.t(trimmed);
     }
+    return trimmed;
   }
 
   /**
@@ -88,9 +88,9 @@ export class ExperienceTimeline {
                 </div>
               </div>
               
-              <div class="timeline__description">
-                ${exp.description}
-              </div>
+<div class="timeline__description">
+${this.resolveContent(exp.description)}
+</div>
               
               ${
                 exp.achievements.length > 0
