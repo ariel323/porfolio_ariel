@@ -1,4 +1,5 @@
 import type { GitHubStats, GitHubRepo } from "@/types";
+import { i18n } from "../utils/i18n";
 
 export class LiveDashboard {
   private container: HTMLElement;
@@ -43,11 +44,11 @@ export class LiveDashboard {
         <div class="dashboard__header">
           <h3 class="dashboard__title">
             <i class="fas fa-tachometer-alt"></i>
-            Live Developer Metrics
+            ${i18n.t("dashboard.title")}
           </h3>
           <div class="dashboard__status">
             <span class="status-indicator status-indicator--active"></span>
-            <span>System Online</span>
+            <span>${i18n.t("dashboard.status")}</span>
           </div>
         </div>
 
@@ -59,7 +60,7 @@ export class LiveDashboard {
             </div>
             <div class="metric-card__content">
               <div class="metric-card__value" id="metric-repos">--</div>
-              <div class="metric-card__label">Total Repositories</div>
+              <div class="metric-card__label">${i18n.t("dashboard.repositories")}</div>
             </div>
             <div class="metric-card__trend">
               <i class="fas fa-arrow-up"></i> +${Math.floor(Math.random() * 5)}%
@@ -72,7 +73,7 @@ export class LiveDashboard {
             </div>
             <div class="metric-card__content">
               <div class="metric-card__value" id="metric-stars">--</div>
-              <div class="metric-card__label">Total Stars</div>
+              <div class="metric-card__label">${i18n.t("dashboard.totalStars")}</div>
             </div>
             <div class="metric-card__trend">
               <i class="fas fa-arrow-up"></i> +${Math.floor(
@@ -89,10 +90,10 @@ export class LiveDashboard {
               <div class="metric-card__value" id="metric-streak">${Math.floor(
                 Math.random() * 30
               )}</div>
-              <div class="metric-card__label">Day Streak</div>
+              <div class="metric-card__label">${i18n.t("dashboard.dayStreak")}</div>
             </div>
             <div class="metric-card__trend">
-              <i class="fas fa-arrow-up"></i> Active
+              <i class="fas fa-arrow-up"></i> ${i18n.t("dashboard.active")}
             </div>
           </div>
 
@@ -105,10 +106,10 @@ export class LiveDashboard {
                 (a, b) => a + b,
                 0
               )}</div>
-              <div class="metric-card__label">Total Commits (365d)</div>
+              <div class="metric-card__label">${i18n.t("dashboard.totalCommits")}</div>
             </div>
             <div class="metric-card__trend">
-              <i class="fas fa-check"></i> Tracked
+              <i class="fas fa-check"></i> ${i18n.t("dashboard.tracked")}
             </div>
           </div>
         </div>
@@ -117,13 +118,13 @@ export class LiveDashboard {
         <div class="dashboard__section">
           <h4 class="dashboard__section-title">
             <i class="fas fa-calendar-alt"></i>
-            Commit Activity (Last 365 Days)
+            ${i18n.t("dashboard.commitActivity")}
           </h4>
           <div class="commit-heatmap" id="commit-heatmap">
             <!-- Generated dynamically -->
           </div>
           <div class="heatmap-legend">
-            <span>Less</span>
+            <span>${i18n.t("dashboard.less")}</span>
             <div class="legend-scale">
               <span class="legend-cell level-0"></span>
               <span class="legend-cell level-1"></span>
@@ -131,7 +132,7 @@ export class LiveDashboard {
               <span class="legend-cell level-3"></span>
               <span class="legend-cell level-4"></span>
             </div>
-            <span>More</span>
+            <span>${i18n.t("dashboard.more")}</span>
           </div>
         </div>
 
@@ -139,7 +140,7 @@ export class LiveDashboard {
         <div class="dashboard__section">
           <h4 class="dashboard__section-title">
             <i class="fas fa-chart-pie"></i>
-            Language Distribution
+            ${i18n.t("dashboard.languageDistribution")}
           </h4>
           <div class="language-chart" id="language-chart">
             <!-- Generated dynamically -->
@@ -150,19 +151,19 @@ export class LiveDashboard {
         <div class="dashboard__section">
           <h4 class="dashboard__section-title">
             <i class="fas fa-rocket"></i>
-            Deployment Status
+            ${i18n.t("dashboard.deploymentStatus")}
           </h4>
           <div class="deploy-status">
             <div class="deploy-item">
               <div class="deploy-item__header">
-                <span class="deploy-item__name">Portfolio Website</span>
+                <span class="deploy-item__name">${i18n.t("dashboard.portfolioWebsite")}</span>
                 <span class="deploy-badge deploy-badge--success">
-                  <i class="fas fa-check-circle"></i> Live
+                  <i class="fas fa-check-circle"></i> ${i18n.t("dashboard.live")}
                 </span>
               </div>
               <div class="deploy-item__info">
-                <span>Last deployed: 2 hours ago</span>
-                <span>Status: 200 OK</span>
+                <span>${i18n.t("dashboard.lastDeployed", { time: "2 hours ago" })}</span>
+                <span>${i18n.t("dashboard.statusOk")}</span>
               </div>
               <div class="deploy-progress">
                 <div class="deploy-progress__bar" style="width: 100%"></div>
@@ -171,14 +172,14 @@ export class LiveDashboard {
 
             <div class="deploy-item">
               <div class="deploy-item__header">
-                <span class="deploy-item__name">API Backend</span>
+                <span class="deploy-item__name">${i18n.t("dashboard.apiBackend")}</span>
                 <span class="deploy-badge deploy-badge--success">
-                  <i class="fas fa-check-circle"></i> Live
+                  <i class="fas fa-check-circle"></i> ${i18n.t("dashboard.live")}
                 </span>
               </div>
               <div class="deploy-item__info">
-                <span>Last deployed: 1 day ago</span>
-                <span>Status: Healthy</span>
+                <span>${i18n.t("dashboard.lastDeployed", { time: "1 day ago" })}</span>
+                <span>${i18n.t("dashboard.healthy")}</span>
               </div>
               <div class="deploy-progress">
                 <div class="deploy-progress__bar" style="width: 100%"></div>
@@ -187,14 +188,14 @@ export class LiveDashboard {
 
             <div class="deploy-item">
               <div class="deploy-item__header">
-                <span class="deploy-item__name">Docker Services</span>
+                <span class="deploy-item__name">${i18n.t("dashboard.dockerServices")}</span>
                 <span class="deploy-badge deploy-badge--warning">
-                  <i class="fas fa-exclamation-triangle"></i> Staging
+                  <i class="fas fa-exclamation-triangle"></i> ${i18n.t("dashboard.staging")}
                 </span>
               </div>
               <div class="deploy-item__info">
-                <span>Last deployed: Testing</span>
-                <span>Status: Validation</span>
+                <span>${i18n.t("dashboard.lastDeployed", { time: "Testing" })}</span>
+                <span>${i18n.t("dashboard.healthy")}</span>
               </div>
               <div class="deploy-progress">
                 <div class="deploy-progress__bar deploy-progress__bar--warning" style="width: 65%"></div>
@@ -207,7 +208,7 @@ export class LiveDashboard {
         <div class="dashboard__section">
           <h4 class="dashboard__section-title">
             <i class="fas fa-server"></i>
-            Tech Stack System Status
+            ${i18n.t("dashboard.techStackStatus")}
           </h4>
           <div class="system-monitor">
             ${this.generateSystemServices()}
@@ -318,12 +319,12 @@ export class LiveDashboard {
 
   private generateSystemServices(): string {
     const services = [
-      { name: "Java / Spring Boot", status: "active", uptime: "99.8%" },
-      { name: "Node.js / Express", status: "active", uptime: "99.5%" },
-      { name: "React / TypeScript", status: "active", uptime: "99.9%" },
-      { name: "PostgreSQL", status: "active", uptime: "100%" },
-      { name: "Docker", status: "active", uptime: "98.2%" },
-      { name: "Git / GitHub", status: "active", uptime: "100%" },
+      { name: i18n.t("dashboard.services.javaSpring"), status: "active", uptime: "99.8%" },
+      { name: i18n.t("dashboard.services.nodeExpress"), status: "active", uptime: "99.5%" },
+      { name: i18n.t("dashboard.services.reactTypeScript"), status: "active", uptime: "99.9%" },
+      { name: i18n.t("dashboard.services.postgresql"), status: "active", uptime: "100%" },
+      { name: i18n.t("dashboard.services.docker"), status: "active", uptime: "98.2%" },
+      { name: i18n.t("dashboard.services.gitHub"), status: "active", uptime: "100%" },
     ];
 
     return services
@@ -337,7 +338,7 @@ export class LiveDashboard {
           <div class="service-item__name">${service.name}</div>
           <div class="service-item__meta">
             <span class="service-item__status">${service.status.toUpperCase()}</span>
-            <span class="service-item__uptime">Uptime: ${service.uptime}</span>
+            <span class="service-item__uptime">${i18n.t("dashboard.uptime", { uptime: service.uptime })}</span>
           </div>
         </div>
         <div class="service-item__pulse">

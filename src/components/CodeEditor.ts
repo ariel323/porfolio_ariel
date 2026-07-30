@@ -1,4 +1,5 @@
 import type { PortfolioData, Project } from "@/types";
+import { i18n } from "../utils/i18n";
 
 interface Tab {
   id: string;
@@ -117,7 +118,7 @@ export class CodeEditor {
       <div class="code-editor">
         <div class="code-editor__header">
           <div class="code-editor__header-left">
-            <button class="code-editor__sidebar-toggle" data-action="toggle-sidebar" title="Toggle Sidebar (Ctrl+B)">
+            <button class="code-editor__sidebar-toggle" data-action="toggle-sidebar" title="${i18n.t("editor.sidebarToggle")}">
               <i class="fas fa-bars"></i>
             </button>
             <div class="code-editor__tabs">
@@ -125,28 +126,28 @@ export class CodeEditor {
             </div>
           </div>
           <div class="code-editor__actions">
-            <button class="code-editor__action code-editor__action--run" data-action="run" title="Run Code (Ctrl+Enter)" style="display: none;">
-              <i class="fas fa-play"></i> <span>RUN</span>
+            <button class="code-editor__action code-editor__action--run" data-action="run" title="${i18n.t("editor.runCode")} (Ctrl+Enter)" style="display: none;">
+              <i class="fas fa-play"></i> <span>${i18n.t("editor.run")}</span>
             </button>
-            <button class="code-editor__action code-editor__action--edit" data-action="edit" title="Toggle Edit Mode" style="display: none;">
+            <button class="code-editor__action code-editor__action--edit" data-action="edit" title="${i18n.t("editor.editModeToggle")}" style="display: none;">
               <i class="fas fa-edit"></i>
             </button>
-            <button class="code-editor__action" data-action="format" title="Format Code (Shift+Alt+F)">
+            <button class="code-editor__action" data-action="format" title="${i18n.t("editor.formatCode")} (Shift+Alt+F)">
               <i class="fas fa-align-left"></i>
             </button>
-            <button class="code-editor__action" data-action="search" title="Search (Ctrl+F)">
+            <button class="code-editor__action" data-action="search" title="${i18n.t("editor.search")} (Ctrl+F)">
               <i class="fas fa-search"></i>
             </button>
-            <button class="code-editor__action" data-action="command-palette" title="Command Palette (Ctrl+Shift+P)">
+            <button class="code-editor__action" data-action="command-palette" title="${i18n.t("editor.commandPalette")} (Ctrl+Shift+P)">
               <i class="fas fa-terminal"></i>
             </button>
-            <button class="code-editor__action" data-action="copy" title="Copy code (Ctrl+C)">
+            <button class="code-editor__action" data-action="copy" title="${i18n.t("editor.copyCode")} (Ctrl+C)">
               <i class="fas fa-copy"></i>
             </button>
-            <button class="code-editor__action" data-action="download" title="Download">
+            <button class="code-editor__action" data-action="download" title="${i18n.t("editor.download")}">
               <i class="fas fa-download"></i>
             </button>
-            <button class="code-editor__action" data-action="fullscreen" title="Toggle fullscreen (F11)">
+            <button class="code-editor__action" data-action="fullscreen" title="${i18n.t("editor.fullscreen")} (F11)">
               <i class="fas fa-expand"></i>
             </button>
           </div>
@@ -157,7 +158,7 @@ export class CodeEditor {
           <div class="code-editor__sidebar">
             <div class="code-editor__explorer">
               <div class="code-editor__explorer-header">
-                <span>📁 EXPLORER</span>
+                <span>${i18n.t("editor.explorer")}</span>
                 <button class="code-editor__explorer-toggle">
                   <i class="fas fa-chevron-down"></i>
                 </button>
@@ -170,7 +171,7 @@ export class CodeEditor {
             <!-- GitHub Stats Mini Panel -->
             <div class="code-editor__stats">
               <div class="code-editor__stats-header">
-                <span>📊 STATS</span>
+                <span>${i18n.t("editor.stats")}</span>
               </div>
               <div class="code-editor__stats-content" id="editor-stats">
                 <!-- Will be populated dynamically -->
@@ -189,7 +190,7 @@ export class CodeEditor {
 
             <!-- Search Bar -->
             <div class="code-editor__search" id="search-bar" style="display: none;">
-              <input type="text" class="code-editor__search-input" id="search-input" placeholder="Find in code..." />
+              <input type="text" class="code-editor__search-input" id="search-input" placeholder="${i18n.t("editor.searchPlaceholder")}" />
               <button class="code-editor__search-btn" data-action="find-next">
                 <i class="fas fa-chevron-down"></i>
               </button>
@@ -204,7 +205,7 @@ export class CodeEditor {
 
             <!-- Command Palette -->
             <div class="code-editor__command-palette" id="command-palette" style="display: none;">
-              <input type="text" class="code-editor__command-input" id="command-input" placeholder="Type a command..." />
+              <input type="text" class="code-editor__command-input" id="command-input" placeholder="${i18n.t("editor.commandPlaceholder")}" />
               <div class="code-editor__command-list" id="command-list">
                 <!-- Commands will be populated dynamically -->
               </div>
@@ -221,7 +222,7 @@ export class CodeEditor {
             <!-- Preview Panel -->
             <div class="code-editor__preview" id="code-preview">
               <div class="code-editor__preview-header">
-                <span>👁️ PREVIEW</span>
+                <span>${i18n.t("editor.preview")}</span>
                 <button class="code-editor__preview-toggle" data-action="toggle-preview">
                   <i class="fas fa-times"></i>
                 </button>
@@ -239,16 +240,16 @@ export class CodeEditor {
             <div class="code-editor__panel-header">
               <div class="code-editor__panel-tabs">
               <button class="code-editor__panel-tab active" data-panel="output">
-                <i class="fas fa-terminal"></i> OUTPUT
+                <i class="fas fa-terminal"></i> ${i18n.t("editor.output")}
               </button>
               <button class="code-editor__panel-tab" data-panel="problems">
-                <i class="fas fa-exclamation-circle"></i> PROBLEMS <span class="badge">0</span>
+                <i class="fas fa-exclamation-circle"></i> ${i18n.t("editor.problems")} <span class="badge">0</span>
               </button>
               <button class="code-editor__panel-tab" data-panel="debug">
-                <i class="fas fa-bug"></i> DEBUG CONSOLE
+                <i class="fas fa-bug"></i> ${i18n.t("editor.debug")}
               </button>
               </div>
-              <button class="code-editor__panel-close" data-action="toggle-bottom-panel" title="Close Panel">
+              <button class="code-editor__panel-close" data-action="toggle-bottom-panel" title="${i18n.t("common.close")}">
                 <i class="fas fa-times"></i>
               </button>
             </div>
@@ -256,17 +257,15 @@ export class CodeEditor {
               <div class="code-editor__output">
                 <div class="output-line">
                   <span class="output-time">[${new Date().toLocaleTimeString()}]</span>
-                  <span class="output-text">✓ Portfolio loaded successfully</span>
+                  <span class="output-text">${i18n.t("editor.portfolioLoaded")}</span>
                 </div>
                 <div class="output-line">
                   <span class="output-time">[${new Date().toLocaleTimeString()}]</span>
-                  <span class="output-text">✓ ${
-                    this.data.projects?.length || 0
-                  } projects compiled</span>
+                  <span class="output-text">${i18n.t("editor.projectsCompiled", { count: this.data.projects?.length || 0 })}</span>
                 </div>
                 <div class="output-line">
                   <span class="output-time">[${new Date().toLocaleTimeString()}]</span>
-                  <span class="output-text">✓ Code editor ready</span>
+                  <span class="output-text">${i18n.t("editor.ready")}</span>
                 </div>
               </div>
             </div>
@@ -277,20 +276,20 @@ export class CodeEditor {
         <div class="code-editor__statusbar">
           <div class="code-editor__statusbar-left">
             <span class="statusbar-item">
-              <i class="fas fa-git-alt"></i> main
+              <i class="fas fa-git-alt"></i> ${i18n.t("editor.gitBranch")}
             </span>
             <span class="statusbar-item">
-              <i class="fas fa-sync-alt"></i> 0 changes
+              <i class="fas fa-sync-alt"></i> 0 ${i18n.t("editor.changes")}
             </span>
             <span class="statusbar-item">
-              <i class="fas fa-exclamation-triangle"></i> 0 ⚠️ 0
+              <i class="fas fa-exclamation-triangle"></i> 0 ${i18n.t("editor.warnings")} 0
             </span>
           </div>
           <div class="code-editor__statusbar-right">
-            <span class="statusbar-item">Ln 1, Col 1</span>
-            <span class="statusbar-item">Spaces: 2</span>
-            <span class="statusbar-item">UTF-8</span>
-            <span class="statusbar-item" id="current-language">Markdown</span>
+            <span class="statusbar-item">${i18n.t("editor.line")} 1, ${i18n.t("editor.col")} 1</span>
+            <span class="statusbar-item">${i18n.t("editor.spaces")}: 2</span>
+            <span class="statusbar-item">${i18n.t("editor.encoding")}</span>
+            <span class="statusbar-item" id="current-language">${i18n.t("editor.language")}</span>
             <span class="statusbar-item">
               <i class="fas fa-bell"></i>
             </span>
@@ -817,7 +816,7 @@ export class CodeEditor {
     const activeTab = this.tabs.find((t) => t.id === this.activeTabId);
     if (activeTab) {
       navigator.clipboard.writeText(activeTab.content).then(() => {
-        this.showNotification("📋 Code copied to clipboard!");
+        this.showNotification(i18n.t("editor.codeCopied"));
       });
     }
   }
@@ -1063,7 +1062,7 @@ fetchData();
     if (activeTab?.language !== "javascript") {
       this.addConsoleOutput(
         "warn",
-        "Only JavaScript code can be executed in the playground"
+        i18n.t("editor.onlyJavaScript")
       );
       return;
     }
@@ -1073,7 +1072,7 @@ fetchData();
 
     try {
       // Create a safe execution context
-      this.addConsoleOutput("info", "▶ Running code...");
+      this.addConsoleOutput("info", i18n.t("editor.runCode"));
 
       // Execute code in try-catch
       const result = new Function(code)();
@@ -1085,7 +1084,7 @@ fetchData();
         });
       }
 
-      this.addConsoleOutput("info", "✓ Code executed successfully");
+      this.addConsoleOutput("info", i18n.t("editor.codeExecuted"));
     } catch (error: any) {
       this.addConsoleOutput("error", `Error: ${error.message}`);
     }
@@ -1110,15 +1109,15 @@ fetchData();
     if (editBtn) {
       editBtn.classList.toggle("active", this.isEditable);
       editBtn.title = this.isEditable
-        ? "Disable Edit Mode"
-        : "Enable Edit Mode";
+        ? i18n.t("editor.editModeToggle")
+        : i18n.t("editor.editModeToggle");
     }
 
     const activeTab = this.tabs.find((t) => t.id === this.activeTabId);
     if (this.isEditable && activeTab?.language === "javascript") {
       this.addConsoleOutput(
         "info",
-        "✏️ Edit mode enabled. Press Ctrl+Enter to run code."
+        i18n.t("editor.editModeEnabled")
       );
       this.updateConsolePanel();
     }
@@ -1297,43 +1296,43 @@ fetchData();
     const commands = [
       {
         icon: "▶️",
-        name: "Run Code",
+        name: i18n.t("editor.run"),
         shortcut: "Ctrl+Enter",
         action: () => this.runCode(),
       },
       {
         icon: "✏️",
-        name: "Toggle Edit Mode",
+        name: i18n.t("editor.edit"),
         shortcut: "Ctrl+E",
         action: () => this.toggleEditMode(),
       },
       {
         icon: "🔍",
-        name: "Search",
+        name: i18n.t("editor.search"),
         shortcut: "Ctrl+F",
         action: () => this.toggleSearch(),
       },
       {
         icon: "📋",
-        name: "Copy Code",
+        name: i18n.t("editor.copy"),
         shortcut: "Ctrl+C",
         action: () => this.copyCode(),
       },
       {
         icon: "💾",
-        name: "Download Code",
+        name: i18n.t("editor.download"),
         shortcut: "",
         action: () => this.downloadCode(),
       },
       {
         icon: "🎨",
-        name: "Format Code",
+        name: i18n.t("editor.format"),
         shortcut: "Shift+Alt+F",
         action: () => this.formatCode(),
       },
       {
         icon: "🔄",
-        name: "Clear Console",
+        name: i18n.t("common.refresh"),
         shortcut: "",
         action: () => this.clearConsole(),
       },
@@ -1390,7 +1389,7 @@ fetchData();
         const parsed = JSON.parse(code);
         formatted = JSON.stringify(parsed, null, 2);
       } catch (e) {
-        this.showNotification("⚠️ Invalid JSON");
+        this.showNotification(i18n.t("editor.invalidJson"));
         return;
       }
     } else if (
@@ -1404,7 +1403,7 @@ fetchData();
     codeContent.textContent = formatted;
     this.updateLineNumbers(formatted);
     this.applySyntaxHighlighting(codeContent, activeTab.language);
-    this.showNotification("✨ Code formatted!");
+    this.showNotification(i18n.t("editor.formatted"));
   }
 
   private formatJavaScript(code: string): string {
@@ -1445,7 +1444,7 @@ fetchData();
   private clearConsole(): void {
     this.consoleOutputs = [];
     this.updateConsolePanel();
-    this.showNotification("🗑️ Console cleared");
+    this.showNotification(i18n.t("common.refresh"));
   }
 
   private updateCursorPosition(): void {
@@ -1516,7 +1515,7 @@ fetchData();
     }
 
     this.showNotification(
-      this.sidebarVisible ? "📂 Sidebar opened" : "📂 Sidebar closed"
+      this.sidebarVisible ? i18n.t("editor.sidebarOpened") : i18n.t("editor.sidebarClosed")
     );
   }
 
@@ -1534,14 +1533,14 @@ fetchData();
     }
 
     this.showNotification(
-      this.bottomPanelVisible ? "⬆️ Panel opened" : "⬇️ Panel closed"
+      this.bottomPanelVisible ? i18n.t("editor.panelOpened") : i18n.t("editor.panelClosed")
     );
   }
 
   private closeTab(tabId: string): void {
     // Don't close if it's the last tab or welcome tab
     if (this.tabs.length <= 1 || tabId === "welcome") {
-      this.showNotification("⚠️ Cannot close this tab");
+      this.showNotification(i18n.t("editor.cannotCloseTab"));
       return;
     }
 
@@ -1567,11 +1566,11 @@ fetchData();
       this.switchTab(this.activeTabId);
     }
 
-    this.showNotification("✖️ Tab closed");
+    this.showNotification(i18n.t("editor.tabClosed"));
   }
 
   private async syncWithGitHub(): Promise<void> {
-    this.showNotification("🔄 Syncing with GitHub...");
+    this.showNotification(i18n.t("editor.syncing"));
 
     try {
       // Fetch repository tree from GitHub API
@@ -1588,10 +1587,10 @@ fetchData();
       // Update file tree with real GitHub files
       this.updateFileTreeFromGitHub(data.tree);
 
-      this.showNotification("✅ Synced with GitHub successfully!");
+      this.showNotification(i18n.t("editor.syncSuccess"));
     } catch (error) {
       console.error("GitHub sync error:", error);
-      this.showNotification("❌ Failed to sync with GitHub");
+      this.showNotification(i18n.t("editor.syncFailed"));
     }
   }
 

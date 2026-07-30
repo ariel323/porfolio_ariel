@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Experience, Education, Certification } from "../types";
+import { i18n } from "../utils/i18n";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,17 +55,17 @@ export class ExperienceTimeline {
                   ${this.formatPeriod(exp.period)}
                   ${
                     exp.type === "freelance"
-                      ? '<span class="badge badge--freelance">Freelance</span>'
+                      ? `<span class="badge badge--freelance">${i18n.t("common.freelance")}</span>`
                       : ""
                   }
                   ${
                     exp.type === "contract"
-                      ? '<span class="badge badge--contract">Contrato</span>'
+                      ? `<span class="badge badge--contract">${i18n.t("common.contract")}</span>`
                       : ""
                   }
                   ${
                     exp.type === "internship"
-                      ? '<span class="badge badge--internship">Pasantía</span>'
+                      ? `<span class="badge badge--internship">${i18n.t("common.internship")}</span>`
                       : ""
                   }
                 </div>
@@ -75,7 +76,7 @@ export class ExperienceTimeline {
                       ? `<a href="${exp.companyUrl}" target="_blank" rel="noopener noreferrer">${exp.company}</a>`
                       : exp.company
                   }
-                  <span class="timeline__location">📍 ${exp.location}</span>
+                  <span class="timeline__location">${i18n.t("sections.experience.location")} ${exp.location}</span>
                 </div>
               </div>
               
@@ -87,7 +88,7 @@ export class ExperienceTimeline {
                 exp.achievements.length > 0
                   ? `
                 <div class="timeline__achievements">
-                  <h4>✨ Logros Destacados:</h4>
+                  <h4>${i18n.t("sections.experience.achievements")}</h4>
                   <ul>
                     ${exp.achievements
                       .map((achievement) => `<li>${achievement}</li>`)
@@ -197,8 +198,8 @@ export class ExperienceTimeline {
         this.certifications.length > 3
           ? `
       <div class="certifications__controls">
-        <button class="certifications__btn certifications__btn--prev" aria-label="Anterior">‹</button>
-        <button class="certifications__btn certifications__btn--next" aria-label="Siguiente">›</button>
+        <button class="certifications__btn certifications__btn--prev" aria-label="${i18n.t("common.previous")}">‹</button>
+        <button class="certifications__btn certifications__btn--next" aria-label="${i18n.t("common.next")}">›</button>
       </div>
       `
           : ""
@@ -340,7 +341,7 @@ export class ExperienceTimeline {
   }): string {
     const start = this.formatDate(period.start);
     const end =
-      period.end === "present" ? "Presente" : this.formatDate(period.end);
+      period.end === "present" ? i18n.t("common.present") : this.formatDate(period.end);
     return `${start} - ${end}`;
   }
 
@@ -350,18 +351,18 @@ export class ExperienceTimeline {
   private formatDate(date: string): string {
     const [year, month] = date.split("-");
     const months = [
-      "Ene",
-      "Feb",
-      "Mar",
-      "Abr",
-      "May",
-      "Jun",
-      "Jul",
-      "Ago",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dic",
+      i18n.t("date.jan"),
+      i18n.t("date.feb"),
+      i18n.t("date.mar"),
+      i18n.t("date.apr"),
+      i18n.t("date.may"),
+      i18n.t("date.jun"),
+      i18n.t("date.jul"),
+      i18n.t("date.aug"),
+      i18n.t("date.sep"),
+      i18n.t("date.oct"),
+      i18n.t("date.nov"),
+      i18n.t("date.dec"),
     ];
     return month ? `${months[parseInt(month) - 1]} ${year}` : year;
   }

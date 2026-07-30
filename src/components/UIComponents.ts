@@ -7,6 +7,7 @@ import type {
 } from "../types";
 import { ProjectsManager } from "./ProjectsManager";
 import { GitHubAPI } from "../utils/GitHubAPI";
+import { i18n } from "../utils/i18n";
 
 export class UIComponents {
   private projectsManager: ProjectsManager;
@@ -236,7 +237,7 @@ export class UIComponents {
         </h3>
         <div class="skill-card__meta">
           <span class="skill-card__category">${skill.category}</span>
-          <span class="skill-card__experience">Nivel promedio ${averageLevel}%</span>
+          <span class="skill-card__experience">${i18n.t("sections.skills.averageLevel")} ${averageLevel}%</span>
         </div>
       </header>
       <button
@@ -246,7 +247,7 @@ export class UIComponents {
         aria-controls="${detailsId}"
       >
         <span class="skill-card__toggle-label">${
-          expand ? "Ocultar detalles" : "Ver stack completo"
+          expand ? i18n.t("sections.skills.hideDetails") : i18n.t("sections.skills.viewStack")
         }</span>
         <span class="skill-card__toggle-icon">${expand ? "−" : "+"}</span>
       </button>
@@ -282,17 +283,17 @@ export class UIComponents {
           </div>
           <div class="skills__actions">
             <label class="skills__search">
-              <span class="sr-only">Buscar tecnologías</span>
+              <span class="sr-only">${i18n.t("common.search")}</span>
               <input
                 type="search"
                 id="skill-search"
-                placeholder="Buscar framework, librería o herramienta..."
+                placeholder="${i18n.t("sections.skills.search")}"
                 autocomplete="off"
               />
             </label>
             <div class="skills__view-toggle" role="group" aria-label="Modo de visualización">
-              <button type="button" class="skill-view-btn" data-view="detailed">Detallado</button>
-              <button type="button" class="skill-view-btn" data-view="compact">Compacto</button>
+              <button type="button" class="skill-view-btn" data-view="detailed">${i18n.t("sections.skills.detailed")}</button>
+              <button type="button" class="skill-view-btn" data-view="compact">${i18n.t("sections.skills.compact")}</button>
             </div>
           </div>
         </div>
@@ -342,7 +343,7 @@ export class UIComponents {
     return `
       <button type="button" class="skill-filter" data-skill-filter="all">
         <span class="skill-filter__icon">🌐</span>
-        <span>Todos</span>
+        <span>${i18n.t("sections.skills.filters.all")}</span>
       </button>
       ${buttons}
     `;
@@ -401,8 +402,8 @@ export class UIComponents {
     if (!filteredSkills.length) {
       container.innerHTML = `
         <div class="skills__empty">
-          <p>No se encontraron stacks con los filtros seleccionados.</p>
-          <button type="button" class="btn btn--secondary" data-reset-skills>Restablecer filtros</button>
+          <p>${i18n.t("sections.skills.noResults")}</p>
+          <button type="button" class="btn btn--secondary" data-reset-skills>${i18n.t("sections.skills.resetFilters")}</button>
         </div>
       `;
 
@@ -490,8 +491,10 @@ export class UIComponents {
     if (!status) return;
 
     const visibleLabel =
-      visibleCount === 1 ? "stack disponible" : "stacks disponibles";
-    status.textContent = `${visibleCount} ${visibleLabel} · ${totalCount} en total`;
+      visibleCount === 1
+        ? i18n.t("sections.skills.availableStackSingular")
+        : i18n.t("sections.skills.availableStacks");
+    status.textContent = `${visibleCount} ${visibleLabel} · ${totalCount} ${i18n.t("sections.skills.totalStacks")}`;
   }
 
   private updateSkillControlsUI(section: Element): void {
@@ -538,7 +541,7 @@ export class UIComponents {
         ".skill-card__toggle-icon"
       );
       if (label) {
-        label.textContent = expand ? "Ocultar detalles" : "Ver stack completo";
+        label.textContent = expand ? i18n.t("sections.skills.hideDetails") : i18n.t("sections.skills.viewStack");
       }
       if (icon) {
         icon.textContent = expand ? "−" : "+";
@@ -634,7 +637,7 @@ export class UIComponents {
           <input 
             type="text" 
             id="project-search" 
-            placeholder="Search projects..." 
+            placeholder="${i18n.t("sections.projects.search")}" 
             class="search-input"
           />
         </div>
@@ -643,11 +646,11 @@ export class UIComponents {
         </div>
         <div class="projects__sort">
           <select id="project-sort" class="sort-select">
-            <option value="date-desc">Newest First</option>
-            <option value="date-asc">Oldest First</option>
-            <option value="name-asc">Name (A-Z)</option>
-            <option value="name-desc">Name (Z-A)</option>
-            <option value="stars-desc">Most Stars</option>
+            <option value="date-desc">${i18n.t("sections.projects.sort.newest")}</option>
+            <option value="date-asc">${i18n.t("sections.projects.sort.oldest")}</option>
+            <option value="name-asc">${i18n.t("sections.projects.sort.nameAsc")}</option>
+            <option value="name-desc">${i18n.t("sections.projects.sort.nameDesc")}</option>
+            <option value="stars-desc">${i18n.t("sections.projects.sort.stars")}</option>
           </select>
         </div>
       </div>
@@ -681,12 +684,12 @@ export class UIComponents {
    */
   private createCategoryFilters(): string {
     const categories = [
-      { id: "all", label: "All", icon: "📂" },
-      { id: "backend", label: "Backend", icon: "⚙️" },
-      { id: "frontend", label: "Frontend", icon: "🎨" },
-      { id: "fullstack", label: "Full Stack", icon: "🌐" },
-      { id: "devops", label: "DevOps", icon: "🐳" },
-      { id: "ai-ml", label: "AI/ML", icon: "🧠" },
+      { id: "all", label: i18n.t("sections.projects.filters.all"), icon: "📂" },
+      { id: "backend", label: i18n.t("sections.projects.filters.backend"), icon: "⚙️" },
+      { id: "frontend", label: i18n.t("sections.projects.filters.frontend"), icon: "🎨" },
+      { id: "fullstack", label: i18n.t("sections.projects.filters.fullstack"), icon: "🌐" },
+      { id: "devops", label: i18n.t("sections.projects.filters.devops"), icon: "🐳" },
+      { id: "ai-ml", label: i18n.t("sections.projects.filters.aiMl"), icon: "🧠" },
     ];
 
     return categories
@@ -765,7 +768,7 @@ export class UIComponents {
     if (projects.length === 0) {
       grid.innerHTML = `
         <div class="no-results">
-          <p>😔 No projects found matching your criteria.</p>
+          <p>${i18n.t("sections.projects.noResults")}</p>
         </div>
       `;
       return;
@@ -786,14 +789,14 @@ export class UIComponents {
 
     const demoButton = project.demoUrl
       ? `<a href="${project.demoUrl}" target="_blank" class="btn btn--primary">
-           <span>🚀</span> View Demo
+           <span>🚀</span> ${i18n.t("sections.projects.links.demo")}
          </a>`
       : "";
 
     const dockerInfo = project.dockerImages
       ? `
       <div class="docker-info">
-        <h4>🐳 Docker Images:</h4>
+        <h4>${i18n.t("sections.projects.docker.images")}</h4>
         ${project.dockerImages
           .map(
             (image) => `
@@ -811,8 +814,8 @@ export class UIComponents {
     const stats = project.stats
       ? `
       <div class="project-stats">
-        <span class="stat">⭐ ${project.stats.stars}</span>
-        <span class="stat">🔀 ${project.stats.forks}</span>
+        <span class="stat">${i18n.t("sections.projects.stats.stars")} ${project.stats.stars}</span>
+        <span class="stat">${i18n.t("sections.projects.stats.forks")} ${project.stats.forks}</span>
         <span class="stat">${project.stats.language}</span>
       </div>
     `
@@ -835,7 +838,7 @@ export class UIComponents {
           <div class="project-card__links">
             ${demoButton}
             <a href="${project.repoUrl}" target="_blank" class="btn btn--secondary">
-              <span>💻</span> View Code
+              <span>💻</span> ${i18n.t("sections.projects.links.code")}
             </a>
           </div>
         </div>
@@ -882,40 +885,40 @@ export class UIComponents {
             `;
           })
           .join("")
-      : `<p class="languages-empty">Aún no hay datos de lenguajes disponibles.</p>`;
+      : `<p class="languages-empty">${i18n.t("sections.github.noLanguages")}</p>`;
 
     const mostPopular = stats.mostPopularRepo
       ? `<a class="github-highlight" href="${stats.mostPopularRepo.html_url}" target="_blank" rel="noopener">${stats.mostPopularRepo.name} · ⭐ ${stats.mostPopularRepo.stargazers_count}</a>`
-      : `<span class="github-highlight">Explorá mis proyectos para ver más estadísticas.</span>`;
+      : `<span class="github-highlight">${i18n.t("sections.github.exploreProjects")}</span>`;
 
     container.innerHTML = `
       <div class="github-stats-grid">
         <div class="stat-card">
           <div class="stat-value">${stats.totalRepos}</div>
-          <div class="stat-label">Repositorios</div>
+          <div class="stat-label">${i18n.t("sections.github.repositories")}</div>
         </div>
         <div class="stat-card">
           <div class="stat-value">⭐ ${stats.totalStars}</div>
-          <div class="stat-label">Total de Stars</div>
+          <div class="stat-label">${i18n.t("sections.github.totalStars")}</div>
         </div>
         <div class="stat-card">
           <div class="stat-value">🔀 ${stats.totalForks}</div>
-          <div class="stat-label">Total de Forks</div>
+          <div class="stat-label">${i18n.t("sections.github.totalForks")}</div>
         </div>
         <div class="stat-card stat-card--highlight">
-          <div class="stat-label">Proyecto Destacado</div>
+          <div class="stat-label">${i18n.t("sections.github.featuredProject")}</div>
           <div class="stat-value">${mostPopular}</div>
         </div>
       </div>
       <div class="github-stats-secondary">
         <div class="languages-chart">
-          <h4>Lenguajes más usados</h4>
+          <h4>${i18n.t("sections.github.mostUsedLanguages")}</h4>
           ${languagesChart}
         </div>
         <div class="github-repos-section">
           <div class="github-repos-header">
-            <h3>🚀 Últimos proyectos en GitHub</h3>
-            <a class="github-repos-link" href="${githubProfileUrl}" target="_blank" rel="noopener">Ver todo el perfil →</a>
+            <h3>🚀 ${i18n.t("sections.github.latestProjects")}</h3>
+            <a class="github-repos-link" href="${githubProfileUrl}" target="_blank" rel="noopener">${i18n.t("sections.github.viewAllProfile")}</a>
           </div>
           <div class="github-repos-grid"></div>
         </div>
@@ -930,7 +933,7 @@ export class UIComponents {
     if (!grid) return;
 
     if (!repos.length) {
-      grid.innerHTML = `<p class="github-repos-empty">Aún no hay repositorios públicos.</p>`;
+      grid.innerHTML = `<p class="github-repos-empty">${i18n.t("sections.github.noRepos")}</p>`;
       return;
     }
 
@@ -956,8 +959,8 @@ export class UIComponents {
 
     container.innerHTML = `
       <div class="github-error">
-        <p>⚠️ ${message}</p>
-        <p class="github-error__hint">Verificá tu conexión a internet o intentá recargar más tarde.</p>
+        <p>${i18n.t("sections.github.error")} ${message}</p>
+        <p class="github-error__hint">${i18n.t("sections.github.errorHint")}</p>
       </div>
     `;
   }
@@ -1011,18 +1014,18 @@ export class UIComponents {
     const days = Math.floor(hours / 24);
 
     if (days > 0) {
-      return `${days} día${days === 1 ? "" : "s"} atrás`;
+      return `${days} ${days === 1 ? i18n.t("common.dayAgo") : i18n.t("common.daysAgo")}`;
     }
 
     if (hours > 0) {
-      return `${hours} hora${hours === 1 ? "" : "s"} atrás`;
+      return `${hours} ${hours === 1 ? i18n.t("common.hourAgo") : i18n.t("common.hoursAgo")}`;
     }
 
     if (minutes > 0) {
-      return `${minutes} minuto${minutes === 1 ? "" : "s"} atrás`;
+      return `${minutes} ${minutes === 1 ? i18n.t("common.minuteAgo") : i18n.t("common.minutesAgo")}`;
     }
 
-    return "Hace unos segundos";
+    return i18n.t("common.justNow");
   }
 
   /**

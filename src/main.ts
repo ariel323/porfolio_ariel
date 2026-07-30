@@ -9,6 +9,7 @@ import { CodeEditor } from "@components/CodeEditor";
 import { LiveDashboard } from "@components/LiveDashboard";
 import { NarrativeScroll } from "@components/NarrativeScroll";
 import { VisualIdentity } from "@components/VisualIdentity";
+import { i18n } from "@utils/i18n";
 import "./styles/main.css";
 
 class Portfolio {
@@ -239,6 +240,8 @@ class Portfolio {
    * Setup event listeners
    */
   private setupEventListeners(): void {
+    this.setupLanguageToggle();
+
     // Smooth scroll for navigation
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", (e) => {
@@ -410,6 +413,56 @@ class Portfolio {
     errorDiv.className = "error-message";
     errorDiv.textContent = message;
     document.body.appendChild(errorDiv);
+  }
+
+  /**
+   * Setup language toggle
+   */
+  private setupLanguageToggle(): void {
+    const langToggle = document.getElementById("lang-toggle");
+    const langLabel = document.getElementById("lang-label");
+
+    if (langToggle) {
+      langToggle.addEventListener("click", () => {
+        const newLang = i18n.toggleLanguage();
+        if (langLabel) {
+          langLabel.textContent = newLang.toUpperCase();
+        }
+        this.updateStaticText();
+        this.updateHtmlLang();
+      });
+    }
+
+    // Set initial label
+    if (langLabel) {
+      langLabel.textContent = i18n.getLanguage().toUpperCase();
+    }
+
+    this.updateHtmlLang();
+  }
+
+  /**
+   * Update static HTML elements with data-i18n attributes
+   */
+  private updateStaticText(): void {
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      if (!key) return;
+
+      const translation = i18n.t(key);
+      if (translation && translation !== key) {
+        element.innerHTML = translation;
+      }
+    });
+  }
+
+  /**
+   * Update HTML lang attribute
+   */
+  private updateHtmlLang(): void {
+    const html = document.documentElement;
+    html.setAttribute("lang", i18n.getLanguage());
+    html.setAttribute("data-lang", i18n.getLanguage());
   }
 
   /**

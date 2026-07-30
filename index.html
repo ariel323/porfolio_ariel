@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -55,15 +55,20 @@
                 <span>💻</span> Ariel Almada
             </a>
 
-            <nav class="header__menu" aria-label="Navegación principal">
-                <a class="header__menu__link" href="#home"><span>01.</span> Inicio</a>
-                <a class="header__menu__link" href="#terminal"><span>02.</span> Terminal</a>
-                <a class="header__menu__link" href="#code-lab"><span>03.</span> Code Lab</a>
-                <a class="header__menu__link" href="#dashboard"><span>04.</span> Dashboard</a>
-                <a class="header__menu__link" href="#skills"><span>05.</span> Skills</a>
-                <a class="header__menu__link" href="#projects"><span>06.</span> Proyectos</a>
-                <a class="header__menu__link" href="#contact"><span>07.</span> Contacto</a>
+                <nav class="header__menu" aria-label="Navegación principal">
+                <a class="header__menu__link" href="#home" data-i18n="nav.home"><span>01.</span> Inicio</a>
+                <a class="header__menu__link" href="#terminal" data-i18n="nav.terminal"><span>02.</span> Terminal</a>
+                <a class="header__menu__link" href="#code-lab" data-i18n="nav.codeLab"><span>03.</span> Code Lab</a>
+                <a class="header__menu__link" href="#dashboard" data-i18n="nav.dashboard"><span>04.</span> Dashboard</a>
+                <a class="header__menu__link" href="#skills" data-i18n="nav.skills"><span>05.</span> Skills</a>
+                <a class="header__menu__link" href="#projects" data-i18n="nav.projects"><span>06.</span> Proyectos</a>
+                <a class="header__menu__link" href="#contact" data-i18n="nav.contact"><span>07.</span> Contacto</a>
             </nav>
+
+            <!-- Language Switcher -->
+            <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
+              🌐 <span id="lang-label">ES</span>
+            </button>
 
             <!-- Theme Toggle (opcional) -->
             <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
@@ -87,7 +92,7 @@
         <section class="hero-section" id="home">
             <div class="hero-section__container">
                 <div class="hero-section__content">
-                    <p class="hero-section__greeting">Hola, soy</p>
+                    <p class="hero-section__greeting" data-i18n="hero.greeting">Hola, soy</p>
 
                     <h1 class="hero-section__title">
                         <h1 class="hero-section__title">
@@ -95,11 +100,11 @@
                             <span class="hero-section__title--highlight" id="profile-title">Fullstack Developer</span>
                         </h1>
 
-                        <p class="hero-section__subtitle" id="profile-tagline">
+                        <p class="hero-section__subtitle" id="profile-tagline" data-i18n="hero.subtitle">
                             Construyo soluciones digitales robustas y escalables
                         </p>
 
-                        <p class="hero-section__text" id="profile-bio">
+                        <p class="hero-section__text" id="profile-bio" data-i18n="hero.bio">
                             Especialista en desarrollo de software con foco en Java y Node.js. Apasionado por crear
                             soluciones robustas, escalables y de alta calidad. Experiencia en desarrollo backend,
                             APIs RESTful, microservicios y aplicaciones web modernas con JavaScript y React.
@@ -117,10 +122,10 @@
                         <!-- Call to Action Buttons -->
                         <div class="hero-section__cta">
                             <a href="#projects" class="hero-section__cta-btn hero-section__cta-btn--primary">
-                                <span>🚀</span> Ver Proyectos
+                                <span>🚀</span> <span data-i18n="hero.ctaPrimary">Ver Proyectos</span>
                             </a>
                             <a href="#contact" class="hero-section__cta-btn hero-section__cta-btn--secondary">
-                                <span>📧</span> Contactar
+                                <span>📧</span> <span data-i18n="hero.ctaSecondary">Contactar</span>
                             </a>
                         </div>
 
@@ -159,8 +164,8 @@
 
         <!-- Interactive Terminal Section -->
         <section class="section-modern" id="terminal">
-            <h2 class="section-title">💻 Interactive Terminal</h2>
-            <p class="section-intro">
+            <h2 class="section-title" data-i18n="sections.terminal.title">💻 Interactive Terminal</h2>
+            <p class="section-intro" data-i18n="sections.terminal.intro">
                 Explora mi portafolio de una manera única. Usa comandos como <code>help</code>, <code>projects</code>,
                 <code>skills</code>, o descubre easter eggs!
             </p>
@@ -169,8 +174,8 @@
 
         <!-- Code Editor / Lab Section -->
         <section class="section-modern" id="code-lab">
-            <h2 class="section-title">🔬 Code Laboratory</h2>
-            <p class="section-intro">
+            <h2 class="section-title" data-i18n="sections.codeLab.title">🔬 Code Laboratory</h2>
+            <p class="section-intro" data-i18n="sections.codeLab.intro">
                 Navega por mis proyectos como si estuvieras en VSCode. Explora el código, revisa las tecnologías y mira
                 las previews.
             </p>
@@ -179,8 +184,8 @@
 
         <!-- Live Dashboard Section -->
         <section class="section-modern" id="dashboard">
-            <h2 class="section-title">📊 Developer Dashboard</h2>
-            <p class="section-intro">
+            <h2 class="section-title" data-i18n="sections.dashboard.title">📊 Developer Dashboard</h2>
+            <p class="section-intro" data-i18n="sections.dashboard.intro">
                 Métricas en tiempo real, actividad de commits, distribución de lenguajes y estado de deployments.
             </p>
             <div id="live-dashboard"></div>
@@ -188,7 +193,7 @@
 
         <!-- Skills Section - Se renderizará dinámicamente con TypeScript -->
         <section class="skills" id="skills">
-            <h2 class="section-title">💡 Stack Tecnológico</h2>
+            <h2 class="section-title" data-i18n="sections.skills.title">💡 Stack Tecnológico</h2>
             <div class="skills__grid">
                 <!-- Los skills se cargarán dinámicamente desde portfolio-data.json -->
             </div>
@@ -196,7 +201,7 @@
 
         <!-- Experience Section - Timeline profesional -->
         <section class="experience" id="experience">
-            <h2 class="section-title">� Experiencia Profesional</h2>
+            <h2 class="section-title" data-i18n="sections.experience.title">💼 Experiencia Profesional</h2>
 
             <!-- Timeline de experiencia -->
             <div class="experience__timeline" id="experience-timeline">
@@ -205,7 +210,7 @@
 
             <!-- Educación -->
             <div class="experience__education">
-                <h3 class="subsection-title">🎓 Formación Académica</h3>
+                <h3 class="subsection-title" data-i18n="sections.experience.education">🎓 Formación Académica</h3>
                 <div class="education__grid" id="education-grid">
                     <!-- Se renderizará dinámicamente -->
                 </div>
@@ -213,7 +218,7 @@
 
             <!-- Certificaciones -->
             <div class="experience__certifications">
-                <h3 class="subsection-title">🏆 Certificaciones</h3>
+                <h3 class="subsection-title" data-i18n="sections.experience.certifications">🏆 Certificaciones</h3>
                 <div class="certifications__carousel" id="certifications-carousel">
                     <!-- Se renderizará dinámicamente -->
                 </div>
@@ -222,7 +227,7 @@
 
         <!-- Projects Section - Se renderizará dinámicamente con TypeScript -->
         <section class="projects" id="projects">
-            <h2 class="section-title">🚀 Proyectos Destacados</h2>
+            <h2 class="section-title" data-i18n="sections.projects.title">🚀 Proyectos Destacados</h2>
 
             <!-- Controles de filtrado y búsqueda se agregarán dinámicamente -->
 
@@ -233,10 +238,10 @@
 
         <!-- GitHub Stats Dashboard -->
         <section id="github-stats">
-            <h2 class="section-title">📊 Estadísticas de GitHub</h2>
+            <h2 class="section-title" data-i18n="sections.github.title">📊 Estadísticas de GitHub</h2>
             <div class="github-stats-loading">
                 <div class="spinner"></div>
-                <p>Cargando estadísticas de GitHub...</p>
+                <p data-i18n="sections.github.loading">Cargando estadísticas de GitHub...</p>
             </div>
         </section>
 
@@ -244,8 +249,8 @@
 
         <!-- Contact Section -->
         <section class="contact" id="contact">
-            <h2 class="section-title">📬 Hablemos</h2>
-            <p class="contact__intro-text">
+            <h2 class="section-title" data-i18n="sections.contact.title">📬 Hablemos</h2>
+            <p class="contact__intro-text" data-i18n="sections.contact.intro">
                 Estoy abierto a nuevas oportunidades y siempre busco colaborar en proyectos
                 interesantes. ¿Tienes un proyecto en mente? ¡Hablemos!
             </p>
@@ -272,9 +277,9 @@
     <!-- Footer -->
     <footer class="footer">
         <p class="footer__text">
-            Diseñado y Desarrollado con ❤️ por Ariel Almada &copy; 2025
+            <span data-i18n="footer.designedBy">Diseñado y Desarrollado con ❤️ por Ariel Almada</span> &copy; <span data-i18n="footer.year">2025</span>
             <br>
-            <span style="font-size: 0.875rem; opacity: 0.7;">
+            <span style="font-size: 0.875rem; opacity: 0.7;" data-i18n="footer.builtWith">
                 Hecho con TypeScript + Three.js + GSAP
             </span>
         </p>

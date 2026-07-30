@@ -1,4 +1,5 @@
 import type { PortfolioData, Skill } from "@/types";
+import { i18n } from "../utils/i18n";
 
 interface TerminalCommand {
   command: string;
@@ -361,7 +362,7 @@ Choose your pill:
     } else {
       this.addLine({
         type: "error",
-        content: `Command not found: ${commandName}. Type 'help' for available commands.`,
+        content: i18n.t("terminal.errors.commandNotFound", { cmd: commandName }),
       });
     }
 
@@ -418,19 +419,18 @@ Choose your pill:
     const welcome = `
 ╔══════════════════════════════════════════════════════════════╗
 ║                                                              ║
-║     🚀 Welcome to Ariel Almada's Interactive Terminal      ║
+║     ${i18n.t("terminal.welcome")}      ║
 ║                                                              ║
-║     Fullstack Developer | Java | Node.js | React            ║
+║     ${i18n.t("terminal.role")} | ${i18n.t("terminal.focus")}            ║
 ║                                                              ║
 ╚══════════════════════════════════════════════════════════════╝
 
-Type 'help' to see available commands.
-Type 'whoami' to learn more about me.
-Type 'projects' to see my work.
+${i18n.t("terminal.commands.help").charAt(0).toUpperCase() + i18n.t("terminal.commands.help").slice(1)}: ${i18n.t("terminal.tips.tab")}
+${i18n.t("terminal.commands.whoami").charAt(0).toUpperCase() + i18n.t("terminal.commands.whoami").slice(1)}: ${i18n.t("terminal.tips.history")}
 
-💡 Pro tip: Use TAB for autocomplete, ↑↓ for history
+💡 ${i18n.t("terminal.tips.easterEggs")}
 
-Last login: ${new Date().toLocaleString()}
+${i18n.t("terminal.commands.date").charAt(0).toUpperCase() + i18n.t("terminal.commands.date").slice(1)}: ${new Date().toLocaleString()}
     `;
 
     this.addLine({ type: "success", content: welcome });
@@ -439,42 +439,41 @@ Last login: ${new Date().toLocaleString()}
   // Command implementations
   private helpCommand(): string {
     const commandList = Array.from(this.commands.entries())
-      .map(([name, cmd]) => `  ${name.padEnd(15)} - ${cmd.description}`)
+      .map(([name]) => `  ${name.padEnd(15)} - ${i18n.t(`terminal.commands.${name}`)}`)
       .join("\n");
 
     return `
-Available commands:
+${i18n.t("terminal.commands.help").charAt(0).toUpperCase() + i18n.t("terminal.commands.help").slice(1)}:
 ${commandList}
 
-💡 Tips:
-  - Use TAB for autocomplete
-  - Use ↑/↓ to navigate command history
-  - Try some easter eggs! (hint: sudo, vim, hack)
+💡 ${i18n.t("terminal.tips.tab")}
+   - ${i18n.t("terminal.tips.history")}
+   - ${i18n.t("terminal.tips.easterEggs")}
     `;
   }
 
   private whoamiCommand(): string {
     return `
 ╔════════════════════════════════════════════════════════════╗
-║  Developer Profile                                         ║
+║  ${i18n.t("terminal.role")}                                         ║
 ╚════════════════════════════════════════════════════════════╝
 
-👤 Name:        Ariel Almada
-💼 Role:        Fullstack Developer
-🎯 Focus:       Java, Spring Boot, Node.js, React
-📍 Location:    Argentina
-🎓 Education:   Computer Science Student at UNER
+👤 ${i18n.t("terminal.stats.name")}:        Ariel Almada
+💼 ${i18n.t("terminal.stats.role")}:        ${i18n.t("terminal.role")}
+🎯 ${i18n.t("terminal.stats.focus")}:       ${i18n.t("terminal.focus")}
+📍 ${i18n.t("terminal.stats.location")}:    ${i18n.t("terminal.location")}
+🎓 ${i18n.t("terminal.stats.education")}:   ${i18n.t("terminal.education")}
 
-📊 Stats:
-   ├─ Years coding:     ${new Date().getFullYear() - 2020}+
-   ├─ Projects:         ${this.data.projects?.length || 0}
-   ├─ Skills:           ${this.data.skills?.length || 0}
-   └─ Coffee consumed:  ∞ ☕
+📊 ${i18n.t("terminal.stats.stats").charAt(0).toUpperCase() + i18n.t("terminal.stats.stats").slice(1)}:
+   ├─ ${i18n.t("terminal.stats.yearsCoding")}:     ${new Date().getFullYear() - 2020}+
+   ├─ ${i18n.t("terminal.stats.projects")}:         ${this.data.projects?.length || 0}
+   ├─ ${i18n.t("terminal.stats.skills")}:           ${this.data.skills?.length || 0}
+   └─ ${i18n.t("terminal.stats.coffee")}:  ∞ ☕
 
-🔗 Links:
-   ├─ GitHub:    https://github.com/ariel323
-   ├─ LinkedIn:  linkedin.com/in/ariel-almada-4a7133346
-   └─ Email:     arielalmada861@gmail.com
+🔗 ${i18n.t("terminal.stats.links").charAt(0).toUpperCase() + i18n.t("terminal.stats.links").slice(1)}:
+   ├─ ${i18n.t("terminal.links.github")}:    https://github.com/ariel323
+   ├─ ${i18n.t("terminal.links.linkedin")}:  linkedin.com/in/ariel-almada-4a7133346
+   └─ ${i18n.t("terminal.links.email")}:     arielalmada861@gmail.com
 
 💬 "Code is poetry in motion" - Ariel
     `;
@@ -512,13 +511,13 @@ ${commandList}
 
       default:
         return `
-📁 Available directories:
-   projects/     - My portfolio projects
-   skills/       - Technical skills
-   experience/   - Work experience
-   education/    - Academic background
+📁 ${i18n.t("terminal.availableDirs.title")}:
+   ${i18n.t("terminal.availableDirs.projects")}/     - ${i18n.t("terminal.availableDirs.projects")}
+   ${i18n.t("terminal.availableDirs.skills")}/       - ${i18n.t("terminal.availableDirs.skills")}
+   ${i18n.t("terminal.availableDirs.experience")}/   - ${i18n.t("terminal.availableDirs.experience")}
+   ${i18n.t("terminal.availableDirs.education")}/    - ${i18n.t("terminal.availableDirs.education")}
 
-Usage: ls [projects|skills|experience]
+${i18n.t("terminal.commands.ls").charAt(0).toUpperCase() + i18n.t("terminal.commands.ls").slice(1)}: ls [${i18n.t("terminal.availableDirs.projects")}|${i18n.t("terminal.availableDirs.skills")}|${i18n.t("terminal.availableDirs.experience")}]
         `;
     }
   }
@@ -585,13 +584,12 @@ and best practices.
         `;
 
       default:
-        return `cat: ${file}: No such file or directory
+        return `${i18n.t("terminal.errors.fileNotFound", { file })}
 
-Available files:
-  • skills.json    - Skills in JSON format
-  • about.txt      - About me
-  • readme.md      - Portfolio README
-        `;
+${i18n.t("terminal.commands.cat").charAt(0).toUpperCase() + i18n.t("terminal.commands.cat").slice(1)}:
+  • ${i18n.t("terminal.availableFiles.skillsJson")}    - ${i18n.t("terminal.availableFiles.skillsJson")}
+  • ${i18n.t("terminal.availableFiles.aboutTxt")}      - ${i18n.t("terminal.availableFiles.aboutTxt")}
+  • ${i18n.t("terminal.availableFiles.readmeMd")}      - ${i18n.t("terminal.availableFiles.readmeMd")}`;
     }
   }
 
@@ -669,23 +667,22 @@ ${exp.achievements?.map((a) => `   • ${a}`).join("\n") || "   N/A"}
   private contactCommand(): string {
     return `
 ╔════════════════════════════════════════════════════════════╗
-║  Contact Information                                       ║
+║  ${i18n.t("terminal.contact.title")}                                       ║
 ╚════════════════════════════════════════════════════════════╝
 
-📧 Email:     arielalmada861@gmail.com
-🐙 GitHub:    https://github.com/ariel323
-💼 LinkedIn:  linkedin.com/in/ariel-almada-4a7133346
-📱 WhatsApp:  +54 9 343 4475095
+${i18n.t("terminal.contact.email")}:     arielalmada861@gmail.com
+🐙 ${i18n.t("terminal.contact.github")}:    https://github.com/ariel323
+💼 ${i18n.t("terminal.contact.linkedin")}:  linkedin.com/in/ariel-almada-4a7133346
+📱 ${i18n.t("terminal.contact.whatsapp")}:  +54 9 343 4475095
 
-💡 Feel free to reach out! I'm always open to:
-   • New opportunities
-   • Collaboration on interesting projects
-   • Technical discussions
-   • Coffee chats ☕
+💡 ${i18n.t("terminal.contact.alwaysOpen")}:
+   • ${i18n.t("terminal.contact.opportunities")}
+   • ${i18n.t("terminal.contact.collaboration")}
+   • ${i18n.t("terminal.contact.discussions")}
+   • ${i18n.t("terminal.contact.coffee")} ☕
 
-Quick actions:
-   • Type 'github' to open my GitHub
-   • Type 'linkedin' to open my LinkedIn
+${i18n.t("terminal.actions.openGithub")}
+${i18n.t("terminal.actions.openLinkedin")}
     `;
   }
 
@@ -701,19 +698,19 @@ Quick actions:
 
   private achievementsCommand(): string {
     const allAchievements = {
-      "coffee-lover": "☕ Coffee Lover - Tried to make coffee with sudo",
-      "vim-survivor": "📝 Vim Survivor - Opened vim and survived",
-      "chaos-agent": "💥 Chaos Agent - Attempted rm -rf /",
-      hacker: "🎯 Hacker - Activated hacker mode",
-      "matrix-fan": "🟢 Matrix Fan - Entered the matrix",
-      explorer: "🗺️ Explorer - Used at least 10 different commands",
+      "coffee-lover": i18n.t("terminal.achievements.coffeeLover"),
+      "vim-survivor": i18n.t("terminal.achievements.vimSurvivor"),
+      "chaos-agent": i18n.t("terminal.achievements.chaosAgent"),
+      hacker: i18n.t("terminal.achievements.hacker"),
+      "matrix-fan": i18n.t("terminal.achievements.matrixFan"),
+      explorer: i18n.t("terminal.achievements.explorer"),
     };
 
     if (this.achievements.size === 0) {
       return `
-🏆 Achievements: 0/${Object.keys(allAchievements).length}
+🏆 ${i18n.t("terminal.achievements.title")}: 0/${Object.keys(allAchievements).length}
 
-No achievements unlocked yet! Try exploring the terminal:
+${i18n.t("terminal.achievements.none")}
 ${Object.entries(allAchievements)
   .map(([_, desc]) => `  🔒 ${desc}`)
   .join("\n")}
@@ -732,14 +729,12 @@ ${Object.entries(allAchievements)
       .join("\n");
 
     return `
-🏆 Achievements: ${this.achievements.size}/${
-      Object.keys(allAchievements).length
-    }
+🏆 ${i18n.t("terminal.achievements.title")}: ${this.achievements.size}/${Object.keys(allAchievements).length}
 
-Unlocked:
+${i18n.t("terminal.achievements.unlocked")}:
 ${unlocked}
 
-Locked:
+${i18n.t("terminal.achievements.locked")}:
 ${locked}
     `;
   }
