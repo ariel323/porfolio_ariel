@@ -56,6 +56,13 @@ export const translations = {
       minuteAgo: "minuto",
       minutesAgo: "minutos",
       justNow: "Hace unos segundos",
+      themeToggled: "Cambiado al tema {theme}",
+      profileImageAlt: "Foto de perfil de Ariel Almada, desarrollador de software.",
+      toggleTheme: "Cambiar tema",
+      mainNav: "Navegación principal",
+      toggleMenu: "Abrir/cerrar menú",
+      changeLanguage: "Cambiar idioma",
+      githubConnectionError: "No pudimos conectar con GitHub. Intentalo más tarde.",
     },
     date: {
       jan: "Ene",
@@ -88,6 +95,16 @@ export const translations = {
       ctaPrimary: "🚀 Ver Proyectos",
       ctaSecondary: "📧 Contactar",
       scroll: "Scroll",
+      experienceList: {
+        javaMvc: "Desarrollo de apps Java Desktop con arquitectura MVC",
+        restApis: "APIs RESTful con Spring Boot y Node.js (Express)",
+        react: "Aplicaciones web interactivas con React",
+        modernJs: "JavaScript moderno (ES6+), TypeScript y manejo de estados",
+        testing: "Testing con JUnit, Jest y herramientas modernas",
+        cleanCode: "Git, metodologías ágiles y buenas prácticas de Clean Code",
+        devops: "Estandarización de entornos de desarrollo global mediante Docker Compose",
+        optimization: "Reducción de tiempos de respuesta del servidor mediante escritura y mejora de consultas SQL complejas",
+      },
     },
     sections: {
       terminal: {
@@ -417,6 +434,13 @@ export const translations = {
        minuteAgo: "minute",
        minutesAgo: "minutes",
        justNow: "Just now",
+       themeToggled: "Switched to {theme} theme",
+       profileImageAlt: "Profile photo of Ariel Almada, software developer.",
+       toggleTheme: "Toggle theme",
+       mainNav: "Main navigation",
+       toggleMenu: "Toggle menu",
+       changeLanguage: "Change language",
+       githubConnectionError: "We couldn't connect to GitHub. Please try again later.",
      },
      date: {
       jan: "Jan",
@@ -449,6 +473,16 @@ export const translations = {
       ctaPrimary: "🚀 View Projects",
       ctaSecondary: "📧 Contact",
       scroll: "Scroll",
+      experienceList: {
+        javaMvc: "Java Desktop apps development with MVC architecture",
+        restApis: "RESTful APIs with Spring Boot and Node.js (Express)",
+        react: "Interactive web applications with React",
+        modernJs: "Modern JavaScript (ES6+), TypeScript and state management",
+        testing: "Testing with JUnit, Jest and modern tools",
+        cleanCode: "Git, agile methodologies and Clean Code best practices",
+        devops: "Standardization of global development environments using Docker Compose",
+        optimization: "Reduction of server response times through writing and improving complex SQL queries",
+      },
     },
     sections: {
       terminal: {
