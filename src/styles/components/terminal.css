@@ -169,9 +169,9 @@
 
 /* Terminal Body */
 .terminal__body {
-  padding: 20px;
-  min-height: 400px;
-  max-height: 600px;
+  padding: 16px;
+  min-height: 350px;
+  max-height: 550px;
   display: flex;
   flex-direction: column;
   position: relative;
