@@ -206,33 +206,10 @@ class Portfolio {
   }
 
   /**
-   * Load GitHub data in background
+   * Load GitHub data from API (only if a token is available)
    */
   private async loadGitHubData(): Promise<void> {
-    try {
-      
-
-      const repos = await this.githubAPI.fetchRepositories();
-      const stats = this.githubAPI.buildStatsFromRepos(repos);
-
-      this.uiComponents.renderGitHubStats(stats);
-      this.uiComponents.renderGitHubRepositories(repos);
-      this.uiComponents.updateProjectsWithGitHubData(repos);
-
-      // Update dashboard with GitHub data
-      if (this.dashboard) {
-        this.dashboard.updateStats(stats, repos);
-      }
-
-      
-    } catch (error) {
-      console.error("Error loading GitHub data:", error);
-      const message =
-        error instanceof Error
-          ? error.message
-          : i18n.t("common.githubConnectionError");
-      this.uiComponents.renderGitHubError(message);
-    }
+    // Static data is already rendered via renderGitHubData()
   }
 
   /**
