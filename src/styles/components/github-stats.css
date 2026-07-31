@@ -519,3 +519,114 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  #github-stats {
+    padding: var(--spacing-md);
+    gap: var(--spacing-lg);
+  }
+
+  .github-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .stat-card {
+    padding: var(--spacing-md);
+  }
+
+  .stat-value {
+    font-size: var(--font-size-xl);
+  }
+
+  .stat-label {
+    font-size: var(--font-size-xs);
+  }
+
+  .github-stats-secondary {
+    gap: var(--spacing-lg);
+  }
+
+  .languages-chart {
+    padding: var(--spacing-md);
+  }
+
+  .languages-chart h4 {
+    font-size: var(--font-size-base);
+  }
+
+  .language-item {
+    grid-template-columns: 70px 1fr 35px;
+    gap: var(--spacing-sm);
+  }
+
+  .language-name {
+    font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .language-bar {
+    height: 8px;
+  }
+
+  .language-count {
+    font-size: 0.7rem;
+  }
+
+  .github-repos-section {
+    padding: var(--spacing-md);
+  }
+
+  .github-repos-header h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .github-repos-link {
+    font-size: var(--font-size-xs);
+  }
+
+  .github-repo-card {
+    padding: var(--spacing-md);
+  }
+
+  .github-repo-name {
+    font-size: var(--font-size-base);
+  }
+
+  .github-repo-description {
+    font-size: var(--font-size-xs);
+    min-height: auto;
+  }
+
+  .github-repo-meta {
+    font-size: 0.65rem;
+  }
+
+  .timeline-item {
+    gap: var(--spacing-sm);
+  }
+
+  .timeline-icon {
+    width: 32px;
+    height: 32px;
+    font-size: var(--font-size-base);
+  }
+
+  .timeline-content {
+    padding: var(--spacing-sm);
+  }
+
+  .timeline-title {
+    font-size: var(--font-size-sm);
+  }
+
+  .timeline-description {
+    font-size: var(--font-size-xs);
+  }
+
+  .timeline-date {
+    font-size: 0.6rem;
+  }
+}

@@ -234,21 +234,26 @@
     position: relative;
   }
 
-  .header__mobile-toggle {
-    display: flex;
-    order: 3;
-  }
-
-  .header__logo {
+  .lang-toggle {
     order: 1;
     z-index: calc(var(--z-index-fixed) + 2);
   }
 
-  .theme-toggle {
+  .header__logo {
     order: 2;
+    z-index: calc(var(--z-index-fixed) + 2);
+  }
+
+  .theme-toggle {
+    order: 3;
     position: relative;
     margin-right: var(--spacing-md);
     z-index: calc(var(--z-index-fixed) + 2);
+  }
+
+  .header__mobile-toggle {
+    display: flex;
+    order: 4;
   }
 
   .header__menu {
@@ -309,7 +314,7 @@
     transition: var(--transition-ease);
   }
 
-  .header__menu::after:hover {
+  .header__menu:hover::after {
     color: var(--color-text-light);
     transform: rotate(90deg);
   }

@@ -306,6 +306,22 @@ section {
   font-family: var(--font-mono);
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-lg);
+    font-size: 0.8rem;
+    margin-top: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-md);
+    font-size: 0.7rem;
+    margin-top: var(--spacing-lg);
+  }
+}
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */

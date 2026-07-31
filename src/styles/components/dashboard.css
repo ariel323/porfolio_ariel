@@ -743,11 +743,15 @@
 
   .metric-card__label {
     font-size: 0.85rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .metric-card__trend {
-    top: 12px;
-    right: 12px;
+    position: static;
+    margin-top: var(--spacing-xs);
+    align-self: flex-start;
     padding: 4px 8px;
     font-size: 0.7rem;
   }
@@ -768,38 +772,96 @@
 
 @media (max-width: 480px) {
   .dashboard {
-    padding: 16px;
+    padding: 12px;
   }
 
   .dashboard__header {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
   }
 
   .dashboard__title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    gap: 8px;
+  }
+
+  .dashboard__title i {
+    font-size: 1.2rem;
+  }
+
+  .dashboard__status {
+    padding: 4px 10px;
+    font-size: 0.75rem;
   }
 
   .dashboard__metrics {
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 24px;
   }
 
   .metric-card {
-    padding: 16px;
-    gap: 16px;
+    padding: 12px;
+    gap: 12px;
+    min-height: 80px;
   }
 
   .metric-card__icon {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
   }
 
   .metric-card__value {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .metric-card__label {
+    font-size: 0.75rem;
+  }
+
+  .metric-card__trend {
+    padding: 3px 6px;
+    font-size: 0.65rem;
+  }
+
+  .dashboard__section-title {
+    font-size: 1rem;
+  }
+
+  .commit-heatmap {
+    padding: 8px;
+    gap: 2px;
+  }
+
+  .heatmap-day {
+    width: 8px;
+    height: 8px;
+  }
+
+  .heatmap-legend {
+    font-size: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .language-bar {
+    padding: 12px;
+  }
+
+  .language-bar__name {
     font-size: 0.8rem;
+  }
+
+  .language-bar__percentage {
+    font-size: 0.8rem;
+  }
+
+  .deploy-item {
+    padding: 12px;
+  }
+
+  .service-item {
+    padding: 12px;
+    gap: 8px;
   }
 }
 
