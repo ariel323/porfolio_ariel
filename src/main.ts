@@ -40,15 +40,11 @@ class Portfolio {
       // Force scroll to top on page load
       window.scrollTo(0, 0);
 
-      console.log("🚀 Initializing Portfolio...");
-
       // Show loading state
       this.showLoader();
 
       // Load data
       await this.projectsManager.loadData();
-      console.log("✅ Portfolio data loaded");
-
       // Initialize particles background
       this.initParticles();
 
@@ -57,16 +53,10 @@ class Portfolio {
 
       // Initialize animations
       this.animationsController.init();
-      console.log("✅ Animations initialized");
-
       // Initialize narrative scroll system
       this.narrativeScroll = new NarrativeScroll();
-      console.log("✅ Narrative scroll initialized");
-
       // Initialize visual identity (cursor, microinteractions)
       this.visualIdentity = new VisualIdentity();
-      console.log("✅ Visual identity applied");
-
       // Setup event listeners
       this.setupEventListeners();
 
@@ -75,8 +65,6 @@ class Portfolio {
 
       // Fetch GitHub data in background
       this.loadGitHubData();
-
-      console.log("🎉 Portfolio initialized successfully!");
     } catch (error) {
       console.error("❌ Error initializing portfolio:", error);
       this.showError("Failed to load portfolio. Please refresh the page.");
@@ -89,7 +77,7 @@ class Portfolio {
   private initParticles(): void {
     const container = document.getElementById("particles-container");
     if (!container) {
-      console.warn("Particles container not found");
+      
       return;
     }
 
@@ -103,7 +91,7 @@ class Portfolio {
         mouseRadius: 100,
       });
       this.particlesSystem.start();
-      console.log("✅ Particles system started");
+      
     } catch (error) {
       console.error("Error initializing particles:", error);
     }
@@ -146,11 +134,8 @@ class Portfolio {
     if (data) {
       try {
         this.terminal = new InteractiveTerminal("interactive-terminal", data);
-        console.log("✅ Interactive terminal rendered");
       } catch (error) {
-        console.warn(
-          "⚠️ Terminal container not found, skipping terminal render"
-        );
+        
       }
     }
   }
@@ -163,11 +148,8 @@ class Portfolio {
     if (data) {
       try {
         this.codeEditor = new CodeEditor("code-editor", data);
-        console.log("✅ Code editor rendered");
       } catch (error) {
-        console.warn(
-          "⚠️ Code editor container not found, skipping editor render"
-        );
+        
       }
     }
   }
@@ -178,11 +160,8 @@ class Portfolio {
   private renderDashboard(): void {
     try {
       this.dashboard = new LiveDashboard("live-dashboard");
-      console.log("✅ Live dashboard rendered");
     } catch (error) {
-      console.warn(
-        "⚠️ Dashboard container not found, skipping dashboard render"
-      );
+      
     }
   }
 
@@ -200,9 +179,9 @@ class Portfolio {
         certifications: data.certifications,
       });
       this.experienceTimeline.render();
-      console.log("✅ Experience timeline rendered");
+      
     } else {
-      console.warn("⚠️ Experience data not available");
+      
     }
   }
 
@@ -211,7 +190,7 @@ class Portfolio {
    */
   private async loadGitHubData(): Promise<void> {
     try {
-      console.log("📊 Fetching GitHub data...");
+      
 
       const repos = await this.githubAPI.fetchRepositories();
       const stats = this.githubAPI.buildStatsFromRepos(repos);
@@ -225,7 +204,7 @@ class Portfolio {
         this.dashboard.updateStats(stats, repos);
       }
 
-      console.log("✅ GitHub data loaded");
+      
     } catch (error) {
       console.error("Error loading GitHub data:", error);
       const message =

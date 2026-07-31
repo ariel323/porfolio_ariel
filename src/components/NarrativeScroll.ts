@@ -16,7 +16,7 @@ export class NarrativeScroll {
   constructor() {
     // Disable on mobile for performance
     if (window.innerWidth < 768) {
-      console.log("📱 Narrative Scroll disabled on mobile");
+      
       return;
     }
 
@@ -109,7 +109,7 @@ export class NarrativeScroll {
    */
   private enterScene(scene: ScrollScene, index: number): void {
     this.currentScene = index;
-    console.log(`📖 Entrando a: ${scene.narrative}`);
+    
 
     // Cambiar color de fondo según el "mood"
     const body = document.body;
@@ -134,8 +134,8 @@ export class NarrativeScroll {
   /**
    * 🌊 Al salir de una escena
    */
-  private leaveScene(scene: ScrollScene, _index: number): void {
-    console.log(`👋 Saliendo de: ${scene.narrative}`);
+  private leaveScene(_scene: ScrollScene, _index: number): void {
+    
   }
 
   /**

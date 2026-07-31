@@ -4,7 +4,6 @@ import { i18n } from "../utils/i18n";
 export class LiveDashboard {
   private container: HTMLElement;
   private stats: GitHubStats | null = null;
-  private repos: GitHubRepo[] = [];
   private commitData: number[] = [];
 
   constructor(containerId: string) {
@@ -29,12 +28,11 @@ export class LiveDashboard {
     }
   }
 
-  public updateStats(stats: GitHubStats, repos: GitHubRepo[]): void {
+  public updateStats(stats: GitHubStats, _repos: GitHubRepo[]): void {
     this.stats = stats;
-    this.repos = repos;
     this.updateMetrics();
     this.updateHeatmap();
-    console.log(`📊 Dashboard updated with ${repos.length} repositories`);
+    
   }
 
   private render(): void {
@@ -252,9 +250,7 @@ export class LiveDashboard {
       )
       .join("");
 
-    // Log repos count for debugging
-    console.log(`📊 Dashboard tracking ${this.repos.length} repositories`);
-  }
+    }
 
   private updateMetrics(): void {
     if (!this.stats) return;
