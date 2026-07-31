@@ -1,9 +1,9 @@
 {
   "profile": {
     "name": "Ariel Almada",
-    "title": "Arquitecto del Código",
-    "tagline": "Transformo ideas en experiencias digitales que inspiran",
-    "bio": "No solo escribo código, construyo soluciones que resuelven problemas reales. Cada línea de código es una oportunidad para crear algo mejor, más eficiente, más humano. Mi pasión es encontrar la elegancia en la complejidad y convertir desafíos técnicos en experiencias fluidas para las personas que las usan.",
+    "title": "Full Stack Developer",
+    "tagline": "Creo infraestructuras SaaS escalables con Clean Architecture e IA",
+    "bio": "Desarrollador Full Stack enfocado en infraestructuras SaaS escalables, arquitecturas limpias e integración de IA (RAG y LLMs). Experto en APIs RESTful y sistemas dinámicos, con alta capacidad autodidacta para liderar proyectos desde la concepción hasta el despliegue productivo.",
     "image": "/assets/foto_mia.jpeg",
     "github": "ariel323",
     "linkedin": "https://www.linkedin.com/in/ariel-almada-4a7133346/",
@@ -76,16 +76,17 @@
     {
       "id": "nodejs-javascript",
       "category": "Backend",
-      "title": "Node.js & JavaScript",
+      "title": "Node.js & TypeScript",
       "icon": "🟢",
       "color": "#68a063",
-      "summary": "Construcción de APIs REST, microservicios y procesos asincrónicos con Node.js y TypeScript.",
+      "summary": "Construcción de APIs REST, microservicios y procesos asincrónicos con Node.js, TypeScript y Next.js.",
       "coreTools": [
         "Express.js",
         "NestJS",
+        "Next.js",
         "TypeScript",
         "JWT/Auth0",
-        "TypeORM/Prisma",
+        "Prisma ORM",
         "Jest"
       ],
       "technologies": [
@@ -103,11 +104,19 @@
         },
         {
           "name": "TypeScript",
-          "level": 80
+          "level": 85
+        },
+        {
+          "name": "Next.js",
+          "level": 75
         },
         {
           "name": "REST APIs",
           "level": 90
+        },
+        {
+          "name": "Prisma ORM",
+          "level": 75
         },
         {
           "name": "Jest Testing",
@@ -118,11 +127,12 @@
     {
       "id": "react",
       "category": "Frontend",
-      "title": "React",
+      "title": "React & Next.js",
       "icon": "⚛️",
       "color": "#61dafb",
-      "summary": "Interfaces responsivas y componentes reutilizables con React, TypeScript y patrones modernos de UI.",
+      "summary": "Interfaces responsivas, SSR y componentes reutilizables con React, Next.js y TypeScript.",
       "coreTools": [
+        "Next.js",
         "React Router",
         "Redux Toolkit",
         "Vite",
@@ -136,8 +146,12 @@
           "level": 85
         },
         {
+          "name": "Next.js",
+          "level": 75
+        },
+        {
           "name": "Hooks & Context",
-          "level": 80
+          "level": 85
         },
         {
           "name": "Component Design",
@@ -203,23 +217,20 @@
       "title": "DevOps & Tools",
       "icon": "🐳",
       "color": "#0db7ed",
-      "summary": "Automatización de pipelines y entrega continua con contenedores, observabilidad y control de versiones.",
+      "summary": "Automatización de pipelines, CI/CD, contenedores y cloud con OCI y Vercel.",
       "coreTools": [
         "Docker",
         "Docker Compose",
-        "GitHub Actions",
         "CI/CD",
-        "Linux",
-        "Monitoring",
-        "Prisma ORM",
+        "GitHub Actions",
         "Oracle Cloud (OCI)",
         "Vercel",
-        "Git"
+        "Linux"
       ],
       "technologies": [
         {
           "name": "Docker",
-          "level": 80
+          "level": 85
         },
         {
           "name": "Docker Compose",
@@ -230,74 +241,53 @@
           "level": 90
         },
         {
-          "name": "Maven",
-          "level": 85
-        },
-        {
-          "name": "Gradle",
+          "name": "CI/CD",
           "level": 75
-        },
-        {
-          "name": "Postman",
-          "level": 85
-        },
-        {
-          "name": "Linux/Ubuntu",
-          "level": 70
-        },
-        {
-          "name": "Prisma ORM",
-          "level": 70
         },
         {
           "name": "Oracle Cloud (OCI)",
-          "level": 75
+          "level": 80
         },
         {
           "name": "Vercel",
-          "level": 70
+          "level": 80
+        },
+        {
+          "name": "Linux/Ubuntu",
+          "level": 75
         }
       ]
     },
     {
       "id": "ai-ml",
       "category": "AI/ML",
-      "title": "Java + AI/ML",
+      "title": "AI/ML & RAG",
       "icon": "🧠",
       "color": "#ff6b6b",
-      "summary": "Integración de librerías Java para minería de datos, machine learning y procesamiento de lenguaje natural.",
+      "summary": "Integración de IA generativa, sistemas RAG (Retrieval Augmented Generation) y LLMs en aplicaciones SaaS modernas.",
       "coreTools": [
-        "Weka",
-        "JavaML",
-        "Deeplearning4j",
-        "CoreNLP",
-        "OpenNLP",
-        "TensorFlow Java",
-        "IA (RAG)"
+        "IA (RAG)",
+        "LLMs",
+        "LangChain",
+        "OpenAI API",
+        "Vector Databases",
+        "Web Scraping"
       ],
       "technologies": [
         {
-          "name": "Weka",
-          "level": 60
-        },
-        {
-          "name": "JavaML",
-          "level": 55
-        },
-        {
-          "name": "Deeplearning4j",
-          "level": 50
-        },
-        {
-          "name": "CoreNLP",
-          "level": 55
-        },
-        {
-          "name": "OpenNLP",
-          "level": 50
-        },
-        {
           "name": "IA (RAG)",
+          "level": 70
+        },
+        {
+          "name": "LLMs Integration",
+          "level": 65
+        },
+        {
+          "name": "Web Scraping",
+          "level": 75
+        },
+        {
+          "name": "OpenAI API",
           "level": 60
         }
       ]
@@ -308,24 +298,34 @@
       "title": "Metodologías y Arquitectura",
       "icon": "🏗️",
       "color": "#4a90e2",
-      "summary": "Aplicación de metodologías ágiles y patrones de arquitectura para desarrollo de software de calidad.",
+      "summary": "Aplicación de metodologías ágiles, Clean Architecture y desarrollo SaaS para proyectos escalables.",
       "coreTools": [
         "Clean Architecture",
         "Scrum",
-        "Desarrollo SaaS"
+        "Desarrollo SaaS",
+        "CI/CD",
+        "Code Review"
       ],
       "technologies": [
         {
           "name": "Clean Architecture",
-          "level": 75
-        },
-        {
-          "name": "Scrum",
           "level": 80
         },
         {
+          "name": "Scrum",
+          "level": 85
+        },
+        {
           "name": "Desarrollo SaaS",
+          "level": 80
+        },
+        {
+          "name": "CI/CD",
           "level": 70
+        },
+        {
+          "name": "Code Review",
+          "level": 80
         }
       ]
     }
@@ -457,17 +457,44 @@
         "forks": 0,
         "language": "Dockerfile"
       }
+    },
+    {
+      "id": "almada-labs",
+      "title": "ALMADA Labs - SaaS CV Generator",
+      "shortDescription": "Plataforma SaaS de generación de CVs con IA RAG",
+      "description": "Plataforma SaaS completa para generación de currículums con inteligencia artificial. Implementa autenticación de usuarios, administración dinámica de roles, pagos reales mediante webhooks, y un sistema de IA RAG (Almada Genesis) para búsquedas web en tiempo real. Construida con Next.js, TypeScript, MongoDB y Vercel.",
+      "image": "/assets/foto_mia.jpeg",
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "MongoDB",
+        "AI/ML",
+        "RAG",
+        "Vercel",
+        "REST APIs"
+      ],
+      "category": "fullstack",
+      "featured": true,
+      "demoUrl": "https://almada-labs.vercel.app",
+      "repoUrl": "https://github.com/ariel323",
+      "date": "2025-11-01",
+      "stats": {
+        "stars": 0,
+        "forks": 0,
+        "language": "TypeScript"
+      }
     }
   ],
   "experience": [
-    "hero.experienceList.javaMvc",
+    "hero.experienceList.almadaLabs",
+    "hero.experienceList.oneLead",
     "hero.experienceList.restApis",
     "hero.experienceList.react",
-    "hero.experienceList.modernJs",
     "hero.experienceList.testing",
     "hero.experienceList.cleanCode",
     "hero.experienceList.devops",
-    "hero.experienceList.optimization"
+    "hero.experienceList.aiIntegration"
   ],
   "experiences": [
     {
@@ -476,28 +503,27 @@
       "company": "content.experiences.exp1.company",
       "location": "content.experiences.exp1.location",
       "period": {
-        "start": "2025-01",
+        "start": "2025-11",
         "end": "present"
       },
-      "type": "personal",
+      "type": "freelance",
       "description": "content.experiences.exp1.description",
       "achievements": [
         "content.experiences.exp1.achievements[0]",
         "content.experiences.exp1.achievements[1]",
         "content.experiences.exp1.achievements[2]",
-        "content.experiences.exp1.achievements[3]",
-        "content.experiences.exp1.achievements[4]"
+        "content.experiences.exp1.achievements[3]"
       ],
       "technologies": [
-        "Java",
-        "Spring Boot",
-        "Spring MVC",
-        "MySQL",
-        "React",
         "TypeScript",
-        "Docker",
-        "Git",
-        "REST APIs"
+        "Next.js",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Vercel",
+        "AI/ML",
+        "REST APIs",
+        "Git"
       ]
     },
     {
@@ -506,18 +532,44 @@
       "company": "content.experiences.exp2.company",
       "location": "content.experiences.exp2.location",
       "period": {
-        "start": "2025-07",
-        "end": "2025-08"
+        "start": "2025-12",
+        "end": "2026-01"
       },
-      "type": "opensource",
+      "type": "contract",
       "description": "content.experiences.exp2.description",
       "achievements": [
         "content.experiences.exp2.achievements[0]",
         "content.experiences.exp2.achievements[1]",
         "content.experiences.exp2.achievements[2]",
-        "content.experiences.exp2.achievements[3]",
-        "content.experiences.exp2.achievements[4]",
-        "content.experiences.exp2.achievements[5]"
+        "content.experiences.exp2.achievements[3]"
+      ],
+      "technologies": [
+        "Java",
+        "Python",
+        "React",
+        "Spring Boot",
+        "JavaScript",
+        "Git",
+        "REST APIs",
+        "Scrum"
+      ]
+    },
+    {
+      "id": "exp-3",
+      "role": "content.experiences.exp3.role",
+      "company": "content.experiences.exp3.company",
+      "location": "content.experiences.exp3.location",
+      "period": {
+        "start": "2025-07",
+        "end": "2025-08"
+      },
+      "type": "opensource",
+      "description": "content.experiences.exp3.description",
+      "achievements": [
+        "content.experiences.exp3.achievements[0]",
+        "content.experiences.exp3.achievements[1]",
+        "content.experiences.exp3.achievements[2]",
+        "content.experiences.exp3.achievements[3]"
       ],
       "technologies": [
         "Node.js",
@@ -534,184 +586,58 @@
   "education": [
     {
       "id": "edu-1",
-      "degree": "content.education.edu1.degree",
-      "institution": "content.education.edu1.institution",
+      "degree": "Full Stack & Backend",
+      "institution": "Alura Latam",
       "period": {
-        "start": "2025-01",
-        "end": "2025-10"
+        "start": "2025",
+        "end": "2026"
       },
-      "description": "content.education.edu1.description",
+      "description": "Formación intensiva en desarrollo Full Stack con enfoque en Java, Spring Boot, Node.js, React y bases de datos.",
       "achievements": [
-        "content.education.edu1.achievements[0]",
-        "content.education.edu1.achievements[1]",
-        "content.education.edu1.achievements[2]",
-        "content.education.edu1.achievements[3]",
-        "content.education.edu1.achievements[4]",
-        "content.education.edu1.achievements[5]"
+        "Especialización en backend con Java y Spring Boot",
+        "Desarrollo de APIs RESTful con buenas prácticas",
+        "Integración de bases de datos relacionales y no relacionales",
+        "Metodologías ágiles y Clean Code"
       ]
     },
     {
       "id": "edu-2",
-      "degree": "content.education.edu2.degree",
-      "institution": "content.education.edu2.institution",
+      "degree": "JavaScript & Java",
+      "institution": "Orange Coast College",
       "period": {
-        "start": "2025-01",
-        "end": "2026-12"
+        "start": "2025",
+        "end": "2026"
       },
-      "description": "content.education.edu2.description",
-      "achievements": []
-    },
-    {
-      "id": "edu-3",
-      "degree": "content.education.edu3.degree",
-      "institution": "content.education.edu3.institution",
-      "period": {
-        "start": "2025-01",
-        "end": "2026-12"
-      },
-      "description": "content.education.edu3.description",
+      "description": "Estudios en desarrollo de software con enfoque en JavaScript, Java y fundamentos de programación.",
       "achievements": []
     }
   ],
   "certifications": [
     {
-      "id": "cert-1",
-      "name": "content.certifications.cert1.name",
-      "issuer": "content.certifications.cert1.issuer",
-      "date": "2025-10-13",
-      "expirationDate": "2027-10-13",
-      "credentialId": "Oracle Badge",
-      "description": "content.certifications.cert1.description"
-    },
-    {
       "id": "cert-oci",
-      "name": "content.certifications.cert2.name",
-      "issuer": "content.certifications.cert2.issuer",
+      "name": "OCI Certified Foundations Associate 2025",
+      "issuer": "Oracle",
       "date": "2025",
-      "description": "content.certifications.cert2.description"
+      "credentialUrl": "https://education.oracle.com",
+      "description": "Certificación oficial de Oracle Cloud Infrastructure que valida conocimientos fundamentales de OCI, incluyendo computación, almacenamiento, redes y seguridad."
     },
     {
       "id": "cert-hackathon",
-      "name": "content.certifications.cert3.name",
-      "issuer": "content.certifications.cert3.issuer",
+      "name": "Hackathon ONE Latam",
+      "issuer": "Oracle",
       "date": "2025",
-      "description": "content.certifications.cert3.description"
+      "description": "Participación y finalización exitosa del Hackathon de Oracle Next Education, resolviendo desafíos Full Stack en equipo bajo presión de tiempo."
     },
     {
       "id": "cert-php-mvc",
-      "name": "content.certifications.cert4.name",
-      "issuer": "content.certifications.cert4.issuer",
+      "name": "PHP & MVC",
+      "issuer": "Udemy",
       "date": "2025",
-      "description": "content.certifications.cert4.description"
-    },
-    {
-      "id": "cert-2",
-      "name": "content.certifications.cert5.name",
-      "issuer": "content.certifications.cert5.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert5.description"
-    },
-    {
-      "id": "cert-3",
-      "name": "content.certifications.cert6.name",
-      "issuer": "content.certifications.cert6.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert6.description"
-    },
-    {
-      "id": "cert-4",
-      "name": "content.certifications.cert7.name",
-      "issuer": "content.certifications.cert7.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert7.description"
-    },
-    {
-      "id": "cert-5",
-      "name": "content.certifications.cert8.name",
-      "issuer": "content.certifications.cert8.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert8.description"
-    },
-    {
-      "id": "cert-6",
-      "name": "content.certifications.cert9.name",
-      "issuer": "content.certifications.cert9.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert9.description"
-    },
-    {
-      "id": "cert-7",
-      "name": "content.certifications.cert10.name",
-      "issuer": "content.certifications.cert10.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert10.description"
-    },
-    {
-      "id": "cert-8",
-      "name": "content.certifications.cert11.name",
-      "issuer": "content.certifications.cert11.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert11.description"
-    },
-    {
-      "id": "cert-9",
-      "name": "content.certifications.cert12.name",
-      "issuer": "content.certifications.cert12.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert12.description"
-    },
-    {
-      "id": "cert-10",
-      "name": "content.certifications.cert13.name",
-      "issuer": "content.certifications.cert13.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert13.description"
-    },
-    {
-      "id": "cert-11",
-      "name": "content.certifications.cert14.name",
-      "issuer": "content.certifications.cert14.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert14.description"
-    },
-    {
-      "id": "cert-12",
-      "name": "content.certifications.cert15.name",
-      "issuer": "content.certifications.cert15.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert15.description"
-    },
-    {
-      "id": "cert-13",
-      "name": "content.certifications.cert16.name",
-      "issuer": "content.certifications.cert16.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert16.description"
-    },
-    {
-      "id": "cert-14",
-      "name": "content.certifications.cert17.name",
-      "issuer": "content.certifications.cert17.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert17.description"
-    },
-    {
-      "id": "cert-15",
-      "name": "content.certifications.cert18.name",
-      "issuer": "content.certifications.cert18.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert18.description"
-    },
-    {
-      "id": "cert-16",
-      "name": "content.certifications.cert19.name",
-      "issuer": "content.certifications.cert19.issuer",
-      "date": "2025",
-      "description": "content.certifications.cert19.description"
+      "description": "Curso completo de PHP con arquitectura MVC, incluyendo creación de aplicaciones web dinámicas y buenas prácticas de desarrollo."
     }
   ],
   "metadata": {
-    "lastUpdated": "2025-10-14",
-    "version": "2.2.0"
+    "lastUpdated": "2025-11-01",
+    "version": "3.0.0"
   }
 }

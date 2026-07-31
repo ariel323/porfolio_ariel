@@ -89,21 +89,21 @@ export const translations = {
     },
     hero: {
       greeting: "Hola, soy",
-      title: "Fullstack Developer",
-      subtitle: "Construyo soluciones digitales robustas y escalables",
-      bio: "Especialista en desarrollo de software con foco en Java y Node.js. Apasionado por crear soluciones robustas, escalables y de alta calidad. Experiencia en desarrollo backend, APIs RESTful, microservicios y aplicaciones web modernas con JavaScript y React.",
+      title: "Full Stack Developer",
+      subtitle: "Creo infraestructuras SaaS escalables con Clean Architecture e IA",
+      bio: "Desarrollador Full Stack enfocado en infraestructuras SaaS escalables, arquitecturas limpias e integración de IA (RAG y LLMs). Experto en APIs RESTful y sistemas dinámicos, con alta capacidad autodidacta para liderar proyectos desde la concepción hasta el despliegue productivo.",
       ctaPrimary: "🚀 Ver Proyectos",
       ctaSecondary: "📧 Contactar",
       scroll: "Scroll",
       experienceList: {
-        javaMvc: "Desarrollo de apps Java Desktop con arquitectura MVC",
-        restApis: "APIs RESTful con Spring Boot y Node.js (Express)",
-        react: "Aplicaciones web interactivas con React",
-        modernJs: "JavaScript moderno (ES6+), TypeScript y manejo de estados",
+        almadaLabs: "Fundé ALMADA Labs, plataforma SaaS de CVs con IA RAG y pagos reales",
+        oneLead: "Lideré equipo Full Stack en Hackathon ONE de 126 horas (Oracle)",
+        restApis: "APIs RESTful con Spring Boot, Node.js (Express) y Node puro",
+        react: "Aplicaciones web interactivas con React, Next.js y TypeScript",
         testing: "Testing con JUnit, Jest y herramientas modernas",
-        cleanCode: "Git, metodologías ágiles y buenas prácticas de Clean Code",
-        devops: "Estandarización de entornos de desarrollo global mediante Docker Compose",
-        optimization: "Reducción de tiempos de respuesta del servidor mediante escritura y mejora de consultas SQL complejas",
+        cleanCode: "Clean Architecture, metodologías ágiles y buenas prácticas",
+        devops: "Docker, CI/CD, Oracle Cloud (OCI) y Vercel",
+        aiIntegration: "Integración de IA (RAG y LLMs) en aplicaciones SaaS",
       },
     },
     sections: {
@@ -386,30 +386,39 @@ export const translations = {
     content: {
       experiences: {
         exp1: {
-          role: "Desarrollador Full Stack",
-          company: "Proyectos Personales",
+          role: "Founder & Full Stack Developer",
+          company: "ALMADA Labs",
           location: "Remoto",
-          description: "Desarrollo de proyectos personales full-stack desde enero 2025, comenzando con el primer proyecto de certificación. Enfoque en crear aplicaciones web completas utilizando tecnologías modernas como Java, Spring Boot, React y bases de datos relacionales.",
+          description: "Lidero el desarrollo de ALMADA Labs, una plataforma SaaS de generación de CVs gestionando el ciclo de vida completo del producto. Implementé infraestructura escalable con Vercel y MongoDB, sistema de administración dinámica de roles y pagos reales. Diseñé 'Almada Genesis', un sistema de IA RAG para búsquedas web en tiempo real optimizando significativamente la latencia.",
           achievements: [
-            "Desarrollo de múltiples proyectos full-stack desde cero aplicando mejores prácticas",
-            "Implementación de arquitecturas RESTful con Spring Boot y Spring MVC",
-            "Gestión de bases de datos relacionales con MySQL aplicando normalización y optimización",
-            "Integración de APIs externas y servicios de terceros en aplicaciones web",
-            "Containerización de aplicaciones con Docker para facilitar despliegue y escalabilidad"
+            "Desarrollé una plataforma SaaS de generación de CVs gestionando el ciclo de vida completo (Vercel, MongoDB)",
+            "Implementé administración dinámica de roles y pagos reales mediante integración segura de webhooks",
+            "Diseñé 'Almada Genesis' para búsquedas web en tiempo real con IA RAG, optimizando latencia",
+            "Arquitectura limpia y escalable con Clean Architecture y TypeScript"
           ]
         },
         exp2: {
-          role: "Desarrollador Backend",
-          company: "Proyecto Open Source",
+          role: "Full Stack Team Lead",
+          company: "Oracle Next Education (Remoto)",
           location: "Remoto",
-          description: "Primera experiencia trabajando en equipo real en un proyecto open source durante julio-agosto 2025. Desarrollo colaborativo de una API en Node.js puro (sin frameworks como Express), implementando servidor HTTP nativo, gestión de rutas, integración con base de datos y dockerización completa del proyecto.",
+          description: "Coordiné un equipo multidisciplinario en un Hackathon de 126 horas, entregando una solución Full Stack bajo presión. Desarrollé las funciones núcleo asegurando la integración fluida entre Java/Python (Backend) y React (Frontend). Ejecuté code reviews y apliqué Clean Architecture para garantizar un código escalable.",
           achievements: [
-            "Desarrollo de API RESTful con Node.js puro sin usar frameworks externos",
-            "Implementación de servidor HTTP nativo y sistema de enrutamiento personalizado",
-            "Integración y optimización de base de datos relacional con consultas SQL eficientes",
-            "Dockerización completa del proyecto incluyendo aplicación y base de datos con Docker Compose",
-            "Trabajo colaborativo con equipo real usando Git, pull requests y code reviews",
-            "Aplicación de metodologías ágiles y buenas prácticas de desarrollo en equipo"
+            "Coordiné un equipo multidisciplinario en un Hackathon de 126 horas",
+            "Desarrollé funciones núcleo asegurando integración fluida Java/Python/React",
+            "Ejecuté code reviews y apliqué Clean Architecture",
+            "Entregué una solución Full Stack completa bajo presión de tiempo"
+          ]
+        },
+        exp3: {
+          role: "Desarrollador Backend",
+          company: "Proyecto Open Source (Remoto)",
+          location: "Remoto",
+          description: "Desarrollé una API REST con Node.js puro, creando servidores HTTP y sistemas de enrutamiento personalizados desde cero. Estandaricé entornos de desarrollo globales mediante dockerización completa con Docker Compose. Reduje tiempos de respuesta del servidor optimizando consultas SQL complejas.",
+          achievements: [
+            "Desarrollé API RESTful con Node.js puro sin frameworks externos",
+            "Implementé servidor HTTP nativo y sistema de enrutamiento personalizado",
+            "Estandaricé entornos Docker con Docker Compose para toda la app y DB",
+            "Optimicé consultas SQL reduciendo tiempos de respuesta del servidor"
           ]
         }
       }
@@ -498,21 +507,21 @@ export const translations = {
     },
     hero: {
       greeting: "Hi, I'm",
-      title: "Fullstack Developer",
-      subtitle: "I build robust and scalable digital solutions",
-      bio: "Software development specialist focused on Java and Node.js. Passionate about creating robust, scalable, and high-quality solutions. Experience in backend development, RESTful APIs, microservices, and modern web applications with JavaScript and React.",
+      title: "Full Stack Developer",
+      subtitle: "I build scalable SaaS infrastructures with Clean Architecture and AI",
+      bio: "Full Stack Developer focused on scalable SaaS infrastructures, clean architectures, and AI integration (RAG and LLMs). Expert in RESTful APIs and dynamic systems, with strong self-learning ability to lead projects from conception to production deployment.",
       ctaPrimary: "🚀 View Projects",
       ctaSecondary: "📧 Contact",
       scroll: "Scroll",
       experienceList: {
-        javaMvc: "Java Desktop apps development with MVC architecture",
-        restApis: "RESTful APIs with Spring Boot and Node.js (Express)",
-        react: "Interactive web applications with React",
-        modernJs: "Modern JavaScript (ES6+), TypeScript and state management",
+        almadaLabs: "Founded ALMADA Labs, SaaS CV platform with AI RAG and real payments",
+        oneLead: "Led Full Stack team in 126-hour ONE Hackathon (Oracle)",
+        restApis: "RESTful APIs with Spring Boot, Node.js (Express), and pure Node",
+        react: "Interactive web applications with React, Next.js, and TypeScript",
         testing: "Testing with JUnit, Jest and modern tools",
-        cleanCode: "Git, agile methodologies and Clean Code best practices",
-        devops: "Standardization of global development environments using Docker Compose",
-        optimization: "Reduction of server response times through writing and improving complex SQL queries",
+        cleanCode: "Clean Architecture, agile methodologies, and best practices",
+        devops: "Docker, CI/CD, Oracle Cloud (OCI), and Vercel",
+        aiIntegration: "AI (RAG and LLMs) integration in SaaS applications",
       },
     },
     sections: {
@@ -801,30 +810,39 @@ export const translations = {
     content: {
       experiences: {
         exp1: {
-          role: "Full Stack Developer",
-          company: "Personal Projects",
+          role: "Founder & Full Stack Developer",
+          company: "ALMADA Labs",
           location: "Remote",
-          description: "Full-stack personal project development since January 2025, starting with the first certification project. Focused on building complete web applications using modern technologies such as Java, Spring Boot, React, and relational databases.",
+          description: "I lead the development of ALMADA Labs, a SaaS platform for CV generation managing the complete product lifecycle. Implemented scalable infrastructure with Vercel and MongoDB, dynamic role management system and real payment processing. Designed 'Almada Genesis', an AI RAG system for real-time web searches significantly optimizing latency.",
           achievements: [
-            "Development of multiple full-stack projects from scratch applying best practices",
-            "Implementation of RESTful architectures with Spring Boot and Spring MVC",
-            "Management of relational databases with MySQL applying normalization and optimization",
-            "Integration of external APIs and third-party services in web applications",
-            "Containerization of applications with Docker to facilitate deployment and scalability"
+            "Developed a SaaS platform for CV generation managing the complete lifecycle (Vercel, MongoDB)",
+            "Implemented dynamic role management and real payments through secure webhook integration",
+            "Designed 'Almada Genesis' for real-time web searches with AI RAG, optimizing latency",
+            "Clean and scalable architecture with Clean Architecture and TypeScript"
           ]
         },
         exp2: {
-          role: "Backend Developer",
-          company: "Open Source Project",
+          role: "Full Stack Team Lead",
+          company: "Oracle Next Education (Remote)",
           location: "Remote",
-          description: "First experience working in a real team on an open source project during July-August 2025. Collaborative development of a Node.js API (without frameworks like Express), implementing native HTTP server, routing management, database integration, and complete project dockerization.",
+          description: "Coordinated a multidisciplinary team in a 126-hour Hackathon, delivering a Full Stack solution under pressure. Developed core functions ensuring fluid integration between Java/Python (Backend) and React (Frontend). Executed code reviews and applied Clean Architecture to guarantee scalable code.",
           achievements: [
-            "Development of RESTful API with pure Node.js without external frameworks",
-            "Implementation of native HTTP server and custom routing system",
-            "Integration and optimization of relational database with efficient SQL queries",
-            "Complete project dockerization including application and database with Docker Compose",
-            "Real team collaboration using Git, pull requests, and code reviews",
-            "Application of agile methodologies and team development best practices"
+            "Coordinated a multidisciplinary team in a 126-hour Hackathon",
+            "Developed core functions ensuring seamless Java/Python/React integration",
+            "Executed code reviews and applied Clean Architecture",
+            "Delivered a complete Full Stack solution under time pressure"
+          ]
+        },
+        exp3: {
+          role: "Backend Developer",
+          company: "Open Source Project (Remote)",
+          location: "Remote",
+          description: "Developed a REST API with pure Node.js, creating HTTP servers and custom routing systems from scratch. Standardized global development environments through complete dockerization with Docker Compose. Reduced server response times by optimizing complex SQL queries.",
+          achievements: [
+            "Developed RESTful API with pure Node.js without external frameworks",
+            "Implemented native HTTP server and custom routing system",
+            "Standardized Docker environments with Docker Compose for the entire app and DB",
+            "Optimized SQL queries reducing server response times"
           ]
         }
       }
