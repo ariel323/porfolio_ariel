@@ -96,6 +96,8 @@ export interface PortfolioData {
   experiences?: Experience[];
   education?: Education[];
   certifications?: Certification[];
+  githubStats?: GitHubStats;
+  githubRepos?: GitHubRepo[];
   metadata: {
     lastUpdated: string;
     version: string;

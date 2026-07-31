@@ -51,6 +51,9 @@ class Portfolio {
       // Render all components
       await this.renderComponents();
 
+      // Load static GitHub data first, then try API
+      this.renderGitHubData();
+
       // Initialize animations
       this.animationsController.init();
       // Initialize narrative scroll system
@@ -63,7 +66,7 @@ class Portfolio {
       // Hide loader
       this.hideLoader();
 
-      // Fetch GitHub data in background
+      // Try to fetch real GitHub data
       this.loadGitHubData();
     } catch (error) {
       console.error("❌ Error initializing portfolio:", error);
@@ -182,6 +185,23 @@ class Portfolio {
       
     } else {
       
+    }
+  }
+
+  /**
+   * Render GitHub data from static JSON first, then update from API
+   */
+  private renderGitHubData(): void {
+    const data = this.projectsManager.getData();
+    if (!data) return;
+
+    if (data.githubStats && data.githubRepos) {
+      this.uiComponents.renderGitHubStats(data.githubStats);
+      this.uiComponents.renderGitHubRepositories(data.githubRepos);
+
+      if (this.dashboard) {
+        this.dashboard.updateStats(data.githubStats, data.githubRepos);
+      }
     }
   }
 
