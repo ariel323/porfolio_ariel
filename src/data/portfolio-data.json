@@ -463,7 +463,7 @@
       "title": "ALMADA Labs - SaaS CV Generator",
       "shortDescription": "Plataforma SaaS de generación de CVs con IA RAG",
       "description": "Plataforma SaaS completa para generación de currículums con inteligencia artificial. Implementa autenticación de usuarios, administración dinámica de roles, pagos reales mediante webhooks, y un sistema de IA RAG (Almada Genesis) para búsquedas web en tiempo real. Construida con Next.js, TypeScript, MongoDB y Vercel.",
-      "image": "/assets/foto_mia.jpeg",
+"image": "/assets/logo_de_almada_labs.png",
       "technologies": [
         "Next.js",
         "TypeScript",
