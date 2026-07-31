@@ -177,6 +177,12 @@
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .terminal__body {
+    padding: 12px;
+  }
+}
+
 .terminal__output {
   flex: 1;
   overflow-y: auto;
