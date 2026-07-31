@@ -49,6 +49,14 @@ export class InteractiveTerminal {
     this.showWelcomeMessage();
   }
 
+  private resolveContent(value: string): string {
+    const trimmed = value.trim();
+    if (trimmed.startsWith("content.")) {
+      return i18n.t(trimmed);
+    }
+    return trimmed;
+  }
+
   private registerCommands(): void {
     // Basic commands
     this.addCommand({
@@ -652,11 +660,11 @@ ${skills
     return this.data.experiences
       .map(
         (exp, index) => `
-${index + 1}. ${exp.role} @ ${exp.company}
+${index + 1}. ${this.resolveContent(exp.role)} @ ${this.resolveContent(exp.company)}
    📅 ${exp.period}
    
    Achievements:
-${exp.achievements?.map((a) => `   • ${a}`).join("\n") || "   N/A"}
+${exp.achievements?.map((a) => `   • ${this.resolveContent(a)}`).join("\n") || "   N/A"}
    
    Technologies: ${exp.technologies?.join(", ") || "N/A"}
       `

@@ -77,14 +77,14 @@ export class ExperienceTimeline {
                       : ""
                   }
                 </div>
-                <div class="timeline__role">${exp.role}</div>
+                <div class="timeline__role">${this.resolveContent(exp.role)}</div>
                 <div class="timeline__company">
                   ${
                     exp.companyUrl
-                      ? `<a href="${exp.companyUrl}" target="_blank" rel="noopener noreferrer">${exp.company}</a>`
-                      : exp.company
+                      ? `<a href="${exp.companyUrl}" target="_blank" rel="noopener noreferrer">${this.resolveContent(exp.company)}</a>`
+                      : this.resolveContent(exp.company)
                   }
-                  <span class="timeline__location">${i18n.t("sections.experience.location")} ${exp.location}</span>
+                  <span class="timeline__location">${i18n.t("sections.experience.location")} ${this.resolveContent(exp.location)}</span>
                 </div>
               </div>
               
