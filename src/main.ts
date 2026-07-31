@@ -206,10 +206,25 @@ class Portfolio {
   }
 
   /**
-   * Load GitHub data from API (only if a token is available)
+   * Load GitHub data from API to update with real data
    */
   private async loadGitHubData(): Promise<void> {
-    // Static data is already rendered via renderGitHubData()
+    try {
+      const repos = await this.githubAPI.fetchRepositories();
+      if (!repos.length) return;
+
+      const stats = this.githubAPI.buildStatsFromRepos(repos);
+
+      this.uiComponents.renderGitHubStats(stats);
+      this.uiComponents.renderGitHubRepositories(repos);
+      this.uiComponents.updateProjectsWithGitHubData(repos);
+
+      if (this.dashboard) {
+        this.dashboard.updateStats(stats, repos);
+      }
+    } catch {
+      // API unavailable, static data already rendered
+    }
   }
 
   /**

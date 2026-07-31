@@ -46,8 +46,7 @@ export class GitHubAPI {
 
       this.setCache(cacheKey, filteredRepos);
       return filteredRepos;
-    } catch (error) {
-      console.error("Error fetching GitHub repositories:", error);
+    } catch {
       return [];
     }
   }
