@@ -99,7 +99,7 @@ ${this.resolveContent(exp.description)}
                   <h4>${i18n.t("sections.experience.achievements")}</h4>
                   <ul>
                     ${exp.achievements
-                      .map((achievement) => `<li>${achievement}</li>`)
+                      .map((achievement) => `<li>${this.resolveContent(achievement)}</li>`)
                       .join("")}
                   </ul>
                 </div>
@@ -150,7 +150,7 @@ ${this.resolveContent(exp.description)}
             edu.achievements && edu.achievements.length > 0
               ? `
             <ul class="education-card__achievements">
-              ${edu.achievements.map((a) => `<li>${a}</li>`).join("")}
+              ${edu.achievements.map((a) => `<li>${this.resolveContent(a)}</li>`).join("")}
             </ul>
           `
               : ""
