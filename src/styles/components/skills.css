@@ -557,7 +557,7 @@
 
 @media (max-width: 768px) {
   .skills {
-    padding: var(--spacing-2xl) var(--spacing-md);
+    padding: var(--spacing-xl) var(--spacing-md);
   }
 
   .skills__controls {
@@ -597,8 +597,23 @@
 }
 
 @media (max-width: 480px) {
+  .skills {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    border-radius: var(--border-radius-lg);
+  }
+
+  .skills__controls {
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-lg);
+  }
+
   .skills__filters {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .skill-filter {
+    padding: var(--spacing-2xs) var(--spacing-sm);
+    font-size: 0.65rem;
   }
 
   .skills__actions {
@@ -610,5 +625,46 @@
   .skills__view-toggle {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .skill-view-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .skills__grid {
+    gap: var(--spacing-md);
+  }
+
+  .skill-card {
+    padding: var(--spacing-md);
+  }
+
+  .skill-card h3 {
+    font-size: var(--font-size-base);
+    gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .skill-icon {
+    font-size: var(--font-size-xl);
+  }
+
+  .skill-summary {
+    font-size: var(--font-size-xs);
+  }
+
+  .tech-name {
+    font-size: var(--font-size-sm);
+  }
+
+  .skill-tag {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
+
+  .skill-card__toggle {
+    font-size: 0.7rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
   }
 }

@@ -550,6 +550,10 @@
 }
 
 @media (max-width: 480px) {
+  .projects {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
   .projects__controls {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
