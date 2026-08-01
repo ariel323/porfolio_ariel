@@ -92,7 +92,7 @@ export const translations = {
       title: "Full Stack Developer",
       subtitle: "Creo infraestructuras SaaS escalables con Clean Architecture e IA",
       bio: "Desarrollador Full Stack enfocado en infraestructuras SaaS escalables, arquitecturas limpias e integración de IA (RAG y LLMs). Experto en APIs RESTful y sistemas dinámicos, con alta capacidad autodidacta para liderar proyectos desde la concepción hasta el despliegue productivo.",
-      ctaPrimary: "🚀 Ver Proyectos",
+      ctaPrimary: "Ver Proyectos",
       ctaSecondary: "📧 Contactar",
       scroll: "Scroll",
       experienceList: {
@@ -146,7 +146,7 @@ export const translations = {
         technologies: "Tecnologías",
       },
       projects: {
-        title: "🚀 Proyectos Destacados",
+        title: "Proyectos Destacados",
         search: "Buscar proyectos...",
         noResults: "😔 No se encontraron proyectos con los criterios seleccionados.",
         filters: {
@@ -185,7 +185,7 @@ export const translations = {
         totalForks: "Total de Forks",
         featuredProject: "Proyecto Destacado",
         mostUsedLanguages: "Lenguajes más usados",
-        latestProjects: "🚀 Últimos proyectos en GitHub",
+        latestProjects: "Últimos proyectos en GitHub",
         viewAllProfile: "Ver todo el perfil →",
         noRepos: "Aún no hay repositorios públicos.",
         noLanguages: "Aún no hay datos de lenguajes disponibles.",
@@ -205,7 +205,7 @@ export const translations = {
       },
     },
     terminal: {
-      welcome: "🚀 Bienvenido a la Terminal Interactiva de Ariel Almada",
+      welcome: "Bienvenido a la Terminal Interactiva de Ariel Almada",
       role: "Fullstack Developer",
       focus: "Java, Spring Boot, Node.js, React",
       location: "Argentina",
@@ -510,7 +510,7 @@ export const translations = {
       title: "Full Stack Developer",
       subtitle: "I build scalable SaaS infrastructures with Clean Architecture and AI",
       bio: "Full Stack Developer focused on scalable SaaS infrastructures, clean architectures, and AI integration (RAG and LLMs). Expert in RESTful APIs and dynamic systems, with strong self-learning ability to lead projects from conception to production deployment.",
-      ctaPrimary: "🚀 View Projects",
+      ctaPrimary: "View Projects",
       ctaSecondary: "📧 Contact",
       scroll: "Scroll",
       experienceList: {
@@ -564,7 +564,7 @@ export const translations = {
         technologies: "Technologies",
       },
       projects: {
-        title: "🚀 Featured Projects",
+        title: "Featured Projects",
         search: "Search projects...",
         noResults: "😔 No projects found matching your criteria.",
         filters: {
@@ -603,7 +603,7 @@ export const translations = {
         totalForks: "Total Forks",
         featuredProject: "Featured Project",
         mostUsedLanguages: "Most used languages",
-        latestProjects: "🚀 Latest GitHub projects",
+        latestProjects: "Latest GitHub projects",
         viewAllProfile: "View full profile →",
         noRepos: "No public repositories yet.",
         noLanguages: "No language data available yet.",
@@ -623,7 +623,7 @@ export const translations = {
       },
     },
     terminal: {
-      welcome: "🚀 Welcome to Ariel Almada's Interactive Terminal",
+      welcome: "Welcome to Ariel Almada's Interactive Terminal",
       role: "Fullstack Developer",
       focus: "Java, Spring Boot, Node.js, React",
       location: "Argentina",

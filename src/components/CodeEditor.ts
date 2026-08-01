@@ -78,7 +78,7 @@ export class CodeEditor {
     // Live Playground tab
     this.tabs.push({
       id: "playground",
-      title: "🚀 playground.js",
+      title: "playground.js",
       content: this.generatePlaygroundCode(),
       language: "javascript",
       editable: true,
@@ -891,7 +891,7 @@ ${this.data.profile.bio}
 - **Technologies Mastered**: ${this.data.skills?.length || 0}+
 - **Years of Experience**: ${new Date().getFullYear() - 2020}+
 
-## 🚀 Featured Projects
+## Featured Projects
 
 ${
   this.data.projects
@@ -982,7 +982,7 @@ async function main() {
   
   // Start server
   app.listen(3000, () => {
-    console.log('🚀 Project running on http://localhost:3000');
+    console.log('Project running on http://localhost:3000');
   });
 }
 
@@ -1008,7 +1008,7 @@ export { projectConfig, stats, features, main };
   }
 
   private generatePlaygroundCode(): string {
-    return `// 🚀 Live JavaScript Playground
+    return `// Live JavaScript Playground
 // Edit this code and press RUN (or Ctrl+Enter) to execute!
 
 // Example 1: Basic operations
@@ -1506,11 +1506,21 @@ fetchData();
     ) as HTMLElement;
 
     if (sidebar) {
-      if (this.sidebarVisible) {
-        sidebar.style.display = "flex";
-        sidebar.style.width = `${this.sidebarWidth}px`;
+      // On small screens use the CSS-driven slide-in via .active
+      if (window.innerWidth <= 768) {
+        sidebar.classList.toggle("active", this.sidebarVisible);
+        // ensure no conflicting inline display style
+        sidebar.style.display = "";
       } else {
-        sidebar.style.display = "none";
+        if (this.sidebarVisible) {
+          sidebar.style.display = "flex";
+          sidebar.style.width = `${this.sidebarWidth}px`;
+        } else {
+          sidebar.style.display = "none";
+          sidebar.style.width = "";
+        }
+        // keep .active class in sync for any CSS that relies on it
+        sidebar.classList.toggle("active", this.sidebarVisible);
       }
     }
 

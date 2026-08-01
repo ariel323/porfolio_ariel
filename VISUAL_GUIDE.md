@@ -1,6 +1,6 @@
 # 🎨 Guía Visual del Portafolio
 
-## 🚀 Vista General
+## Vista General
 
 Tu nuevo portafolio tiene **3 secciones completamente innovadoras** que ningún portafolio tradicional tiene:
 
@@ -12,7 +12,7 @@ Tu nuevo portafolio tiene **3 secciones completamente innovadoras** que ningún 
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  ╔═══════════════════════════════════════════════════════╗ │
-│  ║  🚀 Welcome to Ariel Almada's Interactive Terminal   ║ │
+│  ║  Welcome to Ariel Almada's Interactive Terminal   ║ │
 │  ║                                                       ║ │
 │  ║  Fullstack Developer | Java | Node.js | React        ║ │
 │  ╚═══════════════════════════════════════════════════════╝ │
@@ -105,7 +105,7 @@ Tu nuevo portafolio tiene **3 secciones completamente innovadoras** que ningún 
 │  JavaScript  ████████░░░░░░░░░░░░  42%                     │
 │  Java        ██████░░░░░░░░░░░░░░  35%                     │
 │                                                             │
-│  🚀 Deployment Status                                      │
+│  Deployment Status                                      │
 │  ┌─ Portfolio Website        ✓ Live ──────────────────┐   │
 │  │  Last deployed: 2 hours ago              ████████  │   │
 │  ├─ API Backend              ✓ Live ──────────────────┤   │
@@ -126,7 +126,7 @@ Tu nuevo portafolio tiene **3 secciones completamente innovadoras** que ningún 
 - 📊 Métricas en tiempo real
 - 🗓️ Heatmap de commits (365 días)
 - 🎨 Distribución de lenguajes
-- 🚀 Estado de deployments
+ - Estado de deployments
 - 💚 Monitoring de sistemas
 
 ---
@@ -283,7 +283,7 @@ Just kidding! Here's how to exit vim:
 
 ---
 
-## 🚀 Próximos Pasos
+## Próximos Pasos
 
 1. **Personaliza los datos** en `portfolio-data.json`
 2. **Prueba todos los comandos** del terminal

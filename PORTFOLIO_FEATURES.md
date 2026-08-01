@@ -1,4 +1,4 @@
-# 🚀 Portfolio Revolucionario - Ariel Almada
+# Portfolio Revolucionario - Ariel Almada
 
 ## 💡 Descripción
 
@@ -131,7 +131,7 @@ src/
 - `matrix` - 🟢 Entra en la matrix
 - `achievements` - 🏆 Ver logros desbloqueados
 
-## 🚀 Instalación y Uso
+## Instalación y Uso
 
 ### Requisitos
 

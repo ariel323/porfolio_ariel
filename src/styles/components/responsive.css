@@ -1,0 +1,80 @@
+/* Consolidated responsive overrides for mobile and small screens */
+
+/* Make images and media scale naturally */
+img, video, canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ensure main layout containers never overflow */
+.container, section, .code-editor, .terminal {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Reduce heavy paddings on small screens */
+@media (max-width: 768px) {
+  section, .section-modern {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Ensure editor and terminal are usable on narrow screens */
+  .code-editor, .terminal {
+    border-radius: 10px;
+    padding: 0.25rem;
+  }
+
+  /* Sidebar should be off-canvas by default and slide in with .active */
+  .code-editor__sidebar {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    transition: left 0.28s ease;
+  }
+
+  .code-editor__sidebar.active {
+    left: 0;
+  }
+
+  /* Preview panel collapse on small screens */
+  .code-editor__preview {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    transition: right 0.28s ease;
+    z-index: 40;
+  }
+
+  .code-editor__preview.active {
+    right: 0;
+  }
+
+  /* Make terminal/input controls touch friendly */
+  .terminal__input-line, .code-editor__action, .preview-btn {
+    min-height: 44px;
+    padding: 8px 10px;
+  }
+
+  /* Avoid very small typography */
+  html { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  /* Further reduce heavy UI chrome */
+  .hero-section__aside, .hero-section__container { padding: 0 0.5rem; }
+  .code-editor__tabs { gap: 6px; }
+  .code-editor__tab { padding: 6px 8px; font-size: 0.75rem; }
+  .terminal__title { font-size: 0.72rem; }
+}
+
+/* Disable or reduce animations on small devices to improve perf */
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  * { transition-duration: 0.12s !important; animation-duration: 0.001s !important; }
+}

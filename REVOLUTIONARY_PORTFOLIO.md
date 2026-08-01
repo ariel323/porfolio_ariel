@@ -1,4 +1,4 @@
-# 🚀 Portfolio Revolucionario - Experiencia Narrativa
+# Portfolio Revolucionario - Experiencia Narrativa
 
 ## 🎯 Implementación de los 5 Principios de Diferenciación
 
@@ -222,7 +222,7 @@ El usuario **siente** el cambio de capítulo:
 
 ---
 
-## 🚀 Resultado Final
+## Resultado Final
 
 ### ✨ Antes vs Ahora
 

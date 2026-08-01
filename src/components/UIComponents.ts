@@ -789,7 +789,7 @@ export class UIComponents {
 
     const demoButton = project.demoUrl
       ? `<a href="${project.demoUrl}" target="_blank" class="btn btn--primary">
-           <span>🚀</span> ${i18n.t("sections.projects.links.demo")}
+           ${i18n.t("sections.projects.links.demo")}
          </a>`
       : "";
 
@@ -919,7 +919,7 @@ renderExperience(): void {
         </div>
         <div class="github-repos-section">
           <div class="github-repos-header">
-            <h3>🚀 ${i18n.t("sections.github.latestProjects")}</h3>
+            <h3>${i18n.t("sections.github.latestProjects")}</h3>
             <a class="github-repos-link" href="${githubProfileUrl}" target="_blank" rel="noopener">${i18n.t("sections.github.viewAllProfile")}</a>
           </div>
           <div class="github-repos-grid"></div>

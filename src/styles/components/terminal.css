@@ -18,6 +18,8 @@
   border: 1px solid rgba(100, 255, 218, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   animation: terminalGlow 3s ease-in-out infinite;
+  width: 100%;
+  max-width: 100%;
 }
 
 .terminal:hover {
@@ -170,8 +172,8 @@
 /* Terminal Body */
 .terminal__body {
   padding: 16px;
-  min-height: 350px;
-  max-height: 550px;
+  min-height: clamp(160px, 28vh, 350px);
+  max-height: min(60vh, 550px);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -189,7 +191,7 @@
   overflow-x: hidden;
   margin-bottom: 16px;
   font-family: "Courier New", monospace;
-  font-size: 0.95rem;
+  font-size: clamp(0.82rem, 2.25vw, 0.95rem);
   line-height: 1.6;
   color: #e2e8f0;
   padding-right: 8px;
@@ -339,7 +341,7 @@
 .achievement-notification {
   position: fixed;
   top: 100px;
-  right: -400px;
+  right: 20px;
   background: linear-gradient(
     135deg,
     rgba(100, 255, 218, 0.15) 0%,
@@ -353,9 +355,10 @@
   align-items: center;
   gap: 16px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(100, 255, 218, 0.2);
-  transition: right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: right 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), transform 0.3s ease;
   z-index: 10000;
-  min-width: 320px;
+  min-width: 240px;
+  max-width: 90%;
   animation: achievementGlow 2s ease-in-out infinite;
 }
 
@@ -474,8 +477,8 @@ body.matrix-mode::before {
   }
 
   .achievement-notification {
-    min-width: 280px;
-    right: -320px;
+    min-width: 220px;
+    right: 10px;
   }
 
   .achievement-notification.show {
@@ -517,6 +520,20 @@ body.matrix-mode::before {
   .terminal__action {
     padding: 4px 8px;
     font-size: 0.75rem;
+  }
+
+  /* Move achievement notifications to bottom center on very small screens */
+  .achievement-notification {
+    top: auto;
+    bottom: 18px;
+    left: 12px;
+    right: 12px;
+    min-width: unset;
+    max-width: calc(100% - 24px);
+  }
+
+  .achievement-notification.show {
+    right: 12px;
   }
 }
 

@@ -4,7 +4,7 @@
 
 Has transformado tu portafolio simple en una **obra maestra tecnológica** con:
 
-### 🚀 Tecnologías de Vanguardia
+### Tecnologías de Vanguardia
 
 ```
 ✅ TypeScript 5.3      - Código tipado y profesional
@@ -166,7 +166,7 @@ duration: 1,  // Segundos (más = más lento)
 
 ---
 
-## 🚀 COMANDOS ESENCIALES
+## COMANDOS ESENCIALES
 
 | Comando              | Descripción                                 |
 | -------------------- | ------------------------------------------- |
@@ -287,7 +287,7 @@ En móviles, reduce `particleCount` a 50 para mejor rendimiento
 Has creado un portafolio de nivel **SENIOR** que:
 
 1. ✨ Impresiona visualmente
-2. 🚀 Demuestra habilidades avanzadas
+2. Demuestra habilidades avanzadas
 3. 📊 Se actualiza automáticamente
 4. 💼 Te destaca de otros developers
 5. 🎯 Es escalable a futuro
@@ -312,6 +312,6 @@ Antes de publicar:
 
 ---
 
-**🚀 ¡A CONQUISTAR EL MUNDO DEL DESARROLLO!**
+**¡A CONQUISTAR EL MUNDO DEL DESARROLLO!**
 
 Made with ❤️, TypeScript & Three.js

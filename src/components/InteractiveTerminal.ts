@@ -121,7 +121,7 @@ export class InteractiveTerminal {
       description: "Open GitHub profile",
       execute: () => {
         window.open("https://github.com/ariel323", "_blank");
-        return "🚀 Opening GitHub profile...";
+        return "Opening GitHub profile...";
       },
     });
 
@@ -212,16 +212,16 @@ Nice try though! Here's a cookie instead: 🍪
           document.body.classList.remove("matrix-mode");
         }, 5000);
         return `
-🎯 HACKER MODE ACTIVATED!
-[████████████████████] 100%
+      🎯 HACKER MODE ACTIVATED!
+      [████████████████████] 100%
 
-Access Granted to:
-- All skills: UNLOCKED ✓
-- All projects: ACCESSIBLE ✓
-- Hidden easter eggs: REVEALED ✓
-- Matrix mode: ENABLED for 5 seconds ✓
+      Access Granted to:
+      - All skills: UNLOCKED ✓
+      - All projects: ACCESSIBLE ✓
+      - Hidden easter eggs: REVEALED ✓
+      - Matrix mode: ENABLED for 5 seconds ✓
 
-"The code is strong with this one..." 🚀
+      "The code is strong with this one..."
         `;
       },
     });
@@ -549,7 +549,7 @@ ${i18n.t("terminal.commands.ls").charAt(0).toUpperCase() + i18n.t("terminal.comm
         return `
 Passionate Fullstack Developer specializing in building robust 
 and scalable software solutions.
-
+ 
 🎯 Core Competencies:
    • Backend: Java, Spring Boot, Node.js, Express
    • Frontend: React, TypeScript, JavaScript ES6+
@@ -557,7 +557,7 @@ and scalable software solutions.
    • Tools: Git, Docker, Maven, npm
    • Testing: JUnit, Jest, Integration Testing
 
-🚀 What I Do:
+What I Do:
    ✓ Design and develop RESTful APIs
    ✓ Build responsive web applications
    ✓ Implement clean, maintainable code
@@ -571,7 +571,7 @@ and scalable software solutions.
         return `
 # 👋 Hi, I'm Ariel Almada
 
-## 🚀 About Me
+## About Me
 Fullstack Developer passionate about creating elegant solutions
 to complex problems. I love working with modern technologies
 and best practices.

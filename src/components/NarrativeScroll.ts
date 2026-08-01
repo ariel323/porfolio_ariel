@@ -188,7 +188,7 @@ export class NarrativeScroll {
   }
 
   /**
-   * 🚀 Navegación programática entre escenas
+  * Navegación programática entre escenas
    */
   goToScene(sceneId: string): void {
     const scene = this.scenes.find((s) => s.id === sceneId);

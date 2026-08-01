@@ -12,9 +12,11 @@
   border: 1px solid rgba(59, 130, 246, 0.2);
   display: flex;
   flex-direction: column;
-  min-height: 700px;
+  min-height: clamp(300px, 60vh, 700px);
   transition: all 0.4s ease;
   animation: editorGlow 4s ease-in-out infinite;
+  width: 100%;
+  max-width: 100%;
 }
 
 @keyframes editorGlow {
@@ -412,7 +414,7 @@
   background: rgba(15, 23, 42, 0.8);
   border-right: 1px solid rgba(71, 85, 105, 0.3);
   font-family: "Courier New", monospace;
-  font-size: 0.875rem;
+  font-size: clamp(0.68rem, 1.4vw, 0.9rem);
   color: #475569;
   user-select: none;
   text-align: right;
@@ -434,7 +436,7 @@
   margin: 0;
   overflow: auto;
   font-family: "Courier New", monospace;
-  font-size: 0.875rem;
+  font-size: clamp(0.72rem, 1.6vw, 0.95rem);
   line-height: 1.6;
   color: #e2e8f0;
 }
@@ -1183,24 +1185,25 @@
 .code-editor__notification {
   position: fixed;
   bottom: 40px;
-  right: 40px;
+  right: 24px;
   background: linear-gradient(
     135deg,
     rgba(59, 130, 246, 0.95) 0%,
     rgba(37, 99, 235, 0.95) 100%
   );
   color: white;
-  padding: 16px 24px;
+  padding: 12px 18px;
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
   font-weight: 600;
   z-index: 10000;
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  max-width: 92%;
 }
 
 .code-editor__notification.show {

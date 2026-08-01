@@ -178,7 +178,7 @@ private createCategoryFilters(): string {
 
 ---
 
-## 🚀 Comandos Útiles
+## Comandos Útiles
 
 ```powershell
 # Desarrollo con hot reload

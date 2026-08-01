@@ -65,7 +65,7 @@ El **Code Laboratory** es un editor de código **completamente funcional**, repl
 ```
 Code Laboratory/
 ├── 📋 README.md          → Información del portfolio
-├── 🚀 playground.js      → Playground ejecutable
+├── playground.js      → Playground ejecutable
 ├── 📁 projects/
 │   ├── 💻 Proyecto1.ts   → Código de proyectos reales
 │   ├── 💻 Proyecto2.ts
@@ -75,7 +75,7 @@ Code Laboratory/
 
 ---
 
-## 🚀 Guía de Uso Rápida
+## Guía de Uso Rápida
 
 ### 1. Ejecutar Código
 
@@ -328,7 +328,7 @@ box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
 
 ---
 
-## 🚀 Próximas Mejoras (Roadmap)
+## Próximas Mejoras (Roadmap)
 
 - [ ] Autocompletado inteligente
 - [ ] Snippets personalizados

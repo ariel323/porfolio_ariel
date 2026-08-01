@@ -11,7 +11,7 @@
 
 ---
 
-## 🚀 Optimizaciones Implementadas
+## Optimizaciones Implementadas
 
 ### 1. **Performance - NarrativeScroll**
 
@@ -262,7 +262,7 @@ Todos los componentes principales ya tienen optimizaciones móviles:
 
 ---
 
-## 🚀 Próximas Mejoras (Futuro)
+## Próximas Mejoras (Futuro)
 
 - [ ] Lazy loading de imágenes
 - [ ] Service Worker para PWA

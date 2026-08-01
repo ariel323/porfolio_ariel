@@ -12,14 +12,14 @@ El **Code Laboratory** es un editor de código en vivo integrado en tu portfolio
 
 ---
 
-## 🚀 Cómo usar el Code Laboratory
+## Cómo usar el Code Laboratory
 
 ### 1. **Acceder al Playground**
 
 En el Code Laboratory, encontrarás varios tabs:
 
 - 📋 **README.md** - Información del portfolio
-- 🚀 **playground.js** - ¡Aquí puedes ejecutar código en vivo!
+- **playground.js** - ¡Aquí puedes ejecutar código en vivo!
 - 💻 **[Proyectos]** - Ver código de tus proyectos
 - 🛠️ **skills.json** - Tus habilidades
 
