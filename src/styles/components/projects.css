@@ -350,6 +350,7 @@ RESPONSIVE — PROJECTS
 
   .projects__grid {
     gap: var(--spacing-sm);
+    grid-template-columns: 1fr;
   }
 
   .project-card__content {

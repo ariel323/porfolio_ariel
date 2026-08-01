@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#b7c8e1",
+                        "inverse-primary": "#855300",
+                        "surface-container": "#201f1f",
+                        "surface-tint": "#ffb95f",
+                        "primary-fixed-dim": "#ffb95f",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-container-highest": "#353534",
+                        "inverse-on-surface": "#313030",
+                        "tertiary-container": "#30c88f",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "on-primary-fixed": "#2a1700",
+                        "primary-container": "#f59e0b",
+                        "on-primary": "#472a00",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e5e2e1",
+                        "surface": "#131313",
+                        "on-primary-container": "#613b00",
+                        "outline": "#a08e7a",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-container": "#004e34",
+                        "on-surface-variant": "#d8c3ad",
+                        "on-tertiary-fixed": "#002113",
+                        "primary-fixed": "#ffddb8",
+                        "on-secondary": "#213145",
+                        "on-background": "#e5e2e1",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "primary": "#ffc174",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#6ffbbe",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-dim": "#131313",
+                        "outline-variant": "#534434",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#653e00",
+                        "tertiary": "#56e5a9",
+                        "on-secondary-container": "#a9bad3",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#d3e4fe",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#003824",
+                        "on-secondary-fixed": "#0b1c30",
+                        "secondary-container": "#3a4a5f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "margin-desktop": "32px",
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "label-sm": ["JetBrains Mono"],
+                        "headline-md": ["Geist"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Geist"],
+                        "display-lg": ["Geist"],
+                        "body-lg": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Geist', sans-serif;
+            overflow-x: hidden;
+        }
+        .tech-glow:hover {
+            box-shadow: inset 0 0 10px rgba(245, 158, 11, 0.2);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+        .terminal-cursor::after {
+            content: '_';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+        .amber-gradient {
+            background: linear-gradient(135deg, #ffc174 0%, #f59e0b 100%);
+        }
+    </style>
+</head>
+<body class="antialiased">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center h-16 px-margin-desktop max-w-container-max mx-auto">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Ariel Almada</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#experience">Experience</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+<button class="bg-primary-container text-on-primary px-6 py-2 font-label-md rounded-lg hover:brightness-110 transition-all">Resume</button>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="min-h-[90vh] flex flex-col justify-center px-margin-desktop max-w-container-max mx-auto relative overflow-hidden">
+<div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1 rounded border border-outline-variant/20">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Disponible para nuevos proyectos</span>
+</div>
+<h1 class="font-display-lg text-display-lg tracking-tighter leading-none">
+                        Ariel <span class="text-primary italic">Almada</span>
+</h1>
+<p class="font-headline-md text-headline-md text-on-surface-variant">
+                        Fullstack Developer
+                    </p>
+<p class="font-body-lg text-body-lg max-w-xl text-on-surface-variant/80">
+                        Construyendo soluciones robustas y escalables. Especializado en ecosistemas <span class="text-primary font-medium">Java</span> y <span class="text-primary font-medium">Node.js</span> para arquitectura de alto rendimiento.
+                    </p>
+<div class="flex gap-4 pt-4">
+<button class="bg-primary-container text-on-primary font-label-md py-4 px-8 rounded-lg flex items-center gap-2 hover:translate-y-[-2px] transition-all">
+                            Contactar <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-outline-variant text-on-surface font-label-md py-4 px-8 rounded-lg hover:bg-surface-container transition-all">
+                            Ver Proyectos
+                        </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-primary/20 to-transparent blur-2xl group-hover:from-primary/30 transition-all"></div>
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden border border-outline-variant/40 bg-surface-container">
+<img alt="Ariel Almada" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvc38SzJddHqDxGssG6Ybp7lMt_6OUFpJB39_vGkz5TumD4X9iFm7eauMCsd8Sohp0NLe9nxvsaWSgNxVMpS5ghCN7Gvl1mCvwwlL8-pjIoxD7Yv0RnCD4tqAofiNAa94yqm5h9Jw7JtrwBEzkDsFUkVjcurpTcIM7A423FwWhEhqs8XnEPP3d1LXXNTZyybfYyl-mo1BGdSL3TUhHjOT9Xpg7WwrBhOXxAaJbm-MLk-C3gdhgCw4y6yJY"/>
+</div>
+</div>
+</div>
+<!-- Technical Backdrop -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none w-full h-full">
+<div class="grid grid-cols-12 gap-4 h-full">
+<div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div><div class="border-l border-primary/20 h-full"></div>
+</div>
+</div>
+</section>
+<!-- Tech Stack -->
+<section class="py-24 bg-surface-container-lowest border-y border-outline-variant/20" id="skills">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase mb-2 block">Capacidades</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight">Tech Stack &amp; Herramientas</h2>
+</div>
+<div class="text-right">
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">system.status == "optimized"</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-outline-variant/20 border border-outline-variant/20">
+        <!-- Java & Spring -->
+        <div class="bg-surface p-8 tech-glow border border-transparent transition-all flex flex-col items-center gap-4 text-center">
+          <span class="material-symbols-outlined text-primary text-4xl">coffee</span>
+          <p class="font-label-md text-label-md font-bold">Java &amp; Spring</p>
+        </div>
+        <!-- Node.js & TS -->
+        <div class="bg-surface p-8 tech-glow border border-transparent transition-all flex flex-col items-center gap-4 text-center">
+          <span class="material-symbols-outlined text-primary text-4xl">javascript</span>
+          <p class="font-label-md text-label-md font-bold">Node.js &amp; TS</p>
+        </div>
+        <!-- React & Next -->
+        <div class="bg-surface p-8 tech-glow border border-transparent transition-all flex flex-col items-center gap-4 text-center">
+          <span class="material-symbols-outlined text-primary text-4xl">atom</span>
+          <p class="font-label-md text-label-md font-bold">React &amp; Next</p>
+        </div>
+        <!-- Docker -->
+        <div class="bg-surface p-8 tech-glow border border-transparent transition-all flex flex-col items-center gap-4 text-center">
+          <span class="material-symbols-outlined text-primary text-4xl">deployed_code</span>
+          <p class="font-label-md text-label-md font-bold">Docker</p>
+        </div>
+        <!-- PostgreSQL -->
+        <div class="bg-surface p-8 tech-glow border border-transparent transition-all flex flex-col items-center gap-4 text-center">
+          <span class="material-symbols-outlined text-primary text-4xl">database</span>
+          <p class="font-label-md text-label-md font-bold">PostgreSQL</p>
+        </div>
+        <!-- Clean Arch -->
+        <div class="bg-surface p-8 tech-glow border border-transparent transition-all flex flex-col items-center gap-4 text-center">
+          <span class="material-symbols-outlined text-primary text-4xl">architecture</span>
+          <p class="font-label-md text-label-md font-bold">Clean Arch</p>
+        </div>
+</div>
+</div>
+</section>
+<!-- Featured Projects (Bento Grid) -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="projects">
+<div class="mb-16">
+<span class="font-label-sm text-label-sm text-primary uppercase mb-2 block">Portafolio</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight">Proyectos Destacados</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Project 1: PM Tool -->
+<div class="md:col-span-8 group relative overflow-hidden bg-surface-container border border-outline-variant/30 rounded-lg">
+<img alt="Project Management Tool" class="w-full h-96 object-cover opacity-60 group-hover:opacity-80 transition-all duration-500 scale-105 group-hover:scale-100" src="https://lh3.googleusercontent.com/aida/AP1WRLvv0VkE-MaILUlywfGt85PBKO2AgI1S0dRufcfck0Aw7zJqFwHQQ-Slrdx8Uz6krwf6N5HVwRFivDzg0HRkQS2SuUO4aMDlSTW3TRdRO3xa5ScPlooSg7D8v86zm-0xVpCAm36gpNYTxsFxWxcU0Ar6yg-6nrkq0mQOhrJnpyCAt69-zsZ6_Sqhsx-E5ZYBiozKm2DWLaDA9yngjj0F_dvjzcH9V21picwVS2AXxzIRIrUjX_NsN4yEuA"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Project Management Tool</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-4">Gestión eficiente de flujos de trabajo con integración de backend robusto.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">React</span>
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">Node.js</span>
+</div>
+</div>
+</div>
+<!-- Project 2: LiterAlura -->
+<div class="md:col-span-4 group relative overflow-hidden bg-surface-container border border-outline-variant/30 rounded-lg">
+<img alt="LiterAlura API" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtkm_8JbSAqfmVOhnqI34NsCZTtaKuUHfTV3zyDsWt4oPXld_VoLM4QAdkzOvUlBaVadgMwaiNhXLbrqDkFwGAHiWX0xyaTKbzt-9ZiY34LWCL6fC5fNNQgJOLLEfKIuzd2dpmwRRWPj5zyPHf4aRxdR6v8bIopMz1n1Jrslj-p0AGmMlmJ86mLFmsjsSrCD2yMCuZOS-YaztaOjnb7xnqofrRz4AMC4cAXvWW6nlim6qsL-j4QzUigteI"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<h3 class="font-headline-md text-headline-md text-white mb-2">LiterAlura API</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Catálogo literario inteligente.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">Java</span>
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">Spring</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Docker Systems -->
+<div class="md:col-span-6 group relative overflow-hidden bg-surface-container border border-outline-variant/30 rounded-lg">
+<img alt="Docker Deployment Systems" class="w-full h-80 object-cover opacity-60 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLudATow2vEty9VjsfEKis-yfXOI5XCVJ6V1EyotToI1qYRFkuGJr1j15fq2s9FaMCviBFW4KOyfJy7EVhCRBS44Mbz0RtrC0XQtyM2ZxllaG64cms_QL2eTPYmG27Z5RbPf-Uqm8ZkzWHiIg8djJ4-_VO8hJmj1HIfSPjwPLynse47P4oiWmp7096JwV_k4EnB9BcVXpzlN7ABKYkZ4QJ5ugxaVX_vxpVTS1TkoL7eHbxSOpQ5TTggLkhs"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Docker Deployment Systems</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Infraestructura como código y contenedores.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">DevOps</span>
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">Docker</span>
+</div>
+</div>
+</div>
+<!-- Project 4: Restaurant Backend -->
+<div class="md:col-span-6 group relative overflow-hidden bg-surface-container border border-outline-variant/30 rounded-lg">
+<img alt="Restaurant Backend App" class="w-full h-80 object-cover opacity-60 group-hover:opacity-80 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLviRqXNYAPNjEPGR3Gw2DiJl_9Ooxu15eli8t0dztbUS-cp6pxTlyN6o17s6Aj48mXlRnvviqRdiNX_-qF1RdmIHT7anOQjGsa6lv5pEHMnPSpRvAzL4UbbxRK2zel1271Apvp4pGmWc5cuSfaiKxdpUuWeDCxKuUg6Nkd8oKv36Yt3xgp0Q5H8b1wRVGqO4vkOSFhGbBKJOaYyqhbkMNYyFTt1Wwr2Rf6p_YjmkjnXcQA9JzenGo2TGp4"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<h3 class="font-headline-md text-headline-md text-white mb-2">Restaurant Backend App</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Sistemas escalables para la industria gastronómica.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">PostgreSQL</span>
+<span class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-[10px] font-mono uppercase">Node.js</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="py-24 bg-surface-container-low border-y border-outline-variant/10" id="experience">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<span class="font-label-sm text-label-sm text-primary uppercase mb-2 block">Recorrido</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight">Experiencia Profesional</h2>
+</div>
+<div class="space-y-12 relative before:absolute before:left-[11px] before:top-2 before:bottom-0 before:w-px before:bg-outline-variant/30">
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-2 w-6 h-6 bg-surface border-2 border-primary rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+<div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-white">Fullstack Software Engineer</h3>
+<span class="font-label-md text-label-md font-mono text-primary">Actualidad</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Liderando el desarrollo de aplicaciones empresariales, optimizando bases de datos y mejorando la arquitectura de sistemas críticos con un enfoque en Clean Code.</p>
+</div>
+<div class="relative pl-12 group">
+<div class="absolute left-0 top-2 w-6 h-6 bg-surface border-2 border-outline-variant rounded-full group-hover:border-primary transition-colors duration-300"></div>
+<div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
+<h3 class="font-headline-md text-headline-md text-white">Backend Developer</h3>
+<span class="font-label-md text-label-md font-mono text-on-surface-variant">2021 - 2023</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Especialización en desarrollo de APIs RESTful, integración de microservicios y mantenimiento preventivo de bases de datos relacionales.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<span class="font-label-sm text-label-sm text-primary uppercase mb-2 block">Formación</span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight">Certificaciones</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-8 bg-surface border border-outline-variant/30 rounded-lg tech-glow transition-all flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-primary text-3xl">verified</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-1">Oracle Certified Foundations Associate</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Java SE &amp; Ecosystem</p>
+</div>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/30 rounded-lg tech-glow transition-all flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-primary text-3xl">cloud</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-1">AWS Certified Cloud Practitioner</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Cloud Infrastructure</p>
+</div>
+</div>
+<div class="p-8 bg-surface border border-outline-variant/30 rounded-lg tech-glow transition-all flex flex-col justify-between min-h-[200px]">
+<span class="material-symbols-outlined text-primary text-3xl">developer_board</span>
+<div>
+<h4 class="font-label-md text-label-md font-bold mb-1">Fullstack Developer Certification</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Web Architecture &amp; UX</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-desktop max-w-container-max mx-auto border-t border-outline-variant/20" id="contact">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase mb-2 block">Conexión</span>
+<h2 class="font-display-lg text-display-lg tracking-tighter mb-8 leading-tight">Hablemos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">¿Tienes un proyecto interesante o una oportunidad tecnológica? Estoy disponible para charlar sobre arquitectura de software y nuevos desafíos.</p>
+<div class="grid grid-cols-2 gap-4">
+<a class="flex items-center gap-4 p-4 border border-outline-variant/30 rounded hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">link</span>
+<span class="font-label-md text-label-md">LinkedIn</span>
+</a>
+<a class="flex items-center gap-4 p-4 border border-outline-variant/30 rounded hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">code</span>
+<span class="font-label-md text-label-md">GitHub</span>
+</a>
+<a class="flex items-center gap-4 p-4 border border-outline-variant/30 rounded hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="font-label-md text-label-md">Email</span>
+</a>
+<a class="flex items-center gap-4 p-4 border border-outline-variant/30 rounded hover:border-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-primary">chat</span>
+<span class="font-label-md text-label-md">WhatsApp</span>
+</a>
+</div>
+</div>
+<div class="bg-surface-container p-10 rounded-xl border border-outline-variant/40">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Nombre</label>
+<input class="w-full bg-surface border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-3" placeholder="Tu nombre..." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Email</label>
+<input class="w-full bg-surface border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-3" placeholder="tu@correo.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mensaje</label>
+<textarea class="w-full bg-surface border-0 border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-3 resize-none" placeholder="Cuéntame sobre tu proyecto..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary font-label-md py-4 rounded-lg flex justify-center items-center gap-2 hover:brightness-110 transition-all">
+                            Enviar Mensaje <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="flex items-center gap-4">
+<img alt="Almada Labs Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtEQZmy625xV2ON1BaSL7r0GOVK0tpSR9xUkqFwv02ECEgpimf3m9KN3N6KAUUXX4w1cl-928OzZls706BcJ7Z2OnG5W4cpDduEShOraPnVYcQ-p0gbxN4IMl1EeTtDTa381lQ51TY8wM4pjihpeosy6Z3Fw48ElRVEhOK1sz77ThFci1_sqkt425DlUm_GHfRPjFpI_na7YMQPX30owFZcnfTFgfXVWVuFTi9S0R2gpyibR5g2Sx5zXVw"/>
+<div>
+<p class="font-label-md text-label-md text-primary font-bold">Almada Labs</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-70 italic">Engineering Excellence</p>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left max-w-xs">
+                © 2024 Ariel Almada. Built for the obsidian terminal. 
+                <span class="block mt-1 font-mono text-[10px] opacity-40">SYSTEM_BUILD_V4.2.0</span>
+</p>
+<div class="flex gap-6">
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+        <span class="material-symbols-outlined text-xl">save_as</span>
+      </a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+        <span class="material-symbols-outlined text-xl">terminal</span>
+      </a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+        <span class="material-symbols-outlined text-xl">storage</span>
+      </a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a simple scroll-based navbar shadow
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body></html>

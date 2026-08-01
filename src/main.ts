@@ -50,6 +50,7 @@ class Portfolio {
 
       // Render all components
       await this.renderComponents();
+      this.updateStaticText();
 
       // Initialize animations
       this.animationsController.init();
@@ -397,12 +398,12 @@ class Portfolio {
 
     if (langToggle) {
       langToggle.addEventListener("click", () => {
-        const newLang = i18n.toggleLanguage();
+        i18n.toggleLanguage();
         if (langLabel) {
-          langLabel.textContent = newLang.toUpperCase();
+          langLabel.textContent = i18n.getLanguage().toUpperCase();
         }
-        this.updateStaticText();
         this.updateHtmlLang();
+        window.location.reload();
       });
     }
 
@@ -425,6 +426,19 @@ class Portfolio {
       const translation = i18n.t(key);
       if (translation && translation !== key) {
         element.innerHTML = translation;
+      }
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
+      const mapping = element.getAttribute("data-i18n-attr");
+      if (!mapping) return;
+
+      const [attrName, translationKey] = mapping.split(":").map((part) => part.trim());
+      if (!attrName || !translationKey) return;
+
+      const translation = i18n.t(translationKey);
+      if (translation && translation !== translationKey) {
+        element.setAttribute(attrName, translation);
       }
     });
   }
