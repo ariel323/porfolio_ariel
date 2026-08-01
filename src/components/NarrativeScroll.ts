@@ -113,13 +113,13 @@ export class NarrativeScroll {
 
     // Cambiar color de fondo según el "mood"
     const body = document.body;
-    const moodColors = {
-      inspirational: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-      technical: "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
-      creative: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%)",
-      immersive: "linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)",
-      inviting: "linear-gradient(135deg, #0f172a 0%, #312e81 100%)",
-    };
+  const moodColors = {
+    inspirational: "linear-gradient(135deg, #131313 0%, #1c1b1b 100%)",
+    technical: "linear-gradient(135deg, #201f1f 0%, #131313 100%)",
+    creative: "linear-gradient(135deg, #131313 0%, #2a1f0f 100%)",
+    immersive: "linear-gradient(135deg, #2a1f0f 0%, #131313 100%)",
+    inviting: "linear-gradient(135deg, #131313 0%, #1f1c0f 100%)",
+  };
 
     gsap.to(body, {
       background: moodColors[scene.mood],

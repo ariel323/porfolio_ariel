@@ -775,14 +775,14 @@ export class UIComponents {
     }
 
     grid.innerHTML = projects
-      .map((project) => this.createProjectCard(project))
+      .map((project, index) => this.createProjectCard(project, index))
       .join("");
   }
 
   /**
    * Create project card HTML
    */
-  private createProjectCard(project: Project): string {
+  private createProjectCard(project: Project, index: number): string {
     const techBadges = project.technologies
       .map((tech) => `<span class="tech-badge">${tech}</span>`)
       .join("");
@@ -814,24 +814,40 @@ export class UIComponents {
     const stats = project.stats
       ? `
       <div class="project-stats">
-        <span class="stat">${i18n.t("sections.projects.stats.stars")} ${project.stats.stars}</span>
-        <span class="stat">${i18n.t("sections.projects.stats.forks")} ${project.stats.forks}</span>
         <span class="stat">${project.stats.language}</span>
+        <span class="stat">⭐ ${project.stats.stars}</span>
+        <span class="stat">🍴 ${project.stats.forks}</span>
       </div>
     `
       : "";
 
+    const formattedCategory = project.category
+      ? project.category
+          .split("-")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ")
+      : "";
+
+    const formattedDate = project.date
+      ? new Intl.DateTimeFormat("es-ES", { month: "short", year: "numeric" }).format(
+          new Date(project.date)
+        )
+      : "";
+
     return `
-      <div class="project-card fade-in-up" data-category="${project.category}">
+      <article class="project-card fade-in-up ${index === 0 ? "project-card--featured" : "project-card--standard"}" data-category="${project.category}">
         <div class="project-card__image-wrapper">
           <img src="${project.image}" alt="${project.title}" class="project-card__image" />
           <div class="project-card__overlay">
-            <span class="category-badge">${project.category}</span>
+            <span class="category-badge">${formattedCategory}</span>
+            ${formattedDate ? `<span class="project-card__date">${formattedDate}</span>` : ""}
           </div>
         </div>
         <div class="project-card__content">
-          <h3 class="project-card__title">${project.title}</h3>
-          <p class="project-card__description">${project.shortDescription}</p>
+          <header class="project-card__header">
+            <h3 class="project-card__title">${project.title}</h3>
+            <p class="project-card__intro">${project.shortDescription}</p>
+          </header>
           <div class="tech-tags">${techBadges}</div>
           ${stats}
           ${dockerInfo}
@@ -842,7 +858,7 @@ export class UIComponents {
             </a>
           </div>
         </div>
-      </div>
+      </article>
     `;
   }
 

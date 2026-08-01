@@ -50,9 +50,9 @@ export class ParticlesSystem {
     this.particleVelocities = new Float32Array(this.particleCount * 3);
 
     const geometry = new THREE.BufferGeometry();
-    const material = new THREE.PointsMaterial({
-      color: config.particleColor || 0x64ffda,
-      size: config.particleSize || 2,
+  const material = new THREE.PointsMaterial({
+    color: config.particleColor || 0xf59e0b,
+    size: config.particleSize || 2,
       transparent: true,
       opacity: 0.8,
       blending: THREE.AdditiveBlending,

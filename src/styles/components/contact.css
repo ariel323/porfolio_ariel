@@ -1,68 +1,48 @@
 /* ========================================
-   CONTACT SECTION
-   Contact links and social media
-   ======================================== */
+CONTACT SECTION
+Deep Tech Amber — Clean form layout
+======================================== */
 
-.contact {
-  background: linear-gradient(
-    135deg,
-    var(--color-secondary) 0%,
-    var(--color-tertiary) 100%
-  );
-  border-radius: var(--border-radius-2xl);
-  padding: var(--spacing-3xl);
-  margin: var(--spacing-3xl) auto;
-  max-width: clamp(320px, 80vw, 960px);
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  gap: var(--spacing-xl);
+.section-contact {
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background: var(--color-surface-container-lowest);
+  border-top: 1px solid var(--color-outline-variant);
 }
 
-.contact::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(100, 255, 218, 0.05) 0%,
-    transparent 70%
-  );
-  animation: rotate 20s linear infinite;
-  pointer-events: none;
+.section-contact__inner {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-contact__header {
+  margin-bottom: var(--spacing-xl);
 }
 
-.contact > * {
-  position: relative;
-  z-index: 1;
+.section-contact__title {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: -0.02em;
 }
 
 /* ========================================
-   CONTACT PAGE LINKS
-   ======================================== */
+CONTACT LINKS GRID
+======================================== */
+
+.contact__intro-text {
+  color: var(--color-on-surface-variant);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  max-width: 600px;
+  margin-bottom: var(--spacing-2xl);
+}
 
 .contact__links-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-md);
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   width: 100%;
 }
@@ -70,503 +50,103 @@
 .contact__link {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
-  padding: var(--spacing-md) var(--spacing-xl);
-  border-radius: var(--border-radius-lg);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  text-decoration: none;
-  transition: var(--transition-ease);
-  background: var(--glass-background);
-  backdrop-filter: blur(10px);
-  border: 2px solid var(--glass-border);
-  color: var(--color-text-light);
-  flex: 1;
-  min-width: 140px;
   justify-content: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all var(--transition-base);
+  background: var(--color-surface-container);
+  border: 1px solid var(--color-outline-variant);
+  color: var(--color-text-light);
 }
 
 .contact__link:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-amber);
 }
 
 .contact__link--linkedin {
-  border-color: #0077b5;
-  color: #0077b5;
+  border-color: rgba(0, 119, 181, 0.3);
+  color: #60a5fa;
 }
 
 .contact__link--linkedin:hover {
-  background: rgba(0, 119, 181, 0.15);
+  border-color: #60a5fa;
+  background: rgba(0, 119, 181, 0.08);
 }
 
 .contact__link--github {
-  border-color: #8b949e;
-  color: #8b949e;
+  border-color: rgba(148, 163, 184, 0.3);
+  color: #94a3b8;
 }
 
 .contact__link--github:hover {
-  background: rgba(139, 148, 158, 0.15);
+  border-color: #cbd5e1;
+  background: rgba(148, 163, 184, 0.08);
 }
 
 .contact__link--email {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: var(--color-primary);
 }
 
 .contact__link--email:hover {
-  background: rgba(100, 255, 218, 0.15);
+  border-color: var(--color-primary);
+  background: rgba(245, 158, 11, 0.08);
 }
 
 .contact__link--whatsapp {
-  border-color: #25d366;
-  color: #25d366;
+  border-color: rgba(37, 211, 102, 0.3);
+  color: #4ade80;
 }
 
 .contact__link--whatsapp:hover {
-  background: rgba(37, 211, 102, 0.15);
+  border-color: #4ade80;
+  background: rgba(37, 211, 102, 0.08);
 }
 
 /* ========================================
-   CONTACT INTRO
-   ======================================== */
-
-.contact__intro-text {
-  color: var(--color-text);
-  font-size: var(--font-size-lg);
-  line-height: var(--line-height-relaxed);
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* ========================================
-   STRATEGIC ALLIANCES - BENTO GRID
-   ======================================== */
-
-.contact__bento-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-lg);
-  max-width: 1000px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.contact__card {
-  background: var(--glass-background);
-  backdrop-filter: blur(10px);
-  border: 2px solid var(--glass-border);
-  border-radius: var(--border-radius-xl);
-  padding: var(--spacing-xl);
-  transition: var(--transition-ease);
-  position: relative;
-  overflow: hidden;
-}
-
-.contact__card:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-primary-emerald);
-  box-shadow: var(--shadow-lg), var(--shadow-glow-emerald);
-}
-
-.contact__card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(16, 185, 129, 0.05) 0%,
-    transparent 100%
-  );
-  opacity: 0;
-  transition: var(--transition-ease);
-}
-
-.contact__card:hover::before {
-  opacity: 1;
-}
-
-.contact__card-title {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-md);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.contact__card-icon {
-  font-size: var(--font-size-2xl);
-  color: var(--color-primary-emerald);
-}
-
-.contact__card-content {
-  margin-bottom: var(--spacing-md);
-}
-
-.contact__card-description {
-  color: var(--color-text);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-relaxed);
-}
-
-.contact__card-link {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  color: var(--color-primary-emerald);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  text-decoration: none;
-  transition: var(--transition-ease);
-}
-
-.contact__card-link:hover {
-  gap: calc(var(--spacing-sm) + 4px);
-  color: var(--color-primary-emerald-light);
-}
-
-.contact__card-link i {
-  transition: var(--transition-ease);
-}
-
-.contact__card-link:hover i {
-  transform: translateX(4px);
-}
-
-.contact__cal-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  width: 100%;
-  padding: var(--spacing-md);
-  margin-top: var(--spacing-md);
-  background: var(--gradient-emerald);
-  border-radius: var(--border-radius-md);
-  color: var(--color-text-light);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-semibold);
-  text-decoration: none;
-  transition: var(--transition-ease);
-  border: none;
-  cursor: pointer;
-}
-
-.contact__cal-button:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow-emerald);
-}
-
-.contact__partnerships-list {
-  margin-top: var(--spacing-md);
-  text-align: left;
-}
-
-.contact__partnerships-item {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  color: var(--color-text);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
-  margin-bottom: var(--spacing-sm);
-}
-
-.contact__partnerships-item:last-child {
-  margin-bottom: 0;
-}
-
-.contact__partnerships-item i {
-  color: var(--color-primary-emerald);
-}
-
-/* ========================================
-   DIGITAL PRESENCE GRID (LinkedIn/GitHub)
-   ======================================== */
-
-.contact__digital-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-md);
-  max-width: 600px;
-  margin: var(--spacing-lg) auto 0;
-}
-
-.contact__digital-item {
-  background: var(--glass-background);
-  backdrop-filter: blur(10px);
-  border: 2px solid var(--glass-border);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-lg);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-sm);
-  transition: var(--transition-ease);
-}
-
-.contact__digital-item:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-2px);
-}
-
-.contact__digital-icon {
-  font-size: var(--font-size-3xl);
-  transition: var(--transition-ease);
-}
-
-.contact__digital-item:hover .contact__digital-icon {
-  transform: scale(1.1);
-}
-
-.contact__digital-item--linkedin:hover .contact__digital-icon {
-  color: #0077b5;
-}
-
-.contact__digital-item--github:hover .contact__digital-icon {
-  color: #fff;
-}
-
-.contact__digital-label {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
-  color: var(--color-text);
-}
-
-.contact__digital-handle {
-  font-family: var(--font-mono);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-light);
-}
-
-/* ========================================
-   CONTACT FORM
-   ======================================== */
-
-.contact__form {
-  max-width: 600px;
-  margin: var(--spacing-2xl) auto 0;
-  text-align: left;
-}
-
-.contact__form-group {
-  margin-bottom: var(--spacing-lg);
-}
-
-.contact__form-label {
-  display: block;
-  color: var(--color-text-light);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-sm);
-  margin-bottom: var(--spacing-sm);
-}
-
-.contact__form-input,
-.contact__form-textarea {
-  width: 100%;
-  padding: var(--spacing-md) var(--spacing-lg);
-  background: var(--glass-background);
-  backdrop-filter: blur(10px);
-  border: 2px solid var(--glass-border);
-  border-radius: var(--border-radius-md);
-  color: var(--color-text-light);
-  font-family: var(--font-sans);
-  font-size: var(--font-size-base);
-  transition: var(--transition-ease);
-}
-
-.contact__form-input::placeholder,
-.contact__form-textarea::placeholder {
-  color: var(--color-text-dark);
-}
-
-.contact__form-input:focus,
-.contact__form-textarea:focus {
-  outline: none;
-  border-color: var(--color-primary-emerald);
-  box-shadow: var(--shadow-glow-emerald);
-}
-
-.contact__form-textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-.contact__form-submit {
-  width: 100%;
-  padding: var(--spacing-lg);
-  background: var(--gradient-emerald);
-  border: none;
-  border-radius: var(--border-radius-lg);
-  color: white;
-  font-family: var(--font-mono);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-  cursor: pointer;
-  transition: var(--transition-ease);
-}
-
-.contact__form-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow-primary);
-}
-
-.contact__form-submit:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-/* ========================================
-   HONEYPOT FIELD (Anti-spam)
-   ======================================== */
-
-.contact__honeypot {
-  display: none;
-}
-
-/* ========================================
-   RESPONSIVE
-   ======================================== */
+RESPONSIVE — CONTACT
+======================================== */
 
 @media (max-width: 768px) {
-  .contact {
-    padding: var(--spacing-2xl) var(--spacing-lg);
+  .section-contact {
+    padding: var(--spacing-2xl) var(--spacing-md);
   }
 
-  .contact__bento-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact__digital-grid {
-    grid-template-columns: 1fr;
+  .contact__links-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
   }
 
   .contact__intro-text {
     font-size: var(--font-size-base);
-  }
-
-  .contact__card {
-    padding: var(--spacing-lg);
-  }
-
-  .contact__card-title {
-    font-size: var(--font-size-base);
-  }
-
-  .contact__card-description {
-    font-size: var(--font-size-sm);
-  }
-
-  .contact__links-container {
-    gap: var(--spacing-sm);
-  }
-
-  .contact__link {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    font-size: var(--font-size-sm);
-    min-width: 120px;
   }
 }
 
 @media (max-width: 480px) {
-  .contact {
-    padding: var(--spacing-xl) var(--spacing-md);
-    gap: var(--spacing-lg);
-    border-radius: var(--border-radius-lg);
+  .section-contact {
+    padding: var(--spacing-xl) var(--spacing-sm);
   }
 
-  .contact__intro-text {
-    font-size: var(--font-size-sm);
+  .section-contact__title {
+    font-size: var(--font-size-2xl);
   }
 
   .contact__links-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: var(--spacing-sm);
   }
 
   .contact__link {
     padding: var(--spacing-sm) var(--spacing-md);
     font-size: var(--font-size-xs);
-    min-width: 0;
     width: 100%;
-  }
-
-  .contact__bento-grid {
-    gap: var(--spacing-md);
-  }
-
-  .contact__card {
-    padding: var(--spacing-md);
-  }
-
-  .contact__card-icon {
-    font-size: var(--font-size-xl);
-  }
-
-  .contact__card-title {
-    font-size: var(--font-size-sm);
-    gap: var(--spacing-xs);
-  }
-
-  .contact__card-description {
-    font-size: var(--font-size-xs);
-  }
-
-  .contact__card-link {
-    font-size: var(--font-size-xs);
-  }
-
-  .contact__digital-grid {
-    gap: var(--spacing-sm);
-  }
-
-  .contact__digital-item {
-    padding: var(--spacing-md);
-  }
-
-  .contact__digital-icon {
-    font-size: var(--font-size-2xl);
-  }
-
-  .contact__digital-label {
-    font-size: var(--font-size-xs);
-  }
-
-  .contact__digital-handle {
-    font-size: var(--font-size-sm);
-  }
-
-  .contact__cal-button {
-    padding: var(--spacing-sm);
-    font-size: var(--font-size-xs);
-  }
-
-  .contact__partnerships-item {
-    font-size: var(--font-size-xs);
-  }
-
-  .contact__form {
-    margin-top: var(--spacing-xl);
-  }
-
-  .contact__form-input,
-  .contact__form-textarea {
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-size: var(--font-size-sm);
-  }
-
-  .contact__form-submit {
-    padding: var(--spacing-md);
-    font-size: var(--font-size-sm);
+    justify-content: center;
   }
 }

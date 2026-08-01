@@ -1,177 +1,210 @@
 /* ========================================
-   CSS CUSTOM PROPERTIES (VARIABLES)
-   Dark Theme - Cyberpunk Aesthetic
-   ======================================== */
+CSS CUSTOM PROPERTIES (VARIABLES)
+Dark Theme - Deep Tech Amber
+Material Design 3 inspired — Obsidian + Amber
+======================================== */
 
 :root {
-  /* ========================================
-     COLOR PALETTE
-     ======================================== */
+/* ========================================
+COLOR PALETTE
+======================================== */
 
-  /* Primary Colors */
-   --color-primary: #0b1220; /* neutral dark */
-   --color-secondary: #0f1724;
-   --color-tertiary: #1a2430;
+/* Primary Colors — Amber */
+--color-primary: #ffc174;
+--color-primary-dark: #f59e0b;
+--color-primary-light: #ffddb8;
+--color-primary-container: #f59e0b;
+--color-on-primary: #472a00;
+--color-on-primary-container: #613b00;
 
-   /* Accent Colors (muted / neutral) */
-   --color-accent: #6b7280; /* cool gray */
-   --color-accent-dark: #4b5563;
-   --color-accent-light: #9ca3af;
+/* Secondary Colors — Slate Blue */
+--color-secondary: #b7c8e1;
+--color-secondary-dark: #3a4a5f;
+--color-secondary-light: #d3e4fe;
+--color-secondary-container: #3a4a5f;
+--color-on-secondary: #213145;
+--color-on-secondary-container: #a9bad3;
 
-  /* Text Colors */
-   --color-text: #cbd5e1;
-   --color-text-light: #e6eef8;
-   --color-text-dark: #94a3b8;
+/* Tertiary — Emerald */
+--color-tertiary: #56e5a9;
+--color-tertiary-dark: #30c88f;
+--color-tertiary-light: #6ffbbe;
+--color-tertiary-container: #30c88f;
+--color-on-tertiary: #003824;
+--color-on-tertiary-container: #004e34;
 
-  /* Background Colors */
-   --color-background: #0b1220;
-   --color-card-background: #0f1724;
-   --color-hover: #111827;
+/* Surface — Obsidian Tiers */
+--color-background: #131313;
+--color-surface: #131313;
+--color-surface-dim: #131313;
+--color-surface-bright: #3a3939;
+--color-surface-container-lowest: #0e0e0e;
+--color-surface-container-low: #1c1b1b;
+--color-surface-container: #201f1f;
+--color-surface-container-high: #2a2a2a;
+--color-surface-container-highest: #353534;
 
-  /* Semantic Colors */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-error: #ef4444;
-  --color-info: #3b82f6;
+/* Surface Variant */
+--color-surface-variant: #353534;
+--color-on-surface-variant: #d8c3ad;
+--color-inverse-surface: #e5e2e1;
+--color-inverse-on-surface: #313030;
+--color-inverse-primary: #855300;
 
-  /* ========================================
-     GRADIENTS
-     ======================================== */
+/* Text */
+--color-text: #e5e2e1;
+--color-text-light: #e5e2e1;
+--color-text-dark: #9ca3af;
+--color-text-muted: #9ca3af;
 
-   --gradient-primary: linear-gradient(135deg, #111827 0%, #1f2937 100%);
-   --gradient-secondary: linear-gradient(135deg, #374151 0%, #4b5563 100%);
-   --gradient-accent: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
-   --gradient-success: linear-gradient(135deg, #10b981 0%, #34d399 100%);
-   --gradient-cyber: linear-gradient(135deg, #e5e7eb 0%, #cbd5e1 100%);
-   --gradient-neon: linear-gradient(135deg, #94a3b8 0%, #6b7280 100%);
+/* Semantic */
+--color-success: #4ade80;
+--color-warning: #f59e0b;
+--color-error: #f87171;
+--color-info: #60a5fa;
 
-  /* Glass morphism */
-   --glass-background: rgba(15, 23, 36, 0.72);
-   --glass-border: rgba(156, 163, 175, 0.06);
-   --header-background: rgba(11, 18, 32, 0.95);
-   --header-overlay-background: rgba(11, 18, 32, 0.98);
-   --header-border: var(--glass-border);
-   --project-overlay: rgba(11, 18, 32, 0.9);
+/* Borders */
+--color-outline: #a08e7a;
+--color-outline-variant: #534434;
+--color-border: rgba(229, 226, 225, 0.12);
+--color-border-light: rgba(229, 226, 225, 0.06);
 
-  /* ========================================
-     TYPOGRAPHY
-     ======================================== */
+/* Gradients */
+--gradient-primary: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+--gradient-secondary: linear-gradient(135deg, #3a4a5f 0%, #4b5c73 100%);
+--gradient-accent: linear-gradient(135deg, #b7c8e1 0%, #8ba8cc 100%);
+--gradient-surface: linear-gradient(180deg, #131313 0%, #1c1b1b 100%);
 
-  --font-sans: "Inter", "Calibre", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
-  --font-mono: "Roboto Mono", "SF Mono", "Fira Code", "Fira Mono", "Consolas",
-    "Monaco", monospace;
+/* Glass morphism */
+--glass-background: rgba(32, 31, 31, 0.72);
+--glass-border: rgba(229, 226, 225, 0.06);
+--header-background: rgba(19, 19, 19, 0.85);
+--header-overlay-background: rgba(19, 19, 19, 0.98);
+--header-border: rgba(229, 226, 225, 0.08);
+--project-overlay: rgba(19, 19, 19, 0.92);
 
-  /* Font Sizes */
-  --font-size-xs: 0.75rem; /* 12px */
-  --font-size-sm: 0.875rem; /* 14px */
-  --font-size-base: 1rem; /* 16px */
-  --font-size-lg: 1.125rem; /* 18px */
-  --font-size-xl: 1.25rem; /* 20px */
-  --font-size-2xl: 1.5rem; /* 24px */
-  --font-size-3xl: 2rem; /* 32px */
-  --font-size-4xl: 2.5rem; /* 40px */
-  --font-size-5xl: 3rem; /* 48px */
-  --font-size-6xl: 4rem; /* 64px */
+/* ========================================
+TYPOGRAPHY
+======================================== */
 
-  /* Font Weights */
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+--font-sans: "Geist", "Inter", "Calibre", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+--font-mono: "JetBrains Mono", "Roboto Mono", "SF Mono", "Fira Code", "Fira Mono", "Consolas", "Monaco", monospace;
 
-  /* Line Heights */
-  --line-height-tight: 1.25;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.75;
-  --line-height-loose: 2;
+/* Font Sizes */
+--font-size-xs: 0.75rem; /* 12px */
+--font-size-sm: 0.875rem; /* 14px */
+--font-size-base: 1rem; /* 16px */
+--font-size-lg: 1.125rem; /* 18px */
+--font-size-xl: 1.25rem; /* 20px */
+--font-size-2xl: 1.5rem; /* 24px */
+--font-size-3xl: 2rem; /* 32px */
+--font-size-4xl: 2.5rem; /* 40px */
+--font-size-5xl: 3rem; /* 48px */
+--font-size-6xl: 4rem; /* 64px */
 
-  /* ========================================
-     SPACING
-     ======================================== */
+/* Font Weights */
+--font-weight-normal: 400;
+--font-weight-medium: 500;
+--font-weight-semibold: 600;
+--font-weight-bold: 700;
 
-  --spacing-2xs: 0.125rem; /* 2px */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 2rem; /* 32px */
-  --spacing-2xl: 3rem; /* 48px */
-  --spacing-3xl: 4rem; /* 64px */
-  --spacing-4xl: 6rem; /* 96px */
-  --spacing-5xl: 8rem; /* 128px */
+/* Line Heights */
+--line-height-tight: 1.25;
+--line-height-normal: 1.5;
+--line-height-relaxed: 1.75;
+--line-height-loose: 2;
 
-  /* ========================================
-     BORDER RADIUS
-     ======================================== */
+/* Letter spacing */
+--letter-spacing-xs: 0.05em;
+--letter-spacing-md: 0.02em;
 
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
-  --border-radius-lg: 12px;
-  --border-radius-xl: 16px;
-  --border-radius-2xl: 24px;
-  --border-radius-full: 9999px;
+/* ========================================
+SPACING
+======================================== */
 
-  /* ========================================
-     SHADOWS
-     ======================================== */
+--spacing-2xs: 2px;
+--spacing-xs: 4px;
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 32px;
+--spacing-2xl: 48px;
+--spacing-3xl: 64px;
+--spacing-4xl: 96px;
+--spacing-5xl: 128px;
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+/* ========================================
+BORDER RADIUS
+======================================== */
 
-  /* Glow Effects */
-  --shadow-glow-accent: 0 0 20px rgba(100, 255, 218, 0.3);
-  --shadow-glow-primary: 0 0 30px rgba(102, 126, 234, 0.4);
-  --shadow-glow-neon: 0 0 40px rgba(48, 207, 208, 0.5);
+--border-radius-xs: 2px;
+--border-radius-sm: 4px;
+--border-radius-md: 8px;
+--border-radius-lg: 12px;
+--border-radius-xl: 16px;
+--border-radius-2xl: 24px;
+--border-radius-full: 9999px;
 
-  /* Elevated shadows */
-  --shadow-elevated: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+/* ========================================
+SHADOWS
+======================================== */
 
-  /* ========================================
-     TRANSITIONS
-     ======================================== */
+--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+--shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-ease: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+/* Glow Effects — Amber */
+--shadow-glow-amber: 0 0 20px rgba(245, 158, 11, 0.25);
+--shadow-glow-amber-strong: 0 0 40px rgba(245, 158, 11, 0.4);
+--shadow-glow-primary: 0 0 30px rgba(245, 158, 11, 0.3);
 
-  /* ========================================
-     Z-INDEX LAYERS
-     ======================================== */
+/* Elevated shadows */
+--shadow-elevated: 0 10px 30px -15px rgba(2, 12, 27, 0.8);
 
-  --z-index-base: 0;
-  --z-index-dropdown: 1000;
-  --z-index-sticky: 1020;
-  --z-index-fixed: 1030;
-  --z-index-modal-backdrop: 1040;
-  --z-index-modal: 1050;
-  --z-index-popover: 1060;
-  --z-index-tooltip: 1070;
-  --z-index-notification: 1080;
+/* ========================================
+TRANSITIONS
+======================================== */
 
-  /* ========================================
-     BREAKPOINTS (for reference in JS)
-     ======================================== */
+--transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+--transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+--transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+--transition-ease: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+--transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
-  --breakpoint-2xl: 1536px;
+/* ========================================
+Z-INDEX LAYERS
+======================================== */
 
-  /* ========================================
-     ANIMATIONS
-     ======================================== */
+--z-index-base: 0;
+--z-index-dropdown: 1000;
+--z-index-sticky: 1020;
+--z-index-fixed: 1030;
+--z-index-modal-backdrop: 1040;
+--z-index-modal: 1050;
+--z-index-popover: 1060;
+--z-index-tooltip: 1070;
+--z-index-notification: 1080;
 
-  --animation-duration-fast: 200ms;
-  --animation-duration-base: 300ms;
-  --animation-duration-slow: 500ms;
-  --animation-duration-slower: 1000ms;
+/* ========================================
+BREAKPOINTS (for reference in JS)
+======================================== */
+
+--breakpoint-sm: 640px;
+--breakpoint-md: 768px;
+--breakpoint-lg: 1024px;
+--breakpoint-xl: 1280px;
+--breakpoint-2xl: 1536px;
+
+/* ========================================
+ANIMATIONS
+======================================== */
+
+--animation-duration-fast: 200ms;
+--animation-duration-base: 300ms;
+--animation-duration-slow: 500ms;
+--animation-duration-slower: 1000ms;
 }
 
 /* ========================================

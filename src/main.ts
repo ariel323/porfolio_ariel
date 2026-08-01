@@ -85,7 +85,7 @@ class Portfolio {
       this.particlesSystem = new ParticlesSystem({
         container,
         particleCount: 100,
-        particleColor: 0x64ffda,
+        particleColor: 0xf59e0b,
         particleSize: 2,
         connectionDistance: 120,
         mouseRadius: 100,

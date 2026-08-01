@@ -29,14 +29,14 @@ export class VisualIdentity {
     // Paleta triádica con acento cyan-tech
     const brandColors = {
       // Primario: Cyan tecnológico (protagonista)
-      primary: "#00d9ff",
-      primaryDark: "#00a8cc",
-      primaryLight: "#64ffda",
+      primary: "#f59e0b",
+      primaryDark: "#d97706",
+      primaryLight: "#ffc174",
 
       // Secundario: Violeta profundo (profundidad)
-      secondary: "#8b5cf6",
-      secondaryDark: "#6d28d9",
-      secondaryLight: "#a78bfa",
+      secondary: "#b7c8e1",
+      secondaryDark: "#64748b",
+      secondaryLight: "#d3e4fe",
 
       // Acento: Amarillo energético (creatividad)
       accent: "#fbbf24",
@@ -44,14 +44,14 @@ export class VisualIdentity {
       accentLight: "#fde047",
 
       // Bases: Oscuros espaciales
-      bgPrimary: "#0a0e27",
-      bgSecondary: "#0f172a",
-      bgTertiary: "#1e293b",
+      bgPrimary: "#131313",
+      bgSecondary: "#1c1b1b",
+      bgTertiary: "#2a2a2a",
 
       // Textos
-      textPrimary: "#f8fafc",
+      textPrimary: "#e5e2e1",
       textSecondary: "#cbd5e1",
-      textTertiary: "#94a3b8",
+      textTertiary: "#9ca3af",
     };
 
     // Aplicar variables CSS
@@ -274,3 +274,4 @@ export class VisualIdentity {
     this.cursorFollower?.remove();
   }
 }
+
