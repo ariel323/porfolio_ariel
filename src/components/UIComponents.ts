@@ -204,9 +204,17 @@ export class UIComponents {
   }
 
   private updateSkillsSectionHeader(section: Element): void {
-    const titleElement = section.querySelector<HTMLElement>(".section-skills__title");
+    const titleElement = section.querySelector<HTMLElement>(
+      ".section-skills__title"
+    );
     if (titleElement) {
-      titleElement.textContent = i18n.t("sections.skills.title");
+      const rawTitle = i18n.t("sections.skills.title");
+      if (rawTitle.startsWith("💡")) {
+        const rest = rawTitle.replace(/^💡\s*/, "");
+        titleElement.innerHTML = `<span class="section-title-emoji">💡</span> ${rest}`;
+      } else {
+        titleElement.textContent = rawTitle;
+      }
     }
 
     const labelElement = section.querySelector<HTMLElement>(
@@ -245,19 +253,12 @@ export class UIComponents {
           .join("")}</div>`
       : "";
     const technologiesHTML = skill.technologies
-      .map(
-        (tech) => `
-          <li data-level="${tech.level}">
-            <div class="tech-list__header">
-              <span class="tech-name">${tech.name}</span>
-              <span class="tech-level">${tech.level}%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar-fill" data-level="${tech.level}" style="width: 0%; background: ${skill.color}"></div>
-            </div>
-          </li>
-        `
-      )
+      .map((tech) => `
+        <span class="skill-chip" data-level="${tech.level}" title="${tech.name} — ${tech.level}%" style="border-color: ${skill.color}; color: ${skill.color};">
+          <span class="chip-name">${tech.name}</span>
+          <span class="chip-level">${tech.level}%</span>
+        </span>
+      `)
       .join("");
 
     card.innerHTML = `
@@ -289,9 +290,9 @@ export class UIComponents {
       }" id="${detailsId}" aria-hidden="${!expand}">
         ${summaryHTML}
         ${toolsHTML}
-        <ul class="skill-card__tech-list">
+        <div class="skill-card__tech-chips">
           ${technologiesHTML}
-        </ul>
+        </div>
       </div>
     `;
 

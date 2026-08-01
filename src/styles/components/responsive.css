@@ -168,9 +168,13 @@ img, video, canvas {
 
   .section-contact__title,
   .section-projects__title,
-  .section-skills__title,
   .section-experience__title {
     font-size: clamp(1.75rem, 5vw, 2.25rem);
+  }
+
+  /* Prevent viewport-driven scaling for the Skills title to avoid zoom effect */
+  .section-skills__title {
+    font-size: var(--font-size-2xl);
   }
 
   .project-card__image-wrapper {

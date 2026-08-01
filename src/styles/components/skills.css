@@ -32,6 +32,15 @@ Deep Tech Amber — Terminal-style grid
   letter-spacing: -0.01em;
 }
 
+/* Smaller emoji next to section titles to avoid visual zoom */
+.section-skills__title .section-title-emoji {
+  display: inline-block;
+  font-size: 0.85em;
+  vertical-align: -0.08em;
+  margin-right: 0.4rem;
+  line-height: 1;
+}
+
 .section-skills__status {
   font-family: var(--font-mono);
   font-size: var(--font-size-xs);
@@ -269,6 +278,40 @@ SKILL CARD DETAILS
   letter-spacing: 0.03em;
 }
 
+/* Technology chips (compact) */
+.skill-card__tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--spacing-sm);
+  align-items: center;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(245, 158, 11, 0.06);
+  border: 1px solid rgba(245, 158, 11, 0.12);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.skill-chip .chip-name {
+  font-weight: 600;
+  color: inherit;
+}
+
+.skill-chip .chip-level {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  opacity: 0.85;
+}
+
 .skill-bar {
   width: 100%;
   height: 4px;
@@ -333,8 +376,13 @@ SKILL CARD EXPANDED / COMPACT
 
 .skill-card__tech-list {
   display: grid;
-  gap: var(--spacing-sm);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
   text-align: left;
+  align-items: start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .tech-list__header {
@@ -347,16 +395,16 @@ SKILL CARD EXPANDED / COMPACT
 
 .tech-level {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--color-text-muted);
 }
 
 .tech-name {
   color: var(--color-text);
-  font-size: var(--font-size-sm);
+  font-size: 0.9rem;
   font-weight: var(--font-weight-medium);
   display: block;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 4px;
   transition: var(--transition-fast);
 }
 
@@ -466,5 +514,32 @@ RESPONSIVE — SKILLS
 
   .skill-summary {
     font-size: 0.7rem;
+  }
+
+  .skill-card__tech-chips {
+    gap: 6px;
+  }
+
+  .skill-chip {
+    padding: 3px 6px;
+    font-size: 0.6rem;
+  }
+
+  .skill-chip .chip-level {
+    font-size: 0.55rem;
+  }
+
+  /* Make tech list more compact on very small screens */
+  .skill-card__tech-list {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .tech-name {
+    font-size: 0.85rem;
+  }
+
+  .tech-level {
+    font-size: 0.55rem;
   }
 }
