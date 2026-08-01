@@ -80,15 +80,29 @@ export const translations = {
     },
     nav: {
       home: "Inicio",
+      logo: "Ariel Almada",
+      experience: "Experiencia",
       terminal: "Terminal",
       codeLab: "Code Lab",
       dashboard: "Dashboard",
-      skills: "Skills",
+      skills: "Habilidades",
       projects: "Proyectos",
       contact: "Contacto",
+      resume: "Currículum",
+    },
+    seo: {
+      title: "Ariel Almada | Desarrollador Fullstack - Portafolio",
+      description: "Portafolio profesional de Ariel Almada — Desarrollador Fullstack especializado en Java, Spring Boot, Node.js, React y TypeScript. Proyectos con arquitectura moderna.",
+      keywords: "Ariel Almada, Desarrollador Fullstack, Java, Spring Boot, Node.js, React, TypeScript, Portafolio, Desarrollador",
+      author: "Ariel Almada",
+      ogTitle: "Ariel Almada | Desarrollador Fullstack",
+      ogDescription: "Portfolio profesional con proyectos de Java, Node.js, React y Docker",
+      twitterTitle: "Ariel Almada | Desarrollador Fullstack",
+      twitterDescription: "Portfolio profesional con arquitectura TypeScript moderna",
     },
     hero: {
       greeting: "Hola, soy",
+      badge: "Disponible para nuevos proyectos",
       title: "Full Stack Developer",
       subtitle: "Creo infraestructuras SaaS escalables con Clean Architecture e IA",
       bio: "Desarrollador Full Stack enfocado en infraestructuras SaaS escalables, arquitecturas limpias e integración de IA (RAG y LLMs). Experto en APIs RESTful y sistemas dinámicos, con alta capacidad autodidacta para liderar proyectos desde la concepción hasta el despliegue productivo.",
@@ -120,6 +134,7 @@ export const translations = {
         intro: "Métricas en tiempo real, actividad de commits, distribución de lenguajes y estado de deployments.",
       },
       skills: {
+        label: "Capacidades",
         title: "💡 Stack Tecnológico",
         filters: {
           all: "Todos",
@@ -137,6 +152,7 @@ export const translations = {
         resetFilters: "Restablecer filtros",
       },
       experience: {
+        label: "Recorrido",
         title: "💼 Experiencia Profesional",
         education: "🎓 Formación Académica",
         certifications: "🏆 Certificaciones",
@@ -146,6 +162,7 @@ export const translations = {
         technologies: "Tecnologías",
       },
       projects: {
+        label: "Portafolio",
         title: "Proyectos Destacados",
         search: "Buscar proyectos...",
         noResults: "😔 No se encontraron proyectos con los criterios seleccionados.",
@@ -194,6 +211,7 @@ export const translations = {
         errorHint: "Verificá tu conexión a internet o intentá recargar más tarde.",
       },
       contact: {
+        label: "Conexión",
         title: "📬 Hablemos",
         intro: "Estoy abierto a nuevas oportunidades y siempre busco colaborar en proyectos interesantes. ¿Tienes un proyecto en mente? ¡Hablemos!",
         links: {
@@ -498,15 +516,29 @@ export const translations = {
     },
     nav: {
       home: "Home",
+      logo: "Ariel Almada",
+      experience: "Experience",
       terminal: "Terminal",
       codeLab: "Code Lab",
       dashboard: "Dashboard",
       skills: "Skills",
       projects: "Projects",
       contact: "Contact",
+      resume: "Resume",
+    },
+    seo: {
+      title: "Ariel Almada | Fullstack Developer Portfolio",
+      description: "Ariel Almada's professional portfolio — Fullstack developer specializing in Java, Spring Boot, Node.js, React, and TypeScript. Modern architecture projects.",
+      keywords: "Ariel Almada, Fullstack Developer, Java, Spring Boot, Node.js, React, TypeScript, Portfolio, Developer",
+      author: "Ariel Almada",
+      ogTitle: "Ariel Almada | Fullstack Developer",
+      ogDescription: "Professional portfolio with Java, Node.js, React, and Docker projects",
+      twitterTitle: "Ariel Almada | Fullstack Developer",
+      twitterDescription: "Professional portfolio with modern TypeScript architecture",
     },
     hero: {
       greeting: "Hi, I'm",
+      badge: "Available for new projects",
       title: "Full Stack Developer",
       subtitle: "I build scalable SaaS infrastructures with Clean Architecture and AI",
       bio: "Full Stack Developer focused on scalable SaaS infrastructures, clean architectures, and AI integration (RAG and LLMs). Expert in RESTful APIs and dynamic systems, with strong self-learning ability to lead projects from conception to production deployment.",
@@ -538,6 +570,7 @@ export const translations = {
         intro: "Real-time metrics, commit activity, language distribution, and deployment status.",
       },
       skills: {
+        label: "Capabilities",
         title: "💡 Tech Stack",
         filters: {
           all: "All",
@@ -555,6 +588,7 @@ export const translations = {
         resetFilters: "Reset filters",
       },
       experience: {
+        label: "Journey",
         title: "💼 Professional Experience",
         education: "🎓 Academic Background",
         certifications: "🏆 Certifications",
@@ -564,6 +598,7 @@ export const translations = {
         technologies: "Technologies",
       },
       projects: {
+        label: "Portfolio",
         title: "Featured Projects",
         search: "Search projects...",
         noResults: "😔 No projects found matching your criteria.",
@@ -612,6 +647,7 @@ export const translations = {
         errorHint: "Check your internet connection or try reloading later.",
       },
       contact: {
+        label: "Connect",
         title: "📬 Let's Talk",
         intro: "I'm open to new opportunities and always looking to collaborate on interesting projects. Have a project in mind? Let's talk!",
         links: {

@@ -45,12 +45,12 @@ export class UIComponents {
     const taglineElement =
       container.querySelector<HTMLElement>("#profile-tagline");
     if (taglineElement) {
-      taglineElement.textContent = profile.tagline;
+      taglineElement.textContent = i18n.t("hero.subtitle");
     }
 
     const bioElement = container.querySelector<HTMLElement>("#profile-bio");
     if (bioElement) {
-      bioElement.textContent = profile.bio;
+      bioElement.textContent = i18n.t("hero.bio");
     }
 
     const imageElement = document.querySelector<HTMLImageElement>(
@@ -76,6 +76,24 @@ export class UIComponents {
 
     this.updateSocialLinks(profile.github, profile.linkedin, profile.email);
     this.updateContactLinks(profile);
+    this.updateHeroCtaButtons();
+  }
+
+  private updateHeroCtaButtons(): void {
+    const primaryButton = document.querySelector<HTMLAnchorElement>(
+      ".hero-section__cta-btn--primary"
+    );
+    const secondaryButton = document.querySelector<HTMLAnchorElement>(
+      ".hero-section__cta-btn--secondary"
+    );
+
+    if (primaryButton) {
+      primaryButton.innerHTML = `${i18n.t("hero.ctaPrimary")} <span class="hero-section__cta-arrow">→</span>`;
+    }
+
+    if (secondaryButton) {
+      secondaryButton.textContent = i18n.t("hero.ctaSecondary");
+    }
   }
 
   private updateSocialLinks(
@@ -175,13 +193,28 @@ export class UIComponents {
    * Render skills section
    */
   renderSkills(): void {
-    const skillsSection = document.querySelector(".skills");
+    const skillsSection = document.querySelector(".section-skills");
     const skills = this.projectsManager.getSkills();
     const container = document.querySelector(".skills__grid");
     if (!container || !skillsSection) return;
 
+    this.updateSkillsSectionHeader(skillsSection);
     this.ensureSkillControls(skillsSection, skills);
     this.updateSkillsGrid(skills, container, skillsSection);
+  }
+
+  private updateSkillsSectionHeader(section: Element): void {
+    const titleElement = section.querySelector<HTMLElement>(".section-skills__title");
+    if (titleElement) {
+      titleElement.textContent = i18n.t("sections.skills.title");
+    }
+
+    const labelElement = section.querySelector<HTMLElement>(
+      ".section-skills__header .font-label-sm"
+    );
+    if (labelElement) {
+      labelElement.textContent = i18n.t("sections.skills.label");
+    }
   }
 
   /**
@@ -278,7 +311,7 @@ export class UIComponents {
       controls.className = "skills__controls";
       controls.innerHTML = `
         <div class="skills__controls-main">
-          <div class="skills__filters" role="tablist" aria-label="Filtrar stack tecnológico">
+          <div class="skills__filters" role="tablist" aria-label="Filter tech stack">
             ${this.buildSkillFilters(skills)}
           </div>
           <div class="skills__actions">
@@ -291,7 +324,7 @@ export class UIComponents {
                 autocomplete="off"
               />
             </label>
-            <div class="skills__view-toggle" role="group" aria-label="Modo de visualización">
+            <div class="skills__view-toggle" role="group" aria-label="View mode">
               <button type="button" class="skill-view-btn" data-view="detailed">${i18n.t("sections.skills.detailed")}</button>
               <button type="button" class="skill-view-btn" data-view="compact">${i18n.t("sections.skills.compact")}</button>
             </div>
@@ -384,7 +417,7 @@ export class UIComponents {
   }
 
   private refreshSkillsGrid(): void {
-    const section = document.querySelector(".skills");
+    const section = document.querySelector(".section-skills");
     const container = section?.querySelector(".skills__grid");
     if (!section || !container) return;
     const skills = this.projectsManager.getSkills();
