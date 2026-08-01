@@ -33,19 +33,21 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  /* Responsive base font-size for better zoom/scaling on different screens */
+  font-size: clamp(14px, 1.2vw + 12px, 18px);
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-sans);
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   position: relative;
+  -webkit-text-size-adjust: 100%; /* prevent unexpected font scaling on mobile */
 }
 
 /* Theme transition */

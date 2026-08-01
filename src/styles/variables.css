@@ -9,24 +9,24 @@
      ======================================== */
 
   /* Primary Colors */
-  --color-primary: #0a192f;
-  --color-secondary: #112240;
-  --color-tertiary: #1a2c4e;
+   --color-primary: #0b1220; /* neutral dark */
+   --color-secondary: #0f1724;
+   --color-tertiary: #1a2430;
 
-  /* Accent Colors */
-  --color-accent: #64ffda;
-  --color-accent-dark: #4fd1c5;
-  --color-accent-light: #7fffd4;
+   /* Accent Colors (muted / neutral) */
+   --color-accent: #6b7280; /* cool gray */
+   --color-accent-dark: #4b5563;
+   --color-accent-light: #9ca3af;
 
   /* Text Colors */
-  --color-text: #8892b0;
-  --color-text-light: #ccd6f6;
-  --color-text-dark: #495670;
+   --color-text: #cbd5e1;
+   --color-text-light: #e6eef8;
+   --color-text-dark: #94a3b8;
 
   /* Background Colors */
-  --color-background: #0a192f;
-  --color-card-background: #172a45;
-  --color-hover: #1e3251;
+   --color-background: #0b1220;
+   --color-card-background: #0f1724;
+   --color-hover: #111827;
 
   /* Semantic Colors */
   --color-success: #10b981;
@@ -38,20 +38,20 @@
      GRADIENTS
      ======================================== */
 
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  --gradient-cyber: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  --gradient-neon: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+   --gradient-primary: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+   --gradient-secondary: linear-gradient(135deg, #374151 0%, #4b5563 100%);
+   --gradient-accent: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+   --gradient-success: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+   --gradient-cyber: linear-gradient(135deg, #e5e7eb 0%, #cbd5e1 100%);
+   --gradient-neon: linear-gradient(135deg, #94a3b8 0%, #6b7280 100%);
 
   /* Glass morphism */
-  --glass-background: rgba(23, 42, 69, 0.7);
-  --glass-border: rgba(100, 255, 218, 0.1);
-  --header-background: rgba(10, 25, 47, 0.95);
-  --header-overlay-background: rgba(10, 25, 47, 0.98);
-  --header-border: var(--glass-border);
-  --project-overlay: rgba(10, 25, 47, 0.9);
+   --glass-background: rgba(15, 23, 36, 0.72);
+   --glass-border: rgba(156, 163, 175, 0.06);
+   --header-background: rgba(11, 18, 32, 0.95);
+   --header-overlay-background: rgba(11, 18, 32, 0.98);
+   --header-border: var(--glass-border);
+   --project-overlay: rgba(11, 18, 32, 0.9);
 
   /* ========================================
      TYPOGRAPHY
