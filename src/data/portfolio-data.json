@@ -618,7 +618,7 @@
       "name": "OCI Certified Foundations Associate 2025",
       "issuer": "Oracle",
       "date": "2025",
-      "credentialUrl": "https://education.oracle.com",
+      "credentialUrl": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=24287CCB043E3A7B131F5656A3CAD3E2A5336C5ACB0324846565F0FC346447EE",
       "description": "Certificación oficial de Oracle Cloud Infrastructure que valida conocimientos fundamentales de OCI, incluyendo computación, almacenamiento, redes y seguridad."
     },
     {
@@ -626,14 +626,16 @@
       "name": "Hackathon ONE Latam",
       "issuer": "Oracle",
       "date": "2025",
-      "description": "Participación y finalización exitosa del Hackathon de Oracle Next Education, resolviendo desafíos Full Stack en equipo bajo presión de tiempo."
+"description": "Participación y finalización exitosa del Hackathon de Oracle Next Education, resolviendo desafíos Full Stack en equipo bajo presión de tiempo.",
+      "credentialUrl": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=24287CCB043E3A7B131F5656A3CAD3E2A5336C5ACB0324846565F0FC346447EE"
     },
     {
       "id": "cert-php-mvc",
       "name": "PHP & MVC",
       "issuer": "Udemy",
       "date": "2025",
-      "description": "Curso completo de PHP con arquitectura MVC, incluyendo creación de aplicaciones web dinámicas y buenas prácticas de desarrollo."
+"description": "Curso completo de PHP con arquitectura MVC, incluyendo creación de aplicaciones web dinámicas y buenas prácticas de desarrollo.",
+      "credentialUrl": "https://www.udemy.com/certificate/UC-e0d2d214-d5a2-4e26-ada5-48a9d5f361b5/"
     }
   ],
   "metadata": {
