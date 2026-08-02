@@ -85,20 +85,6 @@ export class NarrativeScroll {
         onLeaveBack: () => this.leaveScene(scene, index),
       });
 
-      // Transición de "cámara" suave entre escenas
-      gsap.to(element, {
-        scrollTrigger: {
-          trigger: element as HTMLElement,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-        },
-        x: scene.cameraMovement.x,
-        y: scene.cameraMovement.y,
-        scale: scene.cameraMovement.scale,
-        ease: "power2.inOut",
-      });
-
       // Efecto de "mood" - cambiar ambiente según la sección
       this.applyMoodTransition(scene);
     });
@@ -144,25 +130,8 @@ export class NarrativeScroll {
   private applyMoodTransition(scene: ScrollScene): void {
     const element = document.querySelector(scene.element);
     if (!element) return;
-
-    // Efectos de luz según mood
-    const lightIntensity = {
-      inspirational: 1.2,
-      technical: 0.9,
-      creative: 1.5,
-      immersive: 0.8,
-      inviting: 1.1,
-    };
-
-    gsap.to(element, {
-      scrollTrigger: {
-        trigger: element as HTMLElement,
-        start: "top 80%",
-        end: "bottom 20%",
-        scrub: 0.5,
-      },
-      filter: `brightness(${lightIntensity[scene.mood]})`,
-    });
+    // El "mood" visual se aplica vía enterScene (background + partículas).
+    // Se eliminado el filtro brightness scrubbed que competía con AnimationsController.
   }
 
   /**
