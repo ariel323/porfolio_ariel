@@ -543,3 +543,88 @@ RESPONSIVE — SKILLS
     font-size: 0.55rem;
   }
 }
+
+/* ========================================
+GITHUB LIVE SKILLS — Minimal tech cards
+======================================= */
+
+.skills__grid:has(.skill-card--github) {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background: var(--color-outline-variant);
+}
+
+.skill-card--github {
+  background: var(--color-surface-container);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  transition: border-left-color var(--transition-base), background var(--transition-base);
+  border-left: 4px solid;
+}
+
+.skill-card--github:hover {
+  background: var(--color-surface-container-high);
+}
+
+.skill-card__github-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.skill-card__github-name {
+  color: var(--color-text-light);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.skill-card__github-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+}
+
+.skill-card__github-count {
+  color: var(--color-on-surface-variant);
+  opacity: 0.8;
+}
+
+.skill-card__github-category {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.skill-card__github .skill-bar {
+  margin-top: auto;
+  height: 3px;
+}
+
+.skill-card__github .skill-bar-fill {
+  transition: width 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@media (max-width: 1200px) {
+  .skills__grid:has(.skill-card--github) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills__grid:has(.skill-card--github) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .skills__grid:has(.skill-card--github) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

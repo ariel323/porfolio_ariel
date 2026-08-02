@@ -141,9 +141,23 @@ export class I18n {
     const keys = key.split(".");
     let result: unknown = translations[this.currentLanguage];
 
-    for (const k of keys) {
-      if (result && typeof result === "object" && k in result) {
-        result = (result as Record<string, unknown>)[k];
+    for (const segment of keys) {
+      const match = segment.match(/^(.*)\[(\d+)\]$/);
+      if (match) {
+        const prop = match[1];
+        const index = parseInt(match[2], 10);
+        if (result && typeof result === "object" && prop in result) {
+          const arr = (result as Record<string, unknown>)[prop];
+          if (Array.isArray(arr) && index >= 0 && index < arr.length) {
+            result = arr[index];
+          } else {
+            return key;
+          }
+        } else {
+          return key;
+        }
+      } else if (result && typeof result === "object" && segment in result) {
+        result = (result as Record<string, unknown>)[segment];
       } else {
         return key;
       }

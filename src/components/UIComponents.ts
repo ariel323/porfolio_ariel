@@ -7,6 +7,7 @@ import type {
 } from "../types";
 import { ProjectsManager } from "./ProjectsManager";
 import { GitHubAPI } from "../utils/GitHubAPI";
+import { getTopLanguages } from "../utils/languageIcons";
 import { i18n } from "../utils/i18n";
 
 export class UIComponents {
@@ -597,7 +598,10 @@ export class UIComponents {
       } else {
         details.classList.remove("is-visible");
         details.setAttribute("aria-hidden", "true");
-        details.style.maxHeight = "0px";
+        details.style.maxHeight = `${details.scrollHeight}px`;
+        requestAnimationFrame(() => {
+          details.style.maxHeight = "0px";
+        });
       }
     }
   }
@@ -607,7 +611,6 @@ export class UIComponents {
       .querySelectorAll<HTMLButtonElement>(".skill-card__toggle")
       .forEach((toggle) => {
         toggle.addEventListener("click", () => {
-          if (this.skillViewMode === "detailed") return;
           const card = toggle.closest<HTMLElement>(".skill-card");
           if (!card) return;
           const isExpanded = !card.classList.contains("skill-card--expanded");
@@ -1120,5 +1123,41 @@ renderExperience(): void {
     };
 
     setTimeout(type, 500);
+  }
+
+  /**
+   * Replace the static skills grid with live GitHub language data.
+   */
+  renderGitHubSkills(languages: Record<string, number>, totalRepos: number): void {
+    const section = document.querySelector(".section-skills");
+    const grid = section?.querySelector(".skills__grid");
+    if (!section || !grid) return;
+
+    const topLangs = getTopLanguages(languages, 6);
+    if (!topLangs.length) return;
+
+    const statusEl = section.querySelector(".section-skills__status");
+    if (statusEl) {
+      statusEl.textContent = `system.status == "live"  ·  ${totalRepos} repos`;
+    }
+
+    grid.innerHTML = topLangs
+      .map(
+        (lang, i) => `
+        <article class="skill-card skill-card--github fade-in-up" style="animation-delay: ${i * 0.08}s; border-left: 4px solid ${lang.color}">
+          <header class="skill-card__header">
+            <span class="skill-card__github-icon" style="color: ${lang.color}">&#x25AE;</span>
+            <h3 class="skill-card__github-name">${lang.name}</h3>
+          </header>
+          <div class="skill-card__github-meta">
+            <span class="skill-card__github-count">${lang.repoCount} ${lang.repoCount === 1 ? "repo" : "repos"}</span>
+            <span class="skill-card__github-category">${lang.category}</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-fill" style="width: ${Math.round((lang.repoCount / totalRepos) * 100)}%; background: ${lang.color}" data-level="${Math.round((lang.repoCount / totalRepos) * 100)}"></div>
+          </div>
+        </article>`
+      )
+      .join("");
   }
 }

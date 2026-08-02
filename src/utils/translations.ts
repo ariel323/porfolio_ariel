@@ -120,7 +120,7 @@ nav: {
 sections: {
        skills: {
         label: "Capacidades",
-        title: "💡 Stack Tecnológico",
+        title: "Stack Tecnológico",
         filters: {
           all: "Todos",
         },
@@ -141,7 +141,7 @@ sections: {
         title: "💼 Experiencia Profesional",
         education: "🎓 Formación Académica",
         certifications: "🏆 Certificaciones",
-        achievements: "✨ Logros Destacados:",
+        achievements: "Logros Destacados",
         period: "Periodo",
         location: "📍",
         technologies: "Tecnologías",
@@ -226,9 +226,10 @@ sections: {
       },
     },
 footer: {
-       designedBy: "Diseñado y Desarrollado con ❤️ por Ariel Almada",
-       year: "2025",
+       designedBy: "Diseñado y Desarrollado por Ariel Almada",
+       year: "2026",
        builtWith: "Hecho con TypeScript + Three.js + GSAP",
+       tagline: "Engineering Excellence",
      },
     content: {
       experiences: {
@@ -385,7 +386,7 @@ nav: {
 sections: {
        skills: {
         label: "Capabilities",
-        title: "💡 Tech Stack",
+        title: "Tech Stack",
         filters: {
           all: "All",
         },
@@ -406,7 +407,7 @@ sections: {
         title: "💼 Professional Experience",
         education: "🎓 Academic Background",
         certifications: "🏆 Certifications",
-        achievements: "✨ Key Achievements:",
+        achievements: "Key Achievements",
         period: "Period",
         location: "📍",
         technologies: "Technologies",
@@ -491,9 +492,10 @@ sections: {
       },
     },
 footer: {
-       designedBy: "Designed and Developed with ❤️ by Ariel Almada",
-       year: "2025",
+       designedBy: "Designed and Developed by Ariel Almada",
+       year: "2026",
        builtWith: "Built with TypeScript + Three.js + GSAP",
+       tagline: "Engineering Excellence",
      },
     content: {
       experiences: {

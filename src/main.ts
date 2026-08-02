@@ -132,17 +132,18 @@ private async renderComponents(): Promise<void> {
   /**
    * Load GitHub data from API to update with real data
    */
-  private async loadGitHubData(): Promise<void> {
+private async loadGitHubData(): Promise<void> {
     try {
       const repos = await this.githubAPI.fetchRepositories();
       if (!repos.length) return;
 
       const stats = this.githubAPI.buildStatsFromRepos(repos);
 
-       this.uiComponents.renderGitHubStats(stats);
-       this.uiComponents.renderGitHubRepositories(repos);
-       this.uiComponents.updateProjectsWithGitHubData(repos);
-     } catch {
+      this.uiComponents.renderGitHubSkills(stats.languages, stats.totalRepos);
+      this.uiComponents.renderGitHubStats(stats);
+      this.uiComponents.renderGitHubRepositories(repos);
+      this.uiComponents.updateProjectsWithGitHubData(repos);
+    } catch {
       // API unavailable — section stays as loading/empty
     }
   }
