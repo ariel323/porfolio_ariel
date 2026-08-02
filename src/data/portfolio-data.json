@@ -333,9 +333,9 @@
   "projects": [
     {
       "id": "conversor-moneda",
-      "title": "Conversor de Moneda",
-      "shortDescription": "App Java Swing con arquitectura MVC y validación robusta",
-      "description": "Aplicación de escritorio desarrollada en Java Swing que permite convertir entre diferentes monedas en tiempo real. Implementa el patrón de diseño MVC para una arquitectura limpia y mantenible. Incluye validación robusta de datos y testing completo con JUnit.",
+      "title": "content.projects.conversorMoneda.title",
+      "shortDescription": "content.projects.conversorMoneda.shortDescription",
+      "description": "content.projects.conversorMoneda.description",
       "image": "/assets/imagen de comvertidor.png",
       "technologies": [
         "Java",
@@ -357,9 +357,9 @@
     },
     {
       "id": "restaurant-backend",
-      "title": "Restaurant Backend API",
-      "shortDescription": "Spring Boot API REST para gestionar menús y órdenes",
-      "description": "API RESTful completa desarrollada con Spring Boot para la gestión de restaurantes. Permite administrar menús, órdenes, inventario y usuarios. Implementa persistencia con JPA/Hibernate, arquitectura por capas, y endpoints documentados. Incluye manejo de errores y validaciones.",
+      "title": "content.projects.restaurantBackend.title",
+      "shortDescription": "content.projects.restaurantBackend.shortDescription",
+      "description": "content.projects.restaurantBackend.description",
       "image": "/assets/Restaurant Backend Application.jpg",
       "technologies": [
         "Spring Boot",
@@ -382,9 +382,9 @@
     },
     {
       "id": "literalura",
-      "title": "Literalura",
-      "shortDescription": "Explorador de libros usando API de Gutendex",
-      "description": "Aplicación Java que consume la API de Gutendex para explorar y buscar libros del Proyecto Gutenberg. Permite filtrar por autor, género, idioma y almacenar favoritos en una base de datos PostgreSQL. Implementa consumo de APIs REST, manejo de JSON, y operaciones CRUD.",
+      "title": "content.projects.literalura.title",
+      "shortDescription": "content.projects.literalura.shortDescription",
+      "description": "content.projects.literalura.description",
       "image": "/assets/imagenApiLiteratura.png",
       "technologies": [
         "Java 17+",
@@ -407,9 +407,9 @@
     },
     {
       "id": "gestor-clientes",
-      "title": "Gestor de Clientes",
-      "shortDescription": "Aplicación web React para gestión de clientes",
-      "description": "Aplicación web interactiva desarrollada en React para la gestión eficiente de clientes. Permite crear, editar, eliminar y buscar clientes con una interfaz intuitiva y responsiva. Implementa React Hooks (useState, useEffect), Context API para estado global, y CSS Modules para estilos encapsulados.",
+      "title": "content.projects.gestorClientes.title",
+      "shortDescription": "content.projects.gestorClientes.shortDescription",
+      "description": "content.projects.gestorClientes.description",
       "image": "/assets/imagenGestor.png",
       "technologies": [
         "React",
@@ -431,9 +431,9 @@
     },
     {
       "id": "docker-caso-001",
-      "title": "Docker Caso 001 - App Containerizada",
-      "shortDescription": "Aplicación completa con Docker y MySQL",
-      "description": "Proyecto de containerización completo usando Docker y Docker Compose. Incluye una aplicación backend y una base de datos MySQL ejecutándose en contenedores separados pero conectados. Implementa mejores prácticas de Docker: multi-stage builds, volúmenes persistentes, redes personalizadas, y variables de entorno.",
+      "title": "content.projects.dockerCaso001.title",
+      "shortDescription": "content.projects.dockerCaso001.shortDescription",
+      "description": "content.projects.dockerCaso001.description",
       "image": "/assets/doker.png",
       "technologies": [
         "Docker",
@@ -460,9 +460,9 @@
     },
     {
       "id": "almada-labs",
-      "title": "ALMADA Labs - SaaS CV Generator",
-      "shortDescription": "Plataforma SaaS de generación de CVs con IA RAG",
-      "description": "Plataforma SaaS completa para generación de currículums con inteligencia artificial. Implementa autenticación de usuarios, administración dinámica de roles, pagos reales mediante webhooks, y un sistema de IA RAG (Almada Genesis) para búsquedas web en tiempo real. Construida con Next.js, TypeScript, MongoDB y Vercel.",
+      "title": "content.projects.almadaLabs.title",
+      "shortDescription": "content.projects.almadaLabs.shortDescription",
+      "description": "content.projects.almadaLabs.description",
 "image": "/assets/logo_de_almada_labs.png",
       "technologies": [
         "Next.js",

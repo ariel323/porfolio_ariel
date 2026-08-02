@@ -269,6 +269,38 @@ footer: {
             "Optimicé consultas SQL reduciendo tiempos de respuesta del servidor"
           ]
         }
+      },
+      projects: {
+        conversorMoneda: {
+          title: "Conversor de Moneda",
+          shortDescription: "App Java Swing con arquitectura MVC y validación robusta",
+          description: "Aplicación de escritorio desarrollada en Java Swing que permite convertir entre diferentes monedas en tiempo real. Implementa el patrón de diseño MVC para una arquitectura limpia y mantenible. Incluye validación robusta de datos y testing completo con JUnit."
+        },
+        restaurantBackend: {
+          title: "Restaurant Backend API",
+          shortDescription: "Spring Boot API REST para gestionar menús y órdenes",
+          description: "API RESTful completa desarrollada con Spring Boot para la gestión de restaurantes. Permite administrar menús, órdenes, inventario y usuarios. Implementa persistencia con JPA/Hibernate, arquitectura por capas, y endpoints documentados. Incluye manejo de errores y validaciones."
+        },
+        literalura: {
+          title: "Literalura",
+          shortDescription: "Explorador de libros usando API de Gutendex",
+          description: "Aplicación Java que consume la API de Gutendex para explorar y buscar libros del Proyecto Gutenberg. Permite filtrar por autor, género, idioma y almacenar favoritos en una base de datos PostgreSQL. Implementa consumo de APIs REST, manejo de JSON, y operaciones CRUD."
+        },
+        gestorClientes: {
+          title: "Gestor de Clientes",
+          shortDescription: "Aplicación web React para gestión de clientes",
+          description: "Aplicación web interactiva desarrollada en React para la gestión eficiente de clientes. Permite crear, editar, eliminar y buscar clientes con una interfaz intuitiva y responsiva. Implementa React Hooks (useState, useEffect), Context API para estado global, y CSS Modules para estilos encapsulados."
+        },
+        dockerCaso001: {
+          title: "Docker Caso 001 - App Containerizada",
+          shortDescription: "Aplicación completa con Docker y MySQL",
+          description: "Proyecto de containerización completo usando Docker y Docker Compose. Incluye una aplicación backend y una base de datos MySQL ejecutándose en contenedores separados pero conectados. Implementa mejores prácticas de Docker: multi-stage builds, volúmenes persistentes, redes personalizadas, y variables de entorno."
+        },
+        almadaLabs: {
+          title: "ALMADA Labs - SaaS CV Generator",
+          shortDescription: "Plataforma SaaS de generación de CVs con IA RAG",
+          description: "Plataforma SaaS completa para generación de currículums con inteligencia artificial. Implementa autenticación de usuarios, administración dinámica de roles, pagos reales mediante webhooks, y un sistema de IA RAG (Almada Genesis) para búsquedas web en tiempo real. Construida con Next.js, TypeScript, MongoDB y Vercel."
+        }
       }
     }
   },
@@ -534,6 +566,38 @@ footer: {
             "Standardized Docker environments with Docker Compose for the entire app and DB",
             "Optimized SQL queries reducing server response times"
           ]
+        }
+      },
+      projects: {
+        conversorMoneda: {
+          title: "Currency Converter",
+          shortDescription: "Java Swing app with MVC architecture and robust validation",
+          description: "Desktop application developed in Java Swing that allows converting between different currencies in real time. Implements the MVC design pattern for a clean, maintainable architecture. Includes robust data validation and full testing with JUnit."
+        },
+        restaurantBackend: {
+          title: "Restaurant Backend API",
+          shortDescription: "Spring Boot REST API to manage menus and orders",
+          description: "Complete RESTful API developed with Spring Boot for restaurant management. Allows you to manage menus, orders, inventory, and users. Implements JPA/Hibernate persistence, layered architecture, and documented endpoints. Includes error handling and validations."
+        },
+        literalura: {
+          title: "Literalura",
+          shortDescription: "Book explorer using the Gutendex API",
+          description: "Java application that consumes the Gutendex API to explore and search Project Gutenberg books. Allows filtering by author, genre, and language, and storing favorites in a PostgreSQL database. Implements REST API consumption, JSON handling, and CRUD operations."
+        },
+        gestorClientes: {
+          title: "Client Manager",
+          shortDescription: "React web application for client management",
+          description: "Interactive web application developed in React for efficient client management. Allows you to create, edit, delete, and search clients with an intuitive, responsive interface. Implements React Hooks (useState, useEffect), Context API for global state, and CSS Modules for encapsulated styles."
+        },
+        dockerCaso001: {
+          title: "Docker Case 001 - Containerized App",
+          shortDescription: "Complete application with Docker and MySQL",
+          description: "Complete containerization project using Docker and Docker Compose. Includes a backend application and a MySQL database running in separate but connected containers. Implements Docker best practices: multi-stage builds, persistent volumes, custom networks, and environment variables."
+        },
+        almadaLabs: {
+          title: "ALMADA Labs - SaaS CV Generator",
+          shortDescription: "SaaS platform for AI-powered CV generation",
+          description: "Complete SaaS platform for AI-powered resume generation. Implements user authentication, dynamic role management, real payments via webhooks, and an AI RAG system (Almada Genesis) for real-time web searches. Built with Next.js, TypeScript, MongoDB, and Vercel."
         }
       }
     }

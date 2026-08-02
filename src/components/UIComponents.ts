@@ -12,6 +12,14 @@ import { i18n } from "../utils/i18n";
 
 export class UIComponents {
   private projectsManager: ProjectsManager;
+
+  private resolveContent(value: string): string {
+    const trimmed = value.trim();
+    if (trimmed.startsWith("content.")) {
+      return i18n.t(trimmed);
+    }
+    return trimmed;
+  }
   private activeSkillCategory: string = "all";
   private skillSearchTerm: string = "";
   private skillViewMode: "detailed" | "compact" = "detailed";
@@ -874,7 +882,7 @@ export class UIComponents {
     return `
       <article class="project-card fade-in-up ${index === 0 ? "project-card--featured" : "project-card--standard"}" data-category="${project.category}">
         <div class="project-card__image-wrapper">
-          <img src="${project.image}" alt="${project.title}" class="project-card__image" />
+          <img src="${project.image}" alt="${this.resolveContent(project.title)}" class="project-card__image" />
           <div class="project-card__overlay">
             <span class="category-badge">${formattedCategory}</span>
             ${formattedDate ? `<span class="project-card__date">${formattedDate}</span>` : ""}
@@ -882,8 +890,8 @@ export class UIComponents {
         </div>
         <div class="project-card__content">
           <header class="project-card__header">
-            <h3 class="project-card__title">${project.title}</h3>
-            <p class="project-card__intro">${project.shortDescription}</p>
+            <h3 class="project-card__title">${this.resolveContent(project.title)}</h3>
+            <p class="project-card__intro">${this.resolveContent(project.shortDescription)}</p>
           </header>
           <div class="tech-tags">${techBadges}</div>
           ${stats}
