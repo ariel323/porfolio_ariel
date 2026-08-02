@@ -4,11 +4,7 @@ import { ParticlesSystem } from "@components/ParticlesSystem";
 import { AnimationsController } from "@components/AnimationsController";
 import { UIComponents } from "@components/UIComponents";
 import { ExperienceTimeline } from "@components/ExperienceTimeline";
-import { InteractiveTerminal } from "@components/InteractiveTerminal";
-import { CodeEditor } from "@components/CodeEditor";
-import { LiveDashboard } from "@components/LiveDashboard";
-import { NarrativeScroll } from "@components/NarrativeScroll";
-import { VisualIdentity } from "@components/VisualIdentity";
+import { ContactForm } from "@components/ContactForm";
 import { i18n } from "@utils/i18n";
 import "./styles/main.css";
 
@@ -19,11 +15,7 @@ class Portfolio {
   private animationsController: AnimationsController;
   private uiComponents: UIComponents;
   private experienceTimeline: ExperienceTimeline | null = null;
-  private terminal: InteractiveTerminal | null = null;
-  private codeEditor: CodeEditor | null = null;
-  private dashboard: LiveDashboard | null = null;
-  private narrativeScroll: NarrativeScroll | null = null;
-  private visualIdentity: VisualIdentity | null = null;
+  private contactForm: ContactForm | null = null;
 
   constructor() {
     this.projectsManager = new ProjectsManager();
@@ -52,12 +44,11 @@ class Portfolio {
       await this.renderComponents();
       this.updateStaticText();
 
-      // Initialize animations
-      this.animationsController.init();
-      // Initialize narrative scroll system
-      this.narrativeScroll = new NarrativeScroll();
-      // Initialize visual identity (cursor, microinteractions)
-      this.visualIdentity = new VisualIdentity();
+       // Initialize animations
+       this.animationsController.init();
+       // Initialize contact form
+       this.contactForm = new ContactForm();
+       this.contactForm.init();
       // Setup event listeners
       this.setupEventListeners();
 
@@ -101,74 +92,26 @@ class Portfolio {
   /**
    * Render all UI components
    */
-  private async renderComponents(): Promise<void> {
-    // Render profile section
-    this.uiComponents.renderProfile();
+private async renderComponents(): Promise<void> {
+     // Render profile section
+     this.uiComponents.renderProfile();
 
-    // Render skills section
-    this.uiComponents.renderSkills();
+     // Render skills section
+     this.uiComponents.renderSkills();
 
-    // Render interactive terminal
-    this.renderTerminal();
+     // Render experience timeline
+     this.renderExperienceTimeline();
 
-    // Render code editor
-    this.renderCodeEditor();
+     // Render projects with filters
+     this.uiComponents.renderProjectsWithFilters();
 
-    // Render live dashboard
-    this.renderDashboard();
+     // Render experience
+     this.uiComponents.renderExperience();
+   }
 
-    // Render experience timeline
-    this.renderExperienceTimeline();
-
-    // Render projects with filters
-    this.uiComponents.renderProjectsWithFilters();
-
-    // Render experience
-    this.uiComponents.renderExperience();
-  }
-
-  /**
-   * Render interactive terminal
-   */
-  private renderTerminal(): void {
-    const data = this.projectsManager.getData();
-    if (data) {
-      try {
-        this.terminal = new InteractiveTerminal("interactive-terminal", data);
-      } catch (error) {
-        
-      }
-    }
-  }
-
-  /**
-   * Render code editor
-   */
-  private renderCodeEditor(): void {
-    const data = this.projectsManager.getData();
-    if (data) {
-      try {
-        this.codeEditor = new CodeEditor("code-editor", data);
-      } catch (error) {
-        
-      }
-    }
-  }
-
-  /**
-   * Render live dashboard
-   */
-  private renderDashboard(): void {
-    try {
-      this.dashboard = new LiveDashboard("live-dashboard");
-    } catch (error) {
-      
-    }
-  }
-
-  /**
-   * Render experience timeline section
-   */
+   /**
+    * Render experience timeline section
+    */
   private renderExperienceTimeline(): void {
     const data = this.projectsManager.getData();
 
@@ -196,14 +139,10 @@ class Portfolio {
 
       const stats = this.githubAPI.buildStatsFromRepos(repos);
 
-      this.uiComponents.renderGitHubStats(stats);
-      this.uiComponents.renderGitHubRepositories(repos);
-      this.uiComponents.updateProjectsWithGitHubData(repos);
-
-      if (this.dashboard) {
-        this.dashboard.updateStats(stats, repos);
-      }
-    } catch {
+       this.uiComponents.renderGitHubStats(stats);
+       this.uiComponents.renderGitHubRepositories(repos);
+       this.uiComponents.updateProjectsWithGitHubData(repos);
+     } catch {
       // API unavailable — section stays as loading/empty
     }
   }
@@ -455,27 +394,12 @@ class Portfolio {
   /**
    * Cleanup resources
    */
-  destroy(): void {
-    if (this.particlesSystem) {
-      this.particlesSystem.destroy();
-    }
-    if (this.terminal) {
-      this.terminal.destroy();
-    }
-    if (this.codeEditor) {
-      this.codeEditor.destroy();
-    }
-    if (this.dashboard) {
-      this.dashboard.destroy();
-    }
-    if (this.narrativeScroll) {
-      this.narrativeScroll.destroy();
-    }
-    if (this.visualIdentity) {
-      this.visualIdentity.destroy();
-    }
-    this.animationsController.destroy();
-  }
+destroy(): void {
+     if (this.particlesSystem) {
+       this.particlesSystem.destroy();
+     }
+     this.animationsController.destroy();
+   }
 }
 
 // Initialize portfolio when DOM is ready

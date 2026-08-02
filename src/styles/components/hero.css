@@ -1,7 +1,55 @@
 /* ========================================
+BACKGROUND GRID (technical backdrop)
+======================================= */
+
+.hero-section__technical-backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -translate-x: 50%;
+  -translate-y: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-section__grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  height: 100%;
+  gap: 1px;
+}
+
+.hero-section__grid-line {
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  opacity: 0.15;
+  animation: pulseGrid 4s infinite;
+}
+
+@keyframes pulseGrid {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.3; }
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: -1;
+}
+
+/* ========================================
 HERO SECTION
 Deep Tech Amber — Editorial layout
-======================================== */
+======================================= */
 
 .hero-section {
   min-height: 100vh;
@@ -207,6 +255,20 @@ CTA BUTTONS
   color: var(--color-primary);
   box-shadow: var(--shadow-glow-amber);
   transform: translateY(-2px);
+}
+
+.hero-section__cta-text {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.hero-section__cta-btn:hover .hero-section__cta-text {
+  transform: translateX(3px);
+}
+
+.hero-section__cta-arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
 }
 
 /* ========================================
