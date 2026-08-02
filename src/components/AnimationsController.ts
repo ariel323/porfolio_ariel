@@ -128,19 +128,21 @@ export class AnimationsController {
         ease: "back.out(1.7)",
       });
 
-      // Animate technology bars
-      const techItems = card.querySelectorAll("li");
-      gsap.from(techItems, {
-        scrollTrigger: {
-          trigger: card,
-          start: "top 70%",
-        },
-        x: -50,
-        opacity: 0,
-        duration: 0.6,
-        stagger: 0.08,
-        delay: 0.3 + index * 0.1,
-      });
+// Animate technology bars
+       const techItems = card.querySelectorAll(".skill-bar-fill");
+       if (techItems.length > 0) {
+         gsap.from(techItems, {
+           scrollTrigger: {
+             trigger: card,
+             start: "top 70%",
+           },
+           x: -50,
+           opacity: 0,
+           duration: 0.6,
+           stagger: 0.08,
+           delay: 0.3 + index * 0.1,
+         });
+       }
 
       // Hover animations
       card.addEventListener("mouseenter", () => {
